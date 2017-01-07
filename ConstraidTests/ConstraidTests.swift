@@ -1,5 +1,5 @@
 import XCTest
-@testable import Constraid
+import Constraid
 
 class ConstraidTests: XCTestCase {
     
