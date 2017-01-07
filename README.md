@@ -1,12 +1,20 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
+
+# Constraid
+
+Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
+possible for you to programmatically use AutoLayout in your iOS projects.
 
 ## Build
+
+We supports [Carthage][carthage] and therefore this project can be built using the folowing.
 
 ```
 carthage build --no-skip-current
 ```
 
-To identify details about build issues it may help to build it without Carthage as follows:
+However, if you don't want to use [Carthage][carthage] or you are having difficulties with
+build failures you can try the following which should provide some more details.
 
 ```
 xcodebuild -scheme Constraid -project Constraid.xcodeproj build
@@ -28,3 +36,4 @@ We love open source software. See [our other projects][community] or
 [community]: https://github.com/uptech
 [hire]: http://upte.ch
 [uptech]: http://upte.ch
+[carthage]: https://github.com/Carthage/Carthage
