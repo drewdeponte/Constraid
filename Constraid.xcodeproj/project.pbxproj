@@ -12,6 +12,17 @@
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */; };
 		E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */; };
+		E9CAB2BE1E21A2B800CDA4E2 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
+		E9CAB2C01E21A32600CDA4E2 /* FlushWithMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */; };
+		E9CAB2C21E21A37000CDA4E2 /* CenterWithinEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */; };
+		E9CAB2C41E21A3C200CDA4E2 /* CenterWithinMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C31E21A3C200CDA4E2 /* CenterWithinMargins.swift */; };
+		E9CAB2C61E21A43900CDA4E2 /* ManageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */; };
+		E9CAB2C81E21A49000CDA4E2 /* ManageRelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */; };
+		E9CAB2CA1E21A4D600CDA4E2 /* LimitByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C91E21A4D600CDA4E2 /* LimitByMargin.swift */; };
+		E9CAB2CC1E21A50F00CDA4E2 /* LimitByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */; };
+		E9CAB2CE1E21A54700CDA4E2 /* ExpandToMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CD1E21A54700CDA4E2 /* ExpandToMargin.swift */; };
+		E9CAB2D01E21A57C00CDA4E2 /* ExpandToEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CF1E21A57C00CDA4E2 /* ExpandToEdge.swift */; };
+		E9CAB2D21E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +44,17 @@
 		E9CAB2AF1E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityConstructor.swift; sourceTree = "<group>"; };
 		E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityConstructionTests.swift; sourceTree = "<group>"; };
+		E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithEdges.swift; sourceTree = "<group>"; };
+		E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithMargins.swift; sourceTree = "<group>"; };
+		E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinEdges.swift; sourceTree = "<group>"; };
+		E9CAB2C31E21A3C200CDA4E2 /* CenterWithinMargins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinMargins.swift; sourceTree = "<group>"; };
+		E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageSize.swift; sourceTree = "<group>"; };
+		E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageRelativePosition.swift; sourceTree = "<group>"; };
+		E9CAB2C91E21A4D600CDA4E2 /* LimitByMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByMargin.swift; sourceTree = "<group>"; };
+		E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByEdge.swift; sourceTree = "<group>"; };
+		E9CAB2CD1E21A54700CDA4E2 /* ExpandToMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandToMargin.swift; sourceTree = "<group>"; };
+		E9CAB2CF1E21A57C00CDA4E2 /* ExpandToEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandToEdge.swift; sourceTree = "<group>"; };
+		E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageIntrinsicSizeRelations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +100,17 @@
 				E9CAB2A21E21954B00CDA4E2 /* Constraid.h */,
 				E9CAB2A31E21954B00CDA4E2 /* Info.plist */,
 				E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */,
+				E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */,
+				E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */,
+				E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */,
+				E9CAB2C31E21A3C200CDA4E2 /* CenterWithinMargins.swift */,
+				E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */,
+				E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */,
+				E9CAB2C91E21A4D600CDA4E2 /* LimitByMargin.swift */,
+				E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */,
+				E9CAB2CD1E21A54700CDA4E2 /* ExpandToMargin.swift */,
+				E9CAB2CF1E21A57C00CDA4E2 /* ExpandToEdge.swift */,
+				E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */,
 			);
 			path = Constraid;
 			sourceTree = "<group>";
@@ -205,7 +238,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAB2CE1E21A54700CDA4E2 /* ExpandToMargin.swift in Sources */,
+				E9CAB2D21E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift in Sources */,
 				E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */,
+				E9CAB2D01E21A57C00CDA4E2 /* ExpandToEdge.swift in Sources */,
+				E9CAB2C01E21A32600CDA4E2 /* FlushWithMargins.swift in Sources */,
+				E9CAB2C21E21A37000CDA4E2 /* CenterWithinEdges.swift in Sources */,
+				E9CAB2C61E21A43900CDA4E2 /* ManageSize.swift in Sources */,
+				E9CAB2BE1E21A2B800CDA4E2 /* FlushWithEdges.swift in Sources */,
+				E9CAB2C41E21A3C200CDA4E2 /* CenterWithinMargins.swift in Sources */,
+				E9CAB2CC1E21A50F00CDA4E2 /* LimitByEdge.swift in Sources */,
+				E9CAB2CA1E21A4D600CDA4E2 /* LimitByMargin.swift in Sources */,
+				E9CAB2C81E21A49000CDA4E2 /* ManageRelativePosition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
