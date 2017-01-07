@@ -5,6 +5,50 @@
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
 possible for you to programmatically use AutoLayout in your iOS projects.
 
+For example something like having a view match the width of its parrenting view would
+normally look like the following:
+
+```swift
+let parentView = UIView()
+let childView = UIView()
+
+parentView.addSubview(childView)
+
+childView.translatesAutoresizingMaskIntoConstraints = false
+
+NSLayoutConstraint.activate([
+    NSLayoutConstraint(
+        item: childView,
+        attribute: .leadingEdge,
+        relatedBy: .equal,
+        toItem: parentView,
+        attribute: .leadingEdge,
+        multiplier: 1.0,
+        constant: 0.0
+    ),
+    NSLayoutConstraint(
+        item: childView,
+        attribute: .trailingEdge,
+        relatedBy: .equal,
+        toItem: parentView,
+        attribute: .trailingEdge,
+        multiplier: 1.0,
+        constant: 0.0
+    )
+])
+```
+
+However, with the aid of [Constraid][constraid] it is as simple as
+
+```swift
+let parentView = UIView()
+let childView = UIView()
+
+parentView.addSubview(childView)
+
+childView.flush(withHorizontalEdgesOf: parentView)
+```
+
 ## Build
 
 We supports [Carthage][carthage] and therefore this project can be built using the folowing.
@@ -37,3 +81,4 @@ We love open source software. See [our other projects][community] or
 [hire]: http://upte.ch
 [uptech]: http://upte.ch
 [carthage]: https://github.com/Carthage/Carthage
+[constraid]: https://github.com/uptech/Constraid
