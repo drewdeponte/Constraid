@@ -10,6 +10,8 @@
 		E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */; };
 		E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */; };
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */; };
+		E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E9CAB2A81E21954B00CDA4E2 /* ConstraidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConstraidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraidTests.swift; sourceTree = "<group>"; };
 		E9CAB2AF1E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityConstructor.swift; sourceTree = "<group>"; };
+		E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityConstructionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 			children = (
 				E9CAB2A21E21954B00CDA4E2 /* Constraid.h */,
 				E9CAB2A31E21954B00CDA4E2 /* Info.plist */,
+				E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */,
 			);
 			path = Constraid;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 			children = (
 				E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */,
 				E9CAB2AF1E21954B00CDA4E2 /* Info.plist */,
+				E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 					E9CAB29E1E21954B00CDA4E2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 6449Q3J4XH;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E9CAB2A71E21954B00CDA4E2 = {
@@ -198,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */,
 				E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +331,7 @@
 		E9CAB2B41E21954B00CDA4E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6449Q3J4XH;
@@ -334,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.upte.Constraid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +352,7 @@
 		E9CAB2B51E21954B00CDA4E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6449Q3J4XH;
@@ -360,6 +372,7 @@
 		E9CAB2B71E21954B00CDA4E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6449Q3J4XH;
 				INFOPLIST_FILE = ConstraidTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +385,7 @@
 		E9CAB2B81E21954B00CDA4E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6449Q3J4XH;
 				INFOPLIST_FILE = ConstraidTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
