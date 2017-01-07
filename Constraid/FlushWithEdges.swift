@@ -45,7 +45,7 @@ extension UIView {
             ])
     }
 
-    open func flush(withHorizontalEdgesOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withVerticalEdgesOf item: Any?, constant: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         flush(withLeadingEdgeOf: item, constant: constant, multiplier: multiplier,
@@ -54,7 +54,7 @@ extension UIView {
               priority: priority)
     }
 
-    open func flush(withVerticalEdgesOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withHorizontalEdgesOf item: Any?, constant: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         flush(withTopEdgeOf: item, constant: constant, multiplier: multiplier,

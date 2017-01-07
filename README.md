@@ -5,15 +5,11 @@
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
 possible for you to programmatically use AutoLayout in your iOS projects.
 
-For example something like having a view match the width of its parrenting view would
-normally look like the following:
+For example if you have a child view (`childView`) added as a subview of a parent
+view (`parentView`) and you want that child view to match the width of the parent view you would
+normally do the following with AutoLayout:
 
 ```swift
-let parentView = UIView()
-let childView = UIView()
-
-parentView.addSubview(childView)
-
 childView.translatesAutoresizingMaskIntoConstraints = false
 
 NSLayoutConstraint.activate([
@@ -41,12 +37,7 @@ NSLayoutConstraint.activate([
 However, with the aid of [Constraid][constraid] it is as simple as
 
 ```swift
-let parentView = UIView()
-let childView = UIView()
-
-parentView.addSubview(childView)
-
-childView.flush(withHorizontalEdgesOf: parentView)
+childView.flush(withVerticalEdgesOf: parentView)
 ```
 
 ## Build
