@@ -12,6 +12,17 @@ extension UIView {
             ])
     }
 
+    open func follows(theTrailingMarginOf item: Any?, by constant: CGFloat = 0.0,
+                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal,
+                               toItem: item, attribute: .trailingMargin, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
     open func precedes(theLeadingEdgeOf item: Any?, by constant: CGFloat = 0.0,
                        multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
@@ -23,7 +34,18 @@ extension UIView {
             ])
     }
 
-    open func sitsOn(theTopEdgeOf item: Any?, by constant: CGFloat = 0.0,
+    open func precedes(theLeadingMarginOf item: Any?, by constant: CGFloat = 0.0,
+                       multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
+                               toItem: item, attribute: .leadingMargin, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
+    open func sits(aboveTheTopEdgeOf item: Any?, by constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -34,13 +56,35 @@ extension UIView {
             ])
     }
 
-    open func sitsUnder(theBottomEdgeOf item: Any?, by constant: CGFloat = 0.0,
+    open func sits(aboveTheTopMarginOf item: Any?, by constant: CGFloat = 0.0,
+                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
+                               toItem: item, attribute: .topMargin, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
+    open func sits(belowTheBottomEdgeOf item: Any?, by constant: CGFloat = 0.0,
                         multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
                                toItem: item, attribute: .bottom, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
+    open func sits(belowTheBottomMarginOf item: Any?, by constant: CGFloat = 0.0,
+                        multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
+                               toItem: item, attribute: .bottomMargin, multiplier: multiplier,
                                constant: constant, priority: priority)
             ])
     }

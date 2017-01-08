@@ -165,8 +165,7 @@ following.
 viewA.precedes(theLeadingEdgeOf: viewB)
 ```
 
-If on the other hand you want to control the vertical position you can use `sitsOn` and
-`sitsUnder` respectively
+If on the other hand you want to control the vertical position you can use `sits`.
 
 These methods simply create one or more equivalency constraints between the two views and the
 appropriate attributes. List of the short versions of all the these methods are provided
@@ -174,9 +173,15 @@ below.
 
 ```swift
 viewA.follows(theTrailingEdgeOf:)
+viewA.follows(theTrailingMarginOf:)
+
 viewA.precedes(theLeadingEdgeOf:)
-viewA.sitsOn(theTopEdgeOf:)
-viewA.sitsUnder(theBottomEdgeOf:)
+viewA.precedes(theLeadingMarginOf:)
+
+viewA.sits(aboveTheTopEdgeOf:)
+viewA.sits(aboveTheTopMarginOf:)
+viewA.sits(belowTheBottomEdgeOf:)
+viewA.sits(belowTheBottomMarginOf:)
 ```
 
 ### Limit
