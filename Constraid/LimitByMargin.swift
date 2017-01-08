@@ -45,7 +45,7 @@ extension UIView {
             ])
     }
 
-    open func limitVertically(byMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func limit(byHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
                               multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         limit(byTopMarginOf: item, constant: constant, multiplier: multiplier,
@@ -54,7 +54,7 @@ extension UIView {
               priority: priority)
     }
 
-    open func limitHorizontally(byMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func limit(byVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
                                 multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         limit(byLeadingMarginOf: item, constant: constant, multiplier: multiplier,

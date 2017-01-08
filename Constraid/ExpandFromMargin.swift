@@ -1,78 +1,78 @@
 import UIKit
 
 extension UIView {
-    open func expand(toBottomEdgeOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromBottomMarginOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .bottom,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .bottom,
+                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .bottomMargin,
                                multiplier: multiplier, constant: constant, priority: priority)
             ])
     }
 
-    open func expand(toTopEdgeOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromTopMarginOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .top,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .top,
-                               multiplier: multiplier, constant: constant, priority: priority)
+            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual,
+                               toItem: item, attribute: .topMargin, multiplier: multiplier,
+                               constant: constant, priority: priority)
             ])
     }
 
-    open func expand(toLeadingEdgeOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .leading,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .leading,
+                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .leadingMargin,
                                multiplier: multiplier, constant: constant, priority: priority)
             ])
     }
 
-    open func expand(toTrailingEdgeOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .trailing,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .trailing,
+                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .trailingMargin,
                                multiplier: multiplier, constant: constant, priority: priority)
             ])
     }
 
-    open func expandVertically(toEdgesOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
                                multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
-        expand(toTopEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromTopMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
-        expand(toBottomEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromBottomMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
     }
 
-    open func expandHorizontally(toEdgesOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
                                  multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
-        expand(toLeadingEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromLeadingMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
-        expand(toTrailingEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromTrailingMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
     }
 
-    open func expand(toEdgesOf item: Any?, constant: CGFloat = 0.0,
+    open func expand(fromMarginsOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
 
-        expand(toTopEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromTopMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
-        expand(toBottomEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromBottomMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
-        expand(toLeadingEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromLeadingMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
-        expand(toTrailingEdgeOf: item, constant: constant, multiplier: multiplier,
+        expand(fromTrailingMarginOf: item, constant: constant, multiplier: multiplier,
                priority: priority)
     }
 }
