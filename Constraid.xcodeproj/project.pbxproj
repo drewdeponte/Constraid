@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51E19A9D1E2A82F900998194 /* ExpandFromWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromWidth.swift */; };
 		E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */; };
 		E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */; };
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51E19A9C1E2A82F900998194 /* ExpandFromWidth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromWidth.swift; sourceTree = "<group>"; };
 		E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Constraid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB2A21E21954B00CDA4E2 /* Constraid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constraid.h; sourceTree = "<group>"; };
 		E9CAB2A31E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		E9CAB2A11E21954B00CDA4E2 /* Constraid */ = {
 			isa = PBXGroup;
 			children = (
+				51E19A9C1E2A82F900998194 /* ExpandFromWidth.swift */,
 				E9CAB2A21E21954B00CDA4E2 /* Constraid.h */,
 				E9CAB2A31E21954B00CDA4E2 /* Info.plist */,
 				E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */,
@@ -250,6 +253,7 @@
 				E9CAB2CC1E21A50F00CDA4E2 /* LimitByEdge.swift in Sources */,
 				E9CAB2CA1E21A4D600CDA4E2 /* LimitByMargin.swift in Sources */,
 				E9CAB2C81E21A49000CDA4E2 /* ManageRelativePosition.swift in Sources */,
+				51E19A9D1E2A82F900998194 /* ExpandFromWidth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +464,7 @@
 				E9CAB2B51E21954B00CDA4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9CAB2B61E21954B00CDA4E2 /* Build configuration list for PBXNativeTarget "ConstraidTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +473,7 @@
 				E9CAB2B81E21954B00CDA4E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

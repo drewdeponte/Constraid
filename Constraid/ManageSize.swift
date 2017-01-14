@@ -48,4 +48,38 @@ extension UIView {
                                priority: priority)
             ])
     }
+
+    open func matchWidth(of item: Any?, by constant: CGFloat = 0.0,
+                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal,
+                               toItem: item, attribute: .width, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
+    open func matchHeight(of item: Any?, by constant: CGFloat = 0.0,
+                         multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal,
+                               toItem: item, attribute: .height, multiplier: multiplier,
+                               constant: constant, priority: priority)
+            ])
+    }
+
+    open func matchWidthToHeight(constant: CGFloat = 0.0,
+                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: self, attribute: .width,
+                               relatedBy: .equal, toItem: self, attribute: .height,
+                               multiplier: multiplier, constant: constant, priority: priority)
+            ])
+    }
+
 }
