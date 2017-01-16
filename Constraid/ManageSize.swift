@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIView {
-    open func setWidth(_ constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+    open func setWidth(_ constant: CGFloat = 0.0,
                        priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -20,12 +20,12 @@ extension UIView {
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal,
                                toItem: nil, attribute: .notAnAttribute ,
-                               multiplier: multiplier, constant: constant,
+                               multiplier: 1.0, constant: constant,
                                priority: priority)
             ])
     }
 
-    open func setHeight(_ constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+    open func setHeight(_ constant: CGFloat = 0.0,
                         priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +44,7 @@ extension UIView {
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal,
                                toItem: nil, attribute: .notAnAttribute ,
-                               multiplier: multiplier, constant: constant,
+                               multiplier: 1.0, constant: constant,
                                priority: priority)
             ])
     }
@@ -71,14 +71,13 @@ extension UIView {
             ])
     }
 
-    open func matchWidthToHeight(constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    open func makeSquare(priority: UILayoutPriority = UILayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .width,
                                relatedBy: .equal, toItem: self, attribute: .height,
-                               multiplier: multiplier, constant: constant, priority: priority)
+                               multiplier: 1.0, constant: 0.0, priority: priority)
             ])
     }
 
