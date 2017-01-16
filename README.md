@@ -149,6 +149,23 @@ viewA.setWidth(_ constant:)
 viewA.setHeight(_ constant:)
 ```
 
+Similarly, if you want to make the width of one view equal to another view's width you can do this:
+
+```swift
+viewA.matchWidth(of: viewB)
+```
+
+And for the height:
+
+```swift
+viewA.matchHeight(of: viewB)
+```
+
+When you want to make a view's hieght and width equal you can do:
+```swift
+viewA.makeSquare()
+```
+
 ### Manage Relative Position
 
 Lets say you want `viewA` to be position right after `viewB`'s edge. You can accomplish this
@@ -272,6 +289,9 @@ viewA.expand(fromVerticalMarginsOf: viewB)
 viewA.expand(fromHorizontalMarginsOf: viewB)
 
 viewA.expand(fromMarginsOf: viewB)
+
+viewA.expand(fromWidthOf: viewB)
+viewA.expand(fromHeightOf: viewB)
 ```
 
 ### Manage Intrinsic Size Relations
