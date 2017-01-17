@@ -1,8 +1,12 @@
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
-extension UIView {
+extension ConstraidView {
     open func setWidth(_ constant: CGFloat = 0.0,
-                       priority: UILayoutPriority = UILayoutPriorityRequired) {
+                       priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         var targetConstraint: NSLayoutConstraint?
@@ -26,7 +30,7 @@ extension UIView {
     }
 
     open func setHeight(_ constant: CGFloat = 0.0,
-                        priority: UILayoutPriority = UILayoutPriorityRequired) {
+                        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         var targetConstraint: NSLayoutConstraint?
@@ -50,7 +54,7 @@ extension UIView {
     }
 
     open func matchWidth(of item: Any?, by constant: CGFloat = 0.0,
-                      multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                      multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -61,7 +65,7 @@ extension UIView {
     }
 
     open func matchHeight(of item: Any?, by constant: CGFloat = 0.0,
-                         multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                         multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -71,7 +75,7 @@ extension UIView {
             ])
     }
 
-    open func makeSquare(priority: UILayoutPriority = UILayoutPriorityRequired) {
+    open func makeSquare(priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
