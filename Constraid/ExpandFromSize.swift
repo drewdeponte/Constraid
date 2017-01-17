@@ -1,8 +1,12 @@
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
-extension UIView {
+extension ConstraidView {
     open func expand(fromWidthOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -13,7 +17,7 @@ extension UIView {
     }
 
     open func expand(fromHeightOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

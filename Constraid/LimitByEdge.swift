@@ -1,8 +1,12 @@
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
-extension UIView {
+extension ConstraidView {
     open func limit(byBottomEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -13,7 +17,7 @@ extension UIView {
     }
 
     open func limit(byTopEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -24,7 +28,7 @@ extension UIView {
     }
 
     open func limit(byLeadingEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -35,7 +39,7 @@ extension UIView {
     }
 
     open func limit(byTrailingEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -46,7 +50,7 @@ extension UIView {
     }
 
     open func limit(byHorizontalEdgesOf item: Any?, constant: CGFloat = 0.0,
-                              multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                              multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         limit(byTopEdgeOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -55,7 +59,7 @@ extension UIView {
     }
 
     open func limit(byVerticalEdgesOf item: Any?, constant: CGFloat = 0.0,
-                                multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                                multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         limit(byLeadingEdgeOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -64,7 +68,7 @@ extension UIView {
     }
 
     open func limit(byEdgesOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         limit(byTopEdgeOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
