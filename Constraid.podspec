@@ -8,6 +8,6 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, "9.0"
   spec.requires_arc = true
-  spec.source = { git: "https://github.com/uptech/RGB.git", tag: "#{spec.version}" }
+  spec.source = { git: "https://github.com/uptech/Constraid.git", tag: "#{spec.version}" }
   spec.source_files = "Constraid/**/*.{h,swift}"
 end
