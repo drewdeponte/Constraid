@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-               BuildableName = "Constraid.framework"
-               BlueprintName = "Constraid-iOS"
+               BlueprintIdentifier = "E9EDB5F21E2E9F6500C0D060"
+               BuildableName = "Constraid-MacOS.framework"
+               BlueprintName = "Constraid-MacOS"
                ReferencedContainer = "container:Constraid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E9CAB2A71E21954B00CDA4E2"
-               BuildableName = "Constraid-iOSTests.xctest"
-               BlueprintName = "Constraid-iOSTests"
-               ReferencedContainer = "container:Constraid.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid-iOS"
-            ReferencedContainer = "container:Constraid.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -64,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid-iOS"
+            BlueprintIdentifier = "E9EDB5F21E2E9F6500C0D060"
+            BuildableName = "Constraid-MacOS.framework"
+            BlueprintName = "Constraid-MacOS"
             ReferencedContainer = "container:Constraid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid-iOS"
+            BlueprintIdentifier = "E9EDB5F21E2E9F6500C0D060"
+            BuildableName = "Constraid-MacOS.framework"
+            BlueprintName = "Constraid-MacOS"
             ReferencedContainer = "container:Constraid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

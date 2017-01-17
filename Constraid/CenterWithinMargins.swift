@@ -1,8 +1,7 @@
-#if os(iOS)
-    import UIKit
-#else
-    import AppKit
-#endif
+// We don't conditional import AppKit like normal here because AppKit Autolayout doesn't support
+// the margin attributes that UIKit does. And of course this file isn't included in the MacOS
+// build target.
+import UIKit
 
 extension ConstraidView {
     open func centerVertically(withinMarginsOf item: Any?, constant: CGFloat = 0.0,
