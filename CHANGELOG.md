@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Fixed`: incorrect GitHub source path in Podspec
 * `Added`: makeSquare()
 * `Added`: matchWidth(of:) and matchHeight(of:)
 * `Added`: expand(fromWidthof) and expand(fromHeightOf)
