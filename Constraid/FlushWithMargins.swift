@@ -1,8 +1,11 @@
+// We don't conditional import AppKit like normal here because AppKit Autolayout doesn't support
+// the margin attributes that UIKit does. And of course this file isn't included in the MacOS
+// build target.
 import UIKit
 
-extension UIView {
+extension ConstraidView {
     open func flush(withLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -13,7 +16,7 @@ extension UIView {
     }
 
     open func flush(withTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -24,7 +27,7 @@ extension UIView {
     }
 
     open func flush(withTopMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -35,7 +38,7 @@ extension UIView {
     }
 
     open func flush(withBottomMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -46,7 +49,7 @@ extension UIView {
     }
 
     open func flush(withVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         flush(withLeadingMarginOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -55,7 +58,7 @@ extension UIView {
     }
 
     open func flush(withHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         flush(withTopMarginOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -64,8 +67,8 @@ extension UIView {
     }
 
     open func flush(withMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
-        
+                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+
         flush(withHorizontalMarginsOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
         flush(withVerticalMarginsOf: item, constant: constant, multiplier: multiplier,

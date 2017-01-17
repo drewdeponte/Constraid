@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516653851E2D41BF00E28FB3 /* ExpandFromSizeTests.swift */; };
 		516653881E2D489B00E28FB3 /* ManageSizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516653871E2D489B00E28FB3 /* ManageSizeTests.swift */; };
-		51E19A9D1E2A82F900998194 /* ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */; };
 		E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */; };
 		E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */; };
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */; };
 		E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */; };
-		E9CAB2BE1E21A2B800CDA4E2 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
-		E9CAB2C01E21A32600CDA4E2 /* FlushWithMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */; };
-		E9CAB2C21E21A37000CDA4E2 /* CenterWithinEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */; };
-		E9CAB2C41E21A3C200CDA4E2 /* CenterWithinMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C31E21A3C200CDA4E2 /* CenterWithinMargins.swift */; };
-		E9CAB2C61E21A43900CDA4E2 /* ManageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */; };
-		E9CAB2C81E21A49000CDA4E2 /* ManageRelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */; };
-		E9CAB2CA1E21A4D600CDA4E2 /* LimitByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C91E21A4D600CDA4E2 /* LimitByMargin.swift */; };
-		E9CAB2CC1E21A50F00CDA4E2 /* LimitByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */; };
-		E9CAB2D21E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
-		E9CAB2D51E21D8A300CDA4E2 /* ExpandFromEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D31E21D8A300CDA4E2 /* ExpandFromEdge.swift */; };
-		E9CAB2D61E21D8A300CDA4E2 /* ExpandFromMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D41E21D8A300CDA4E2 /* ExpandFromMargin.swift */; };
+		E9EDB5CA1E2DE65F00C0D060 /* PriorityConstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */; };
+		E9EDB5CE1E2E081300C0D060 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
+		E9EDB5CF1E2E081400C0D060 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
+		E9EDB5D21E2E18AF00C0D060 /* LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */; };
+		E9EDB5D31E2E18AF00C0D060 /* LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */; };
+		E9EDB5D41E2E18AF00C0D060 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D11E2E18AF00C0D060 /* View.swift */; };
+		E9EDB5D51E2E18AF00C0D060 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D11E2E18AF00C0D060 /* View.swift */; };
+		E9EDB5D61E2E1A7C00C0D060 /* FlushWithMargins.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */; };
+		E9EDB5D81E2E1C3300C0D060 /* CenterWithinEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */; };
+		E9EDB5D91E2E1C3400C0D060 /* CenterWithinEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C11E21A37000CDA4E2 /* CenterWithinEdges.swift */; };
+		E9EDB5DA1E2E1D5300C0D060 /* ManageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */; };
+		E9EDB5DB1E2E1D5400C0D060 /* ManageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C51E21A43900CDA4E2 /* ManageSize.swift */; };
+		E9EDB5DC1E2E1DF300C0D060 /* LimitByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C91E21A4D600CDA4E2 /* LimitByMargin.swift */; };
+		E9EDB5DE1E2E1DF800C0D060 /* ManageRelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */; };
+		E9EDB5DF1E2E1DF900C0D060 /* ManageRelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2C71E21A49000CDA4E2 /* ManageRelativePosition.swift */; };
+		E9EDB5E01E2E1EBF00C0D060 /* LimitByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */; };
+		E9EDB5E11E2E1EC000C0D060 /* LimitByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2CB1E21A50F00CDA4E2 /* LimitByEdge.swift */; };
+		E9EDB5E21E2E1EE000C0D060 /* ExpandFromEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D31E21D8A300CDA4E2 /* ExpandFromEdge.swift */; };
+		E9EDB5E31E2E1EE100C0D060 /* ExpandFromEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D31E21D8A300CDA4E2 /* ExpandFromEdge.swift */; };
+		E9EDB5E51E2E1F0100C0D060 /* ExpandFromMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D41E21D8A300CDA4E2 /* ExpandFromMargin.swift */; };
+		E9EDB5E61E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */; };
+		E9EDB5E71E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */; };
+		E9EDB5E81E2E1F6200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
+		E9EDB5E91E2E1F6300C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +73,9 @@
 		E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageIntrinsicSizeRelations.swift; sourceTree = "<group>"; };
 		E9CAB2D31E21D8A300CDA4E2 /* ExpandFromEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromEdge.swift; sourceTree = "<group>"; };
 		E9CAB2D41E21D8A300CDA4E2 /* ExpandFromMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromMargin.swift; sourceTree = "<group>"; };
+		E9EDB5C21E2DE4A200C0D060 /* Constraid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Constraid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPriority.swift; sourceTree = "<group>"; };
+		E9EDB5D11E2E18AF00C0D060 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +91,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EDB5BE1E2DE4A200C0D060 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +118,7 @@
 			children = (
 				E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */,
 				E9CAB2A81E21954B00CDA4E2 /* ConstraidTests.xctest */,
+				E9EDB5C21E2DE4A200C0D060 /* Constraid.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +128,8 @@
 			children = (
 				E9CAB2A21E21954B00CDA4E2 /* Constraid.h */,
 				E9CAB2A31E21954B00CDA4E2 /* Info.plist */,
+				E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */,
+				E9EDB5D11E2E18AF00C0D060 /* View.swift */,
 				E9CAB2B91E219A3C00CDA4E2 /* PriorityConstructor.swift */,
 				E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */,
 				E9CAB2BF1E21A32600CDA4E2 /* FlushWithMargins.swift */,
@@ -142,6 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EDB5BF1E2DE4A200C0D060 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +216,24 @@
 			productReference = E9CAB2A81E21954B00CDA4E2 /* ConstraidTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E9EDB5C11E2DE4A200C0D060 /* Constraid MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EDB5C91E2DE4A300C0D060 /* Build configuration list for PBXNativeTarget "Constraid MacOS" */;
+			buildPhases = (
+				E9EDB5BD1E2DE4A200C0D060 /* Sources */,
+				E9EDB5BE1E2DE4A200C0D060 /* Frameworks */,
+				E9EDB5BF1E2DE4A200C0D060 /* Headers */,
+				E9EDB5C01E2DE4A200C0D060 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Constraid MacOS";
+			productName = "Constraid MacOS";
+			productReference = E9EDB5C21E2DE4A200C0D060 /* Constraid.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +255,11 @@
 						DevelopmentTeam = 6449Q3J4XH;
 						ProvisioningStyle = Automatic;
 					};
+					E9EDB5C11E2DE4A200C0D060 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6449Q3J4XH;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = E9CAB2991E21954B00CDA4E2 /* Build configuration list for PBXProject "Constraid" */;
@@ -221,6 +276,7 @@
 			targets = (
 				E9CAB29E1E21954B00CDA4E2 /* Constraid */,
 				E9CAB2A71E21954B00CDA4E2 /* ConstraidTests */,
+				E9EDB5C11E2DE4A200C0D060 /* Constraid MacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +296,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9EDB5C01E2DE4A200C0D060 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -247,19 +310,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CAB2D21E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift in Sources */,
-				E9CAB2D51E21D8A300CDA4E2 /* ExpandFromEdge.swift in Sources */,
+				E9EDB5D41E2E18AF00C0D060 /* View.swift in Sources */,
+				E9EDB5E21E2E1EE000C0D060 /* ExpandFromEdge.swift in Sources */,
+				E9EDB5D61E2E1A7C00C0D060 /* FlushWithMargins.swift in Sources */,
+				E9EDB5E51E2E1F0100C0D060 /* ExpandFromMargin.swift in Sources */,
+				E9EDB5E71E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */,
+				E9EDB5D81E2E1C3300C0D060 /* CenterWithinEdges.swift in Sources */,
+				E9EDB5DE1E2E1DF800C0D060 /* ManageRelativePosition.swift in Sources */,
+				E9EDB5CE1E2E081300C0D060 /* FlushWithEdges.swift in Sources */,
+				E9EDB5DA1E2E1D5300C0D060 /* ManageSize.swift in Sources */,
+				E9EDB5E81E2E1F6200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */,
+				E9EDB5D21E2E18AF00C0D060 /* LayoutPriority.swift in Sources */,
+				E9EDB5DC1E2E1DF300C0D060 /* LimitByMargin.swift in Sources */,
 				E9CAB2BA1E219A3C00CDA4E2 /* PriorityConstructor.swift in Sources */,
-				E9CAB2D61E21D8A300CDA4E2 /* ExpandFromMargin.swift in Sources */,
-				E9CAB2C01E21A32600CDA4E2 /* FlushWithMargins.swift in Sources */,
-				E9CAB2C21E21A37000CDA4E2 /* CenterWithinEdges.swift in Sources */,
-				E9CAB2C61E21A43900CDA4E2 /* ManageSize.swift in Sources */,
-				E9CAB2BE1E21A2B800CDA4E2 /* FlushWithEdges.swift in Sources */,
-				E9CAB2C41E21A3C200CDA4E2 /* CenterWithinMargins.swift in Sources */,
-				E9CAB2CC1E21A50F00CDA4E2 /* LimitByEdge.swift in Sources */,
-				E9CAB2CA1E21A4D600CDA4E2 /* LimitByMargin.swift in Sources */,
-				E9CAB2C81E21A49000CDA4E2 /* ManageRelativePosition.swift in Sources */,
-				51E19A9D1E2A82F900998194 /* ExpandFromSize.swift in Sources */,
+				E9EDB5E01E2E1EBF00C0D060 /* LimitByEdge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +335,24 @@
 				E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */,
 				516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */,
 				516653881E2D489B00E28FB3 /* ManageSizeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EDB5BD1E2DE4A200C0D060 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EDB5E31E2E1EE100C0D060 /* ExpandFromEdge.swift in Sources */,
+				E9EDB5D51E2E18AF00C0D060 /* View.swift in Sources */,
+				E9EDB5E61E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */,
+				E9EDB5DF1E2E1DF900C0D060 /* ManageRelativePosition.swift in Sources */,
+				E9EDB5CF1E2E081400C0D060 /* FlushWithEdges.swift in Sources */,
+				E9EDB5E11E2E1EC000C0D060 /* LimitByEdge.swift in Sources */,
+				E9EDB5D91E2E1C3400C0D060 /* CenterWithinEdges.swift in Sources */,
+				E9EDB5E91E2E1F6300C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */,
+				E9EDB5DB1E2E1D5400C0D060 /* ManageSize.swift in Sources */,
+				E9EDB5D31E2E18AF00C0D060 /* LayoutPriority.swift in Sources */,
+				E9EDB5CA1E2DE65F00C0D060 /* PriorityConstructor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +535,52 @@
 			};
 			name = Release;
 		};
+		E9EDB5C71E2DE4A300C0D060 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6449Q3J4XH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Constraid/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.upte.Constraid-MacOS";
+				PRODUCT_NAME = Constraid;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E9EDB5C81E2DE4A300C0D060 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6449Q3J4XH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Constraid/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.upte.Constraid-MacOS";
+				PRODUCT_NAME = Constraid;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -482,6 +610,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E9EDB5C91E2DE4A300C0D060 /* Build configuration list for PBXNativeTarget "Constraid MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EDB5C71E2DE4A300C0D060 /* Debug */,
+				E9EDB5C81E2DE4A300C0D060 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

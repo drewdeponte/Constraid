@@ -1,8 +1,13 @@
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
-extension UIView {
-    open func flush(withLeadingEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+extension ConstraidView {
+    public func flush(withLeadingEdgeOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -12,8 +17,9 @@ extension UIView {
             ])
     }
 
-    open func flush(withTrailingEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withTrailingEdgeOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -23,8 +29,9 @@ extension UIView {
             ])
     }
 
-    open func flush(withTopEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withTopEdgeOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -34,8 +41,9 @@ extension UIView {
             ])
     }
 
-    open func flush(withBottomEdgeOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withBottomEdgeOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -45,8 +53,9 @@ extension UIView {
             ])
     }
 
-    open func flush(withVerticalEdgesOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withVerticalEdgesOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         flush(withLeadingEdgeOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -54,8 +63,9 @@ extension UIView {
               priority: priority)
     }
 
-    open func flush(withHorizontalEdgesOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withHorizontalEdgesOf item: Any?, constant: CGFloat = 0.0,
+                    multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         flush(withTopEdgeOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
@@ -63,8 +73,8 @@ extension UIView {
               priority: priority)
     }
 
-    open func flush(withEdgesOf item: Any?, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-                    priority: UILayoutPriority = UILayoutPriorityRequired) {
+    public func flush(withEdgesOf item: Any?, constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
         
         flush(withHorizontalEdgesOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
