@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Added`: MacOS support, this includes all non-margin methods
 * `Fixed`: incorrect GitHub source path in Podspec
 * `Added`: makeSquare()
 * `Added`: matchWidth(of:) and matchHeight(of:)
