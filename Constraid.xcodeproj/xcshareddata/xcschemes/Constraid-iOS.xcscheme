@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-               BuildableName = "Constraid.framework"
-               BlueprintName = "Constraid"
+               BuildableName = "Constraid-iOS.framework"
+               BlueprintName = "Constraid-iOS"
                ReferencedContainer = "container:Constraid.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9CAB2A71E21954B00CDA4E2"
-               BuildableName = "ConstraidTests.xctest"
-               BlueprintName = "ConstraidTests"
+               BuildableName = "Constraid-iOSTests.xctest"
+               BlueprintName = "Constraid-iOSTests"
                ReferencedContainer = "container:Constraid.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid"
+            BuildableName = "Constraid-iOS.framework"
+            BlueprintName = "Constraid-iOS"
             ReferencedContainer = "container:Constraid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid"
+            BuildableName = "Constraid-iOS.framework"
+            BlueprintName = "Constraid-iOS"
             ReferencedContainer = "container:Constraid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,8 +83,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9CAB29E1E21954B00CDA4E2"
-            BuildableName = "Constraid.framework"
-            BlueprintName = "Constraid"
+            BuildableName = "Constraid-iOS.framework"
+            BlueprintName = "Constraid-iOS"
             ReferencedContainer = "container:Constraid.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
