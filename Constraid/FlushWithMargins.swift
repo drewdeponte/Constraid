@@ -53,7 +53,7 @@ extension ConstraidView {
 
         flush(withLeadingMarginOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
-        flush(withTrailingMarginOf: item, constant: constant, multiplier: multiplier,
+        flush(withTrailingMarginOf: item, constant: (-1.0 * constant), multiplier: multiplier,
               priority: priority)
     }
 
@@ -62,7 +62,7 @@ extension ConstraidView {
 
         flush(withTopMarginOf: item, constant: constant, multiplier: multiplier,
               priority: priority)
-        flush(withBottomMarginOf: item, constant: constant, multiplier: multiplier,
+        flush(withBottomMarginOf: item, constant: (-1.0 * constant), multiplier: multiplier,
               priority: priority)
     }
 

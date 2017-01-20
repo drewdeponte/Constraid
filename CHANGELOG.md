@@ -14,6 +14,7 @@ that you can set version constraints properly.
   flush(withHorizontalEdgesOf) constant argument would not do what expected
 * `Fixed`: `by` on sits(aboveTheTopEdgeOf) and sits(aboveTheTopMarginOf) to not be inverted
 * `Added`: MacOS support, this includes all non-margin methods
+* `Fixed`: incorrect bottom and trailing margins for flush(withHorizontal/VerticalMarginsof)
 * `Fixed`: incorrect GitHub source path in Podspec
 * `Added`: makeSquare()
 * `Added`: matchWidth(of:) and matchHeight(of:)
