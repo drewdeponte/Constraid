@@ -3,7 +3,7 @@
 # Constraid
 
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
-possible for you to programmatically use AutoLayout in your iOS projects.
+possible for you to programmatically use AutoLayout in your iOS & MacOS projects.
 
 For example if you have a child view (`childView`) added as a subview of a parent
 view (`parentView`) and you want that child view to match the width of the parent view you would
