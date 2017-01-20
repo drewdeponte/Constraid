@@ -31,7 +31,7 @@
             NSLayoutConstraint.activate([
                 NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
                                    toItem: item, attribute: .topMargin, multiplier: multiplier,
-                                   constant: constant, priority: priority)
+                                   constant: (-1.0 * constant), priority: priority)
                 ])
         }
 
@@ -80,7 +80,7 @@ extension ConstraidView {
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
                                toItem: item, attribute: .top, multiplier: multiplier,
-                               constant: constant, priority: priority)
+                               constant: (-1.0 * constant), priority: priority)
             ])
     }
 
