@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Fixed`: issue where flush(withEdgesOf), flush(withVerticalEdgesOf), and
+  flush(withHorizontalEdgesOf) constant argument would not do what expected
 * `Fixed`: `by` on sits(aboveTheTopEdgeOf) and sits(aboveTheTopMarginOf) to not be inverted
 * `Added`: MacOS support, this includes all non-margin methods
 * `Fixed`: incorrect GitHub source path in Podspec
