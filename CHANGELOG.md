@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Changed`: `flush(withEdge...)` methods to return collection of constraints
 * `Fixed`: issue where flush(withEdgesOf), flush(withVerticalEdgesOf), and
   flush(withHorizontalEdgesOf) constant argument would not do what expected
 * `Fixed`: `by` on sits(aboveTheTopEdgeOf) and sits(aboveTheTopMarginOf) to not be inverted
