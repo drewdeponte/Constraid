@@ -42,6 +42,8 @@ However, with the aid of [Constraid][constraid] it is as simple as
 childView.flush(withVerticalEdgesOf: parentView)
 ```
 
+<img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right" \>
+
 ## Usage
 
 [Constraid][constraid] tries to simplify things by building on top of the lower level
@@ -330,9 +332,9 @@ xcodebuild -scheme Constraid -project Constraid.xcodeproj build
 `Constraid` is Copyright © 2017 UpTech Works, LLC. It is free software, and
 may be redistributed under the terms specified in the LICENSE file.
 
-## Our Mascot
+## Our Mascots
 
-The mascot for our project is the work of [Ron Leishman][]. We licensed it and it is
+The mascots for our project are the work of [Ron Leishman][]. We licensed them and they are
 available for licensing if you like from [shutterstock][crazyman].
 
 ## About ![uptech](http://upte.ch/img/logo.png)
