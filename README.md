@@ -1,6 +1,6 @@
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
+[<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>][carthage]
 
-<img src="resources/mascot.png" align="left" \>
+<img src="resources/mascot.png" alt="Crazy Man in Straight Jacket" align="left" \>
 
 # Constraid
 
