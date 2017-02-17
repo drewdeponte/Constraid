@@ -139,7 +139,7 @@ this by using the following:
 viewA.setWidth(100)
 ```
 
-<img src="resources/bandaid.png" alt="First Aid Case" align="right" height="120px" hspace="20px" vspace="30px" \>
+<img src="resources/bandaid.png" alt="Bandaid" align="right" height="120px" hspace="20px" vspace="30px" \>
 
 If on the other hand you wanted `viewA`'s height to be explicitly sized to 100 pts you would
 do.
@@ -208,6 +208,8 @@ viewA.sits(aboveTheTopMarginOf:)
 viewA.sits(belowTheBottomEdgeOf:)
 viewA.sits(belowTheBottomMarginOf:)
 ```
+
+<img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="80px" hspace="20px" vspace="20px" \>
 
 ### Limit
 
