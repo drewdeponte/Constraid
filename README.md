@@ -95,6 +95,8 @@ viewA.flush(withHorizontalMarginsOf: viewB)
 viewA.flush(withMarginsOf: viewB)
 ```
 
+<img src="resources/first_aid_case.png" alt="First Aid Case" align="left" height="120px" hspace="30px" vspace="30px" \>
+
 ### Center
 
 Ok so you want `viewA` to be centered inside of `viewB`'s edges. You can accomplish this by
