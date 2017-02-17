@@ -1,6 +1,6 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthage]
 
-<img src="resources/mascot.png" style="float: left; margin-left: 40px; margin-right: 60px;" \>
+<img src="resources/mascot.png" align="left" \>
 
 # Constraid
 
