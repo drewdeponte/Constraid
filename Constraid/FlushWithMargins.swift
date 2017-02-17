@@ -4,6 +4,19 @@
 import UIKit
 
 extension ConstraidView {
+    /**
+        Constrains the object's leading edge to the leading margin of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the leading
+          margin of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          leading margin of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withLeadingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
