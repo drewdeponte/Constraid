@@ -209,7 +209,7 @@ viewA.sits(belowTheBottomEdgeOf:)
 viewA.sits(belowTheBottomMarginOf:)
 ```
 
-<img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="80px" hspace="20px" vspace="20px" \>
+<img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px" \>
 
 ### Limit
 
