@@ -330,6 +330,11 @@ xcodebuild -scheme Constraid -project Constraid.xcodeproj build
 `Constraid` is Copyright © 2017 UpTech Works, LLC. It is free software, and
 may be redistributed under the terms specified in the LICENSE file.
 
+## Our Mascot
+
+The mascot for our project is the work of [Ron Leishman][]. We licensed it and it is
+available for licensing if you like from [shutterstock][crazyman].
+
 ## About ![uptech](http://upte.ch/img/logo.png)
 
 `Constraid` is maintained and funded by [UpTech Works, LLC][uptech], a
@@ -343,3 +348,5 @@ We love open source software. See [our other projects][community] or
 [uptech]: http://upte.ch
 [carthage]: https://github.com/Carthage/Carthage
 [constraid]: https://github.com/uptech/Constraid
+[crazyman]: https://www.shutterstock.com/image-vector/crazy-cartoon-man-straight-jacket-193143881
+[Ron Leishman]: https://www.shutterstock.com/g/Ron+Leishman
