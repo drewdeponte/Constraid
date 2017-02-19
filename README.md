@@ -283,8 +283,8 @@ provided below.
 ```swift
 viewA.expand(fromLeadingEdgeOf: viewB)
 viewA.expand(fromTrailingEdgeOf: viewB)
-viewA.expand(fromfrompEdgeOf: viewB)
-viewA.expand(fromBotfrommEdgeOf: viewB)
+viewA.expand(fromTopEdgeOf: viewB)
+viewA.expand(fromBottomEdgeOf: viewB)
 
 viewA.expand(fromVerticalEdgesOf: viewB)
 viewA.expand(fromHorizontalEdgesOf: viewB)
@@ -293,8 +293,8 @@ viewA.expand(fromEdgesOf: viewB)
 
 viewA.expand(fromLeadingMarginOf: viewB)
 viewA.expand(fromTrailingMarginOf: viewB)
-viewA.expand(fromfrompMarginOf: viewB)
-viewA.expand(fromBotfrommMarginOf: viewB)
+viewA.expand(fromTopMarginOf: viewB)
+viewA.expand(fromBottomMarginOf: viewB)
 
 viewA.expand(fromVerticalMarginsOf: viewB)
 viewA.expand(fromHorizontalMarginsOf: viewB)
