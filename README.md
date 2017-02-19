@@ -1,6 +1,7 @@
 <img src="resources/mascot.png" alt="Crazy Man in Straight Jacket" align="left" \>
 
 [<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>][carthage]
+[<img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right"\>][travisproject]
 
 # Constraid
 
@@ -359,3 +360,4 @@ We love open source software. See [our other projects][community] or
 [constraid]: https://github.com/uptech/Constraid
 [crazyman]: https://www.shutterstock.com/image-vector/crazy-cartoon-man-straight-jacket-193143881
 [Ron Leishman]: https://www.shutterstock.com/g/Ron+Leishman
+[travisproject]: https://travis-ci.org/uptech/Constraid
