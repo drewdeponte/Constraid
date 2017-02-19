@@ -330,7 +330,8 @@ However, if you don't want to use [Carthage][carthage] or you are having difficu
 build failures you can try the following which should provide some more details.
 
 ```
-xcodebuild -scheme Constraid -project Constraid.xcodeproj build
+xcodebuild -scheme Constraid-MacOS -project Constraid.xcodeproj build
+xcodebuild -scheme Constraid-iOS -project Constraid.xcodeproj build
 ```
 
 ## License
