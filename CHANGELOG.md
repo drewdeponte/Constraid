@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Changed`: `flush(withEdge...)` methods to use `insetBy` instead of `constant`
 * `Changed`: `flush(withMargin...)` methods to use `insetBy` instead of `constant`
 * `Changed`: `flush(withMargin...)` methods to return collection of constraints
 * `Fixed`: issue where flush(withMarginsOf), flush(withVerticalMarginsOf), and
