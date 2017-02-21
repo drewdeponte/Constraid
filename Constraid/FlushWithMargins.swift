@@ -5,92 +5,92 @@ import UIKit
 
 extension ConstraidView {
     @discardableResult
-    open func flush(withLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withLeadingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal,
                                toItem: item, attribute: .leadingMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
+                               constant: inset, priority: priority)
             ])
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withTrailingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
                                toItem: item, attribute: .trailingMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
+                               constant: inset, priority: priority)
             ])
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withTopMarginOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withTopMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
                                toItem: item, attribute: .topMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
+                               constant: inset, priority: priority)
             ])
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withBottomMarginOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withBottomMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
                                toItem: item, attribute: .bottomMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
+                               constant: inset, priority: priority)
             ])
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withVerticalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
-        let constraints = flush(withLeadingMarginOf: item, constant: constant,
+        let constraints = flush(withLeadingMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
-                          flush(withTrailingMarginOf: item, constant: (-1.0 * constant),
+                          flush(withTrailingMarginOf: item, insetBy: (-1.0 * inset),
                                 multiplier: multiplier, priority: priority)
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withHorizontalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
-        let constraints = flush(withTopMarginOf: item, constant: constant, multiplier: multiplier,
+        let constraints = flush(withTopMarginOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
-                          flush(withBottomMarginOf: item, constant: (-1.0 * constant),
+                          flush(withBottomMarginOf: item, insetBy: (-1.0 * inset),
                                 multiplier: multiplier, priority: priority)
         constraints.activate()
         return constraints
     }
 
     @discardableResult
-    open func flush(withMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func flush(withMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
 
-        let constraints = flush(withHorizontalMarginsOf: item, constant: constant,
+        let constraints = flush(withHorizontalMarginsOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
-                          flush(withVerticalMarginsOf: item, constant: constant,
+                          flush(withVerticalMarginsOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority)
         constraints.activate()
         return constraints

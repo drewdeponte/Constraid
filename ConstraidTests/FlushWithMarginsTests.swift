@@ -8,7 +8,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withLeadingMarginOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withLeadingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -29,7 +29,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withTrailingMarginOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withTrailingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -50,7 +50,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withTopMarginOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withTopMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -71,7 +71,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withBottomMarginOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withBottomMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -92,7 +92,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withVerticalMarginsOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withVerticalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
@@ -125,7 +125,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withHorizontalMarginsOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withHorizontalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
@@ -158,7 +158,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withMarginsOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
 
         let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
         let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
