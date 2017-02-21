@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased]
 
+* `Fixed`: `flush(withEdge...)` issue where `constant` didn't behave as expected
 * `Fixed`: `flush(withMargin...)` issue where `constant` didn't behave as expected
 * `Changed`: `flush(withEdge...)` methods to use `insetBy` instead of `constant`
 * `Changed`: `flush(withMargin...)` methods to use `insetBy` instead of `constant`
