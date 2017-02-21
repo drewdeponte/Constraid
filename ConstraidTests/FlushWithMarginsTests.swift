@@ -40,7 +40,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.relation, NSLayoutRelation.equal)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.trailingMargin)
-        XCTAssertEqual(constraintOne.constant, 10.0)
+        XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, 500)
     }
@@ -82,7 +82,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.relation, NSLayoutRelation.equal)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.bottomMargin)
-        XCTAssertEqual(constraintOne.constant, 10.0)
+        XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, 500)
     }

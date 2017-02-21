@@ -26,7 +26,7 @@ extension ConstraidView {
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
                                toItem: item, attribute: .trailingMargin, multiplier: multiplier,
-                               constant: inset, priority: priority)
+                               constant: (-1.0 * inset), priority: priority)
             ])
         constraints.activate()
         return constraints
@@ -54,7 +54,7 @@ extension ConstraidView {
         let constraints = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
                                toItem: item, attribute: .bottomMargin, multiplier: multiplier,
-                               constant: inset, priority: priority)
+                               constant: (-1.0 * inset), priority: priority)
             ])
         constraints.activate()
         return constraints
@@ -66,7 +66,7 @@ extension ConstraidView {
 
         let constraints = flush(withLeadingMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
-                          flush(withTrailingMarginOf: item, insetBy: (-1.0 * inset),
+                          flush(withTrailingMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority)
         constraints.activate()
         return constraints
@@ -78,7 +78,7 @@ extension ConstraidView {
 
         let constraints = flush(withTopMarginOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
-                          flush(withBottomMarginOf: item, insetBy: (-1.0 * inset),
+                          flush(withBottomMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority)
         constraints.activate()
         return constraints
