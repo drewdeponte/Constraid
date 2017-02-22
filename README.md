@@ -120,13 +120,13 @@ and the appropriate attributes (`centerX`, `centerY`, `centerXwithinMargins`,
 provided below.
 
 ```swift
-viewA.centerVertically(within: viewB)
-viewA.centerHorizontally(within: viewB)
+viewA.center(verticallyWithin: viewB)
+viewA.center(horizontallyWithin: viewB)
 
 viewA.center(within: viewB)
 
-viewA.centerVertically(withinMarginsOf: viewB)
-viewA.centerHorizontally(withinMarginsOf: viewB)
+viewA.center(verticallyWithinMarginsOf: viewB)
+viewA.center(horizontallyWithinMarginsOf: viewB)
 
 viewA.center(withinMarginsOf: viewB)
 ```

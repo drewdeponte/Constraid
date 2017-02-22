@@ -4,7 +4,7 @@
 import UIKit
 
 extension ConstraidView {
-    open func centerVertically(withinMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func center(verticallyWithinMarginsOf item: Any?, constant: CGFloat = 0.0,
                                multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -15,7 +15,7 @@ extension ConstraidView {
             ])
     }
 
-    open func centerHorizontally(withinMarginsOf item: Any?, constant: CGFloat = 0.0,
+    open func center(horizontallyWithinMarginsOf item: Any?, constant: CGFloat = 0.0,
                                  multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -29,9 +29,9 @@ extension ConstraidView {
     open func center(withinMarginsOf item: Any?, constant: CGFloat = 0.0,
                      multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
 
-        self.centerHorizontally(withinMarginsOf: item, constant: constant,
+        self.center(horizontallyWithinMarginsOf: item, constant: constant,
                                 multiplier: multiplier, priority: priority)
-        self.centerVertically(withinMarginsOf: item, constant: constant,
+        self.center(verticallyWithinMarginsOf: item, constant: constant,
                               multiplier: multiplier, priority: priority)
     }
 }

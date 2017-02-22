@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Changed `centerVertically()` and `centerHorizontally` to
+  `center(vertically...)` and `center(horizontally...)`
 * Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
 * Fixed `flush(withMargin...)` issue where `constant` didn't behave as expected
 * Changed `flush(withEdge...)` methods to use `insetBy` instead of `constant`
