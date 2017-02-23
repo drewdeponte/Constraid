@@ -1,11 +1,10 @@
 <img src="resources/mascot.png" alt="Crazy Man in Straight Jacket" align="left" \>
 
+[<img src="https://badges.gitter.im/uptech/Constraid.svg" align="right" alt="Join the chat at https://gitter.im/uptech/Constraid"\>][gitterroom]
 [<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>][carthage]
 [<img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right"\>][travisproject]
 
 # Constraid
-
-[![Join the chat at https://gitter.im/uptech/Constraid](https://badges.gitter.im/uptech/Constraid.svg)](https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
 possible for you to programmatically use AutoLayout in your iOS & MacOS projects.
@@ -363,3 +362,4 @@ We love open source software. See [our other projects][community] or
 [crazyman]: https://www.shutterstock.com/image-vector/crazy-cartoon-man-straight-jacket-193143881
 [Ron Leishman]: https://www.shutterstock.com/g/Ron+Leishman
 [travisproject]: https://travis-ci.org/uptech/Constraid
+[gitterroom]: https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
