@@ -5,6 +5,8 @@
 
 # Constraid
 
+[![Join the chat at https://gitter.im/uptech/Constraid](https://badges.gitter.im/uptech/Constraid.svg)](https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
 possible for you to programmatically use AutoLayout in your iOS & MacOS projects.
 
