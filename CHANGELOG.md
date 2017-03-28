@@ -10,6 +10,9 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Fixed bug with `center(horizontallyWithinMarginsOf:)`
+* Changed center methods to return constraint collections
+* Added tests for center within edges and center within margins
 * Changed `centerVertically()` and `centerHorizontally` to
   `center(vertically...)` and `center(horizontally...)`
 * Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
