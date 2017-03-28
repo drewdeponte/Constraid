@@ -45,6 +45,8 @@
 		E9EDB6051E2EA02D00C0D060 /* ExpandFromEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D31E21D8A300CDA4E2 /* ExpandFromEdge.swift */; };
 		E9EDB6061E2EA03B00C0D060 /* ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */; };
 		E9EDB6071E2EA04200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
+		E9EFFFC41E8A5DA100F26BAB /* CenterWithinEdgesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFFFC21E8A5DA100F26BAB /* CenterWithinEdgesTests.swift */; };
+		E9EFFFC51E8A5DA100F26BAB /* CenterWithinMarginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFFFC31E8A5DA100F26BAB /* CenterWithinMarginsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		E9EDB5F31E2E9F6500C0D060 /* Constraid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Constraid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EDB5F51E2E9F6500C0D060 /* Constraid-MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constraid-MacOS.h"; sourceTree = "<group>"; };
 		E9EDB5F61E2E9F6600C0D060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EFFFC21E8A5DA100F26BAB /* CenterWithinEdgesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinEdgesTests.swift; sourceTree = "<group>"; };
+		E9EFFFC31E8A5DA100F26BAB /* CenterWithinMarginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinMarginsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				E9112A601E31A94A00F5CEC5 /* ManageRelativePositionTests.swift */,
 				E9112A621E31AC6100F5CEC5 /* FlushWithEdgesTests.swift */,
 				E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */,
+				E9EFFFC21E8A5DA100F26BAB /* CenterWithinEdgesTests.swift */,
+				E9EFFFC31E8A5DA100F26BAB /* CenterWithinMarginsTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -363,10 +369,12 @@
 			files = (
 				E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */,
 				E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */,
+				E9EFFFC51E8A5DA100F26BAB /* CenterWithinMarginsTests.swift in Sources */,
 				E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */,
 				516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */,
 				E9112A631E31AC6100F5CEC5 /* FlushWithEdgesTests.swift in Sources */,
 				E9112A611E31A94A00F5CEC5 /* ManageRelativePositionTests.swift in Sources */,
+				E9EFFFC41E8A5DA100F26BAB /* CenterWithinEdgesTests.swift in Sources */,
 				516653881E2D489B00E28FB3 /* ManageSizeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
