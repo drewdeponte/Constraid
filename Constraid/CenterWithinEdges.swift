@@ -53,4 +53,42 @@ extension ConstraidView {
         constraints.activate()
         return constraints
     }
+
+    // MARK: - Deprecated
+
+    @discardableResult
+    @available(*, deprecated, message: "use center(verticallyWithin: ...)")
+    open func centerVertically(within item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .centerY,
+                relatedBy: .equal, toItem: item, attribute: .centerY,
+                multiplier: multiplier, constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    @available(*, deprecated, message: "use center(horizontallyWithin: ...)")
+    open func centerHorizontally(within item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .centerX,
+                relatedBy: .equal, toItem: item, attribute: .centerX,
+                multiplier: multiplier, constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
+    }
 }
