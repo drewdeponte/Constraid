@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`
 * Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
 * Fixed bug with `center(horizontallyWithinMarginsOf:)`
 * Changed center methods to return constraint collections
