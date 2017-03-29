@@ -1,8 +1,17 @@
+
 <img src="resources/mascot.png" alt="Crazy Man in Straight Jacket" align="left" \>
 
-[<img src="https://badges.gitter.im/uptech/Constraid.svg" align="right" alt="Join the chat at https://gitter.im/uptech/Constraid"\>][gitterroom]
-[<img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>][carthage]
-[<img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right"\>][travisproject]
+<a href="https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+  <img src="https://badges.gitter.im/uptech/Constraid.svg" align="right" alt="Join the chat at https://gitter.im/uptech/Constraid"\>
+</a>
+
+<a href="https://github.com/Carthage/Carthage">
+  <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>
+</a>
+
+<a href="https://travis-ci.org/uptech/Constraid">
+  <img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right"\>
+</a>
 
 # Constraid
 
