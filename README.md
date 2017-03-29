@@ -1,17 +1,15 @@
-# Test
-
-<img src="http://media.upte.ch/images/mascot.png" alt="Crazy Man in Straight Jacket" align="left" \>
+<img src="http://media.upte.ch/images/mascot.png" alt="Crazy Man in Straight Jacket" align="left">
 
 <a href="https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-  <img src="https://badges.gitter.im/uptech/Constraid.svg" align="right" alt="Join the chat at https://gitter.im/uptech/Constraid"\>
+  <img src="https://badges.gitter.im/uptech/Constraid.svg" align="right" alt="Join the chat at https://gitter.im/uptech/Constraid">
 </a>
 
 <a href="https://github.com/Carthage/Carthage">
-  <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right"\>
+  <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" align="right">
 </a>
 
 <a href="https://travis-ci.org/uptech/Constraid">
-  <img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right"\>
+  <img src="https://travis-ci.org/uptech/Constraid.svg?branch=master" align="right">
 </a>
 
 # Constraid
@@ -54,7 +52,7 @@ However, with the aid of [Constraid][constraid] it is as simple as
 childView.flush(withVerticalEdgesOf: parentView)
 ```
 
-<img src="http://media.upte.ch/images/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right" \>
+<img src="http://media.upte.ch/images/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
 
 ## Usage
 
@@ -107,7 +105,7 @@ viewA.flush(withHorizontalMarginsOf: viewB)
 viewA.flush(withMarginsOf: viewB)
 ```
 
-<img src="http://media.upte.ch/images/first_aid_case.png" alt="First Aid Case" align="left" height="120px" hspace="20px" vspace="30px" \>
+<img src="http://media.upte.ch/images/first_aid_case.png" alt="First Aid Case" align="left" height="120px" hspace="20px" vspace="30px">
 
 ### Center
 
@@ -151,7 +149,7 @@ this by using the following:
 viewA.setWidth(100)
 ```
 
-<img src="http://media.upte.ch/images/bandaid.png" alt="Bandaid" align="right" height="120px" hspace="20px" vspace="30px" \>
+<img src="http://media.upte.ch/images/bandaid.png" alt="Bandaid" align="right" height="120px" hspace="20px" vspace="30px">
 
 If on the other hand you wanted `viewA`'s height to be explicitly sized to 100 pts you would
 do.
@@ -221,7 +219,7 @@ viewA.sits(belowTheBottomEdgeOf:)
 viewA.sits(belowTheBottomMarginOf:)
 ```
 
-<img src="http://media.upte.ch/images/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px" \>
+<img src="http://media.upte.ch/images/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px">
 
 ### Limit
 
