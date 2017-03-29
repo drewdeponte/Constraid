@@ -4,6 +4,7 @@
 import UIKit
 
 extension ConstraidView {
+    @discardableResult
     open func center(verticallyWithinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
@@ -21,6 +22,7 @@ extension ConstraidView {
         return collection
     }
 
+    @discardableResult
     open func center(horizontallyWithinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
@@ -38,6 +40,7 @@ extension ConstraidView {
         return collection
     }
 
+    @discardableResult
     open func center(withinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
