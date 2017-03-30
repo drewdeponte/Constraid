@@ -10,6 +10,10 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Backfilled test for `limit(byEdgesOf:)` family of methods
+* Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
+* Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
+* Changed `limit(byEdgesOf:)` family to return collection of constraints
 * Deprecated `flush(withMarginsOf:, constant:)` use `flush(withMarginsOf:, insetBy:)`
 * Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`
 * Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
