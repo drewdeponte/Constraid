@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
 * Fixed bug with `center(horizontallyWithinMarginsOf:)`
 * Changed center methods to return constraint collections
 * Added tests for center within edges and center within margins
