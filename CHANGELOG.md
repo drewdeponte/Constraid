@@ -10,12 +10,18 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
-* Changed `limit(byMarginsOf:)` family to return collection of constraints
+* Backfilled test for `expand(fromEdgesOf:)` family of methods
+* Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
+  **breaking change**
+* Fixed bug with `expand(fromTrailingEdgeOf:)` treating `constant` as a positive
+  **breaking change**
+* Changed `expand(fromEdgesOf:)` family to return collection of constraints
 * Backfilled test for `limit(byMarginsOf:)` family of methods
 * Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
   **breaking change**
 * Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
   **breaking change**
+* Changed `limit(byMarginsOf:)` family to return collection of constraints
 * Backfilled test for `limit(byEdgesOf:)` family of methods
 * Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
   **breaking change**
