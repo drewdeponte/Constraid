@@ -10,9 +10,17 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Changed `limit(byMarginsOf:)` family to return collection of constraints
+* Backfilled test for `limit(byMarginsOf:)` family of methods
+* Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
+  **breaking change**
+* Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
+  **breaking change**
 * Backfilled test for `limit(byEdgesOf:)` family of methods
 * Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
+  **breaking change**
 * Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
+  **breaking change**
 * Changed `limit(byEdgesOf:)` family to return collection of constraints
 * Deprecated `flush(withMarginsOf:, constant:)` use `flush(withMarginsOf:, insetBy:)`
 * Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`

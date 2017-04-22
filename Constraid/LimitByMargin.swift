@@ -4,78 +4,120 @@
 import UIKit
 
 extension ConstraidView {
-    open func limit(byBottomMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func limit(byLeadingMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .bottom,relatedBy: .lessThanOrEqual,
-                               toItem: item, attribute: .bottomMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .leading,
+                relatedBy: .lessThanOrEqual, toItem: item,
+                attribute: .leadingMargin, multiplier: multiplier,
+                constant: constant, priority: priority)
             ])
+        collection.activate()
+        return collection
     }
 
-    open func limit(byTopMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func limit(byTrailingMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .lessThanOrEqual,
-                               toItem: item, attribute: .topMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-    }
-
-    open func limit(byLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .lessThanOrEqual,
-                               toItem: item, attribute: .leadingMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-    }
-
-    open func limit(byTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+        let collection = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing,
-                               relatedBy: .lessThanOrEqual, toItem: item, attribute: .trailingMargin,
-                               multiplier: multiplier, constant: constant, priority: priority)
+               relatedBy: .lessThanOrEqual, toItem: item,
+               attribute: .trailingMargin, multiplier: multiplier,
+               constant: (constant * -1), priority: priority)
             ])
+        collection.activate()
+        return collection
     }
 
-    open func limit(byHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                              multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func limit(byTopMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        limit(byTopMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
-        limit(byBottomMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .top,
+                relatedBy: .lessThanOrEqual, toItem: item,
+                attribute: .topMargin, multiplier: multiplier,
+                constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
     }
 
-    open func limit(byVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                                multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func limit(byBottomMarginOf item: Any?,
+        constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        limit(byLeadingMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
-        limit(byTrailingMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .bottom,
+                relatedBy: .lessThanOrEqual, toItem: item,
+                attribute: .bottomMargin, multiplier: multiplier,
+                constant: (constant * -1), priority: priority)
+            ])
+        collection.activate()
+        return collection
     }
 
-    open func limit(byMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func limit(byHorizontalMarginsOf item: Any?,
+        constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        limit(byTopMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
-        limit(byBottomMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
-        limit(byLeadingMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
-        limit(byTrailingMarginOf: item, constant: constant, multiplier: multiplier,
-              priority: priority)
+        let collection = limit(byTopMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority) +
+                         limit(byBottomMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    open func limit(byVerticalMarginsOf item: Any?,
+        constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        let collection = limit(byLeadingMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority) +
+                         limit(byTrailingMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    open func limit(byMarginsOf item: Any?,
+        constant: CGFloat = 0.0, multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        let collection = limit(byTopMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority) +
+                         limit(byBottomMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority) +
+                         limit(byLeadingMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority) +
+                         limit(byTrailingMarginOf: item, constant: constant,
+                             multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
     }
 }
