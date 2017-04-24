@@ -10,6 +10,12 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Backfilled test for `expand(fromMarginsOf:)` family of methods
+* Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
+  **breaking change**
+* Fixed bug with `expand(fromTrailingMarginOf:)` treating `constant` as a positive
+  **breaking change**
+* Changed `expand(fromMarginsOf:)` family to return collection of constraints
 * Backfilled test for `expand(fromEdgesOf:)` family of methods
 * Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
   **breaking change**
