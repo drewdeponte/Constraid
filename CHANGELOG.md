@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Backfilled tests for Manage Size methods
+* Changed Manage Size methods to return collection of constraints
 * Backfilled tests for Manage Intrinsic Size Relations methods
 * Backfilled test for Manage Relative Position family of methods
 * Changed Manage Relative Position family of methods to return collection of constraints
