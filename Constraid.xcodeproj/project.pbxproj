@@ -20,6 +20,7 @@
 		E9C0FE531EAAD0FD003FCF15 /* LimitByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */; };
 		E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */; };
 		E9C0FE571EAD6D70003FCF15 /* ExpandFromMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */; };
+		E9C0FE5B1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */; };
 		E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */; };
 		E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */; };
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +77,7 @@
 		E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByMarginTests.swift; sourceTree = "<group>"; };
 		E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromEdgeTests.swift; sourceTree = "<group>"; };
 		E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromMarginTests.swift; sourceTree = "<group>"; };
+		E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageIntrinsicSizeRelationsTests.swift; sourceTree = "<group>"; };
 		E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Constraid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CAB2A21E21954B00CDA4E2 /* Constraid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constraid.h; sourceTree = "<group>"; };
 		E9CAB2A31E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */,
 				E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */,
 				E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */,
+				E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */,
 				E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */,
 				516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */,
+				E9C0FE5B1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift in Sources */,
 				E9112A631E31AC6100F5CEC5 /* FlushWithEdgesTests.swift in Sources */,
 				E9112A611E31A94A00F5CEC5 /* ManageRelativePositionTests.swift in Sources */,
 				E9C0FE531EAAD0FD003FCF15 /* LimitByMarginTests.swift in Sources */,
