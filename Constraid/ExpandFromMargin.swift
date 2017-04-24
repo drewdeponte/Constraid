@@ -4,78 +4,124 @@
 import UIKit
 
 extension ConstraidView {
-    open func expand(fromBottomMarginOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func expand(fromLeadingMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .bottom,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .bottomMargin,
-                               multiplier: multiplier, constant: constant, priority: priority)
-            ])
-    }
-
-    open func expand(fromTopMarginOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .greaterThanOrEqual,
-                               toItem: item, attribute: .topMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-    }
-
-    open func expand(fromLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+        let collection = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .leadingMargin,
-                               multiplier: multiplier, constant: constant, priority: priority)
+                relatedBy: .greaterThanOrEqual, toItem: item,
+                attribute: .leadingMargin, multiplier: multiplier,
+                constant: constant, priority: priority)
             ])
+        collection.activate()
+        return collection
     }
 
-    open func expand(fromTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func expand(fromTrailingMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
+        let collection = ConstraidConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing,
-                               relatedBy: .greaterThanOrEqual, toItem: item, attribute: .trailingMargin,
-                               multiplier: multiplier, constant: constant, priority: priority)
+                relatedBy: .greaterThanOrEqual, toItem: item,
+                attribute: .trailingMargin, multiplier: multiplier,
+                constant: (constant * -1), priority: priority)
             ])
+        collection.activate()
+        return collection
     }
 
-    open func expand(fromHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                               multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func expand(fromTopMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        expand(fromTopMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
-        expand(fromBottomMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .top,
+                relatedBy: .greaterThanOrEqual, toItem: item,
+                attribute: .topMargin, multiplier: multiplier,
+                constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
     }
 
-    open func expand(fromVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                                 multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func expand(fromBottomMarginOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        expand(fromLeadingMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
-        expand(fromTrailingMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .bottom,
+                relatedBy: .greaterThanOrEqual, toItem: item,
+                attribute: .bottomMargin, multiplier: multiplier,
+                constant: (constant * -1), priority: priority)
+            ])
+        collection.activate()
+        return collection
     }
 
-    open func expand(fromMarginsOf item: Any?, constant: CGFloat = 0.0,
-                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) {
+    @discardableResult
+    open func expand(fromHorizontalMarginsOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
 
-        expand(fromTopMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
-        expand(fromBottomMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
-        expand(fromLeadingMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
-        expand(fromTrailingMarginOf: item, constant: constant, multiplier: multiplier,
-               priority: priority)
+        let collection = expand(fromTopMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority) +
+                         expand(fromBottomMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    open func expand(fromVerticalMarginsOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        let collection = expand(fromLeadingMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority) +
+                         expand(fromTrailingMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    open func expand(fromMarginsOf item: Any?,
+        constant: CGFloat = 0.0,
+        multiplier: CGFloat = 1.0,
+        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        let collection = expand(fromTopMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority) +
+                         expand(fromBottomMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority) +
+                         expand(fromLeadingMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority) +
+                         expand(fromTrailingMarginOf: item, constant: constant,
+                                multiplier: multiplier, priority: priority)
+        collection.activate()
+        return collection
     }
 }
