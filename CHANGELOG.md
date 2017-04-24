@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Backfilled test for Manage Relative Position family of methods
+* Changed Manage Relative Position family of methods to return collection of constraints
 * Backfilled test for `expand(fromMarginsOf:)` family of methods
 * Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
   **breaking change**
