@@ -22,7 +22,6 @@
 		E9C0FE571EAD6D70003FCF15 /* ExpandFromMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */; };
 		E9C0FE5B1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */; };
 		E9CAB2A91E21954B00CDA4E2 /* Constraid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CAB29F1E21954B00CDA4E2 /* Constraid.framework */; };
-		E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */; };
 		E9CAB2B01E21954B00CDA4E2 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */; };
 		E9EDB5CE1E2E081300C0D060 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
@@ -82,7 +81,6 @@
 		E9CAB2A21E21954B00CDA4E2 /* Constraid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constraid.h; sourceTree = "<group>"; };
 		E9CAB2A31E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CAB2A81E21954B00CDA4E2 /* Constraid-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Constraid-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraidTests.swift; sourceTree = "<group>"; };
 		E9CAB2AF1E21954B00CDA4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityConstructionTests.swift; sourceTree = "<group>"; };
 		E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithEdges.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		E9CAB2AC1E21954B00CDA4E2 /* ConstraidTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9CAB2AD1E21954B00CDA4E2 /* ConstraidTests.swift */,
 				E9CAB2AF1E21954B00CDA4E2 /* Info.plist */,
 				E9CAB2BB1E219A9500CDA4E2 /* PriorityConstructionTests.swift */,
 				516653851E2D41BF00E28FB3 /* ExpandFromSizeTests.swift */,
@@ -383,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */,
-				E9CAB2AE1E21954B00CDA4E2 /* ConstraidTests.swift in Sources */,
 				E9EFFFC51E8A5DA100F26BAB /* CenterWithinMarginsTests.swift in Sources */,
 				E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */,
 				E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */,
