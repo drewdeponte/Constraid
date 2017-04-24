@@ -2,13 +2,14 @@ import XCTest
 import Constraid
 
 class ManageSizeTests: XCTestCase {
-
     func testSetWidth() {
         let viewOne = UIView()
 
-        viewOne.setWidth(10.0, priority: 500)
+        let constraints = viewOne.setWidth(10.0, priority: 500)
+
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
+        XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
@@ -21,9 +22,10 @@ class ManageSizeTests: XCTestCase {
     func testSetHeight() {
         let viewOne = UIView()
 
-        viewOne.setHeight(10.0, priority: 500)
+        let constraints = viewOne.setHeight(10.0, priority: 500)
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
+        XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
@@ -38,9 +40,10 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        viewOne.matchWidth(of: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.matchWidth(of: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
+        XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
@@ -55,9 +58,10 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        viewOne.matchHeight(of: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.matchHeight(of: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
+        XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
@@ -70,9 +74,10 @@ class ManageSizeTests: XCTestCase {
     func testMakeSquare() {
         let viewOne = UIView()
 
-        viewOne.makeSquare(priority: 500)
+        let constraints = viewOne.makeSquare(priority: 500)
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
+        XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
         XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
