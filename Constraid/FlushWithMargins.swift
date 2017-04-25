@@ -11,7 +11,7 @@ extension ConstraidView {
         - parameter inset: The amount to inset the object from the leading
           margin of the item
         - parameter multiplier: The ratio altering the constraint relative to
-          leading margin of the item prior to the `constant` being applied.
+          leading margin of the item prior to the `inset` being applied.
         - parameter priority: The priority this constraint uses when being
           evaluated against other constraints
 
@@ -31,6 +31,19 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's trailing edge to the trailing margin of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the trailing
+          margin of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          trailing margin of the item prior to the `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withTrailingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
@@ -45,6 +58,19 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's top edge to the top margin of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the top
+          margin of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          top margin of the item prior to the `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withTopMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
@@ -59,6 +85,19 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's bottom edge to the bottom margin of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the bottom
+          margin of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          bottom margin of the item prior to the `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withBottomMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
@@ -73,6 +112,20 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's top & bottom edge to the top & bottom margins of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the top & bottom
+          margins of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          top & bottom margins of the item prior to the `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withVerticalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
@@ -85,6 +138,20 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's leading & trailing edge to the leading &
+        trailing margins of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the leading & trailing
+          margins of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          leading & trailing margins of the item prior to the `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withHorizontalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
@@ -97,6 +164,21 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's leading, trailing, top, & bottom  edge to the
+        leading, trailing, top & bottom  margins of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter inset: The amount to inset the object from the leading,
+          trailing, top and bottom margins of the item
+        - parameter multiplier: The ratio altering the constraint relative to
+          leading, trailing, top & bottom  margins of the item prior to the
+          `inset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func flush(withMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
