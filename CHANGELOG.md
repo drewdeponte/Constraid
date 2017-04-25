@@ -75,7 +75,9 @@ that you can set version constraints properly.
 #### [v1.1.0][v1.1.0] - 2017-01-07
 
 * Changed `sitsOn(theTopEdgeOf)` to `sits(aboveTheTopEdgeOf)`
+  (**breaking change**)
 * Changed `sitsUnder(theBottomEdgeOf)` to `sits(belowTheBottomEdgeOf)`
+  (**breaking change**)
 * Added `precedes(theLeadingMarginOf)`, `follows(theTrailingMarginOf)`
 * Added Podspec
 
