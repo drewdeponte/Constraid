@@ -4,6 +4,22 @@
 import UIKit
 
 extension ConstraidView {
+    /**
+        Constrains the object's center to the vertical center of `item` within
+        the margins of `item`
+
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter offset: The amount to offset the object vertically from the
+          center of the item
+        - parameter direction: The vertical direction (.up|.down) to offset the
+          object
+        - parameter multiplier: The ratio altering the constraint relative to
+          center of the item prior to the `offset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func center(verticallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
@@ -34,6 +50,22 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's center to the horizontal center of `item` within
+        the margins of `item`
+
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter offset: The amount to offset the object horizontally from the
+          center of the item
+        - parameter direction: The horizontal direction (.right|.left) to offset the
+          object
+        - parameter multiplier: The ratio altering the constraint relative to
+          center of the item prior to the `offset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func center(horizontallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
@@ -64,6 +96,22 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's center to the vertical & horizontal center of
+        `item` within the margins of `item`
+
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter offset: The amount to offset the object vertically & horizontally
+          from the center of the item
+        - parameter direction: The direction (.downAndright|.upAndleft) to offset the
+          object
+        - parameter multiplier: The ratio altering the constraint relative to
+          center of the item prior to the `offset` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func center(withinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,

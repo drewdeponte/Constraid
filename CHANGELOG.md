@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Document the `center(withinEdgesOf:)` and `center(withinMarginsOf:)` families
 * Document the `flush(withEdgesOf:)` and `flush(withMarginsOf:)` families
 * Deprecated `center(withinMarginsOf:)` use `center(withinMarginsOf:, offsetBy:)`
 * Deprecated `center(withinEdgesOf:)` use `center(withinEdgesOf:, offsetBy:)`
