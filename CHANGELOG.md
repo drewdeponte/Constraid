@@ -14,58 +14,58 @@ that you can set version constraints properly.
 * Deprecated `expand(fromEdgesOf:, constant:)` family use `expand(fromEdgesOf:, offsetBy:)`
 * Deprecated `limit(byMarginsOf:, constant:)` family use `limit(byMarginsOf:, insetBy:)`
 * Deprecated `limit(byEdgesOf:, constant:)` family use `limit(byEdgesOf:, insetBy:)`
+* Deprecated `flush(withMarginsOf:, constant:)` use `flush(withMarginsOf:, insetBy:)`
+* Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`
+* Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
+* Changed Expand From Size methods to return collection of constraints
+* Changed Manage Size methods to return collection of constraints
+* Changed Manage Relative Position family of methods to return collection of constraints
+* Changed `expand(fromMarginsOf:)` family to return collection of constraints
+* Changed `expand(fromEdgesOf:)` family to return collection of constraints
+* Changed `limit(byMarginsOf:)` family to return collection of constraints
+* Changed `limit(byEdgesOf:)` family to return collection of constraints
+* Changed center methods to return constraint collections
+* Changed `flush(withMargin...)` methods to return collection of constraints
+* Changed `flush(withEdge...)` methods to return collection of constraints
 * Backfilled tests for ConstraintCollection
 * Backfilled tests for Expand From Size methods
-* Changed Expand From Size methods to return collection of constraints
 * Backfilled tests for Manage Size methods
-* Changed Manage Size methods to return collection of constraints
 * Backfilled tests for Manage Intrinsic Size Relations methods
-* Backfilled test for Manage Relative Position family of methods
-* Changed Manage Relative Position family of methods to return collection of constraints
-* Backfilled test for `expand(fromMarginsOf:)` family of methods
+* Backfilled tests for Manage Relative Position family of methods
+* Backfilled tests for `expand(fromMarginsOf:)` family of methods
+* Backfilled tests for `expand(fromEdgesOf:)` family of methods
+* Backfilled tests for `limit(byMarginsOf:)` family of methods
+* Backfilled tests for `limit(byEdgesOf:)` family of methods
+* Backfilled tests for center within edges and center within margins
 * Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
   **breaking change**
 * Fixed bug with `expand(fromTrailingMarginOf:)` treating `constant` as a positive
   **breaking change**
-* Changed `expand(fromMarginsOf:)` family to return collection of constraints
-* Backfilled test for `expand(fromEdgesOf:)` family of methods
 * Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
   **breaking change**
 * Fixed bug with `expand(fromTrailingEdgeOf:)` treating `constant` as a positive
   **breaking change**
-* Changed `expand(fromEdgesOf:)` family to return collection of constraints
-* Backfilled test for `limit(byMarginsOf:)` family of methods
 * Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
   **breaking change**
 * Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
   **breaking change**
-* Changed `limit(byMarginsOf:)` family to return collection of constraints
-* Backfilled test for `limit(byEdgesOf:)` family of methods
 * Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
   **breaking change**
 * Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
   **breaking change**
-* Changed `limit(byEdgesOf:)` family to return collection of constraints
-* Deprecated `flush(withMarginsOf:, constant:)` use `flush(withMarginsOf:, insetBy:)`
-* Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`
-* Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
 * Fixed bug with `center(horizontallyWithinMarginsOf:)`
-* Changed center methods to return constraint collections
-* Added tests for center within edges and center within margins
-* Changed `centerVertically()` and `centerHorizontally` to
-  `center(vertically...)` and `center(horizontally...)`
 * Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
+  **breaking change**
 * Fixed `flush(withMargin...)` issue where `constant` didn't behave as expected
-* Changed `flush(withEdge...)` methods to use `insetBy` instead of `constant`
-* Changed `flush(withMargin...)` methods to use `insetBy` instead of `constant`
-* Changed `flush(withMargin...)` methods to return collection of constraints
+  **breaking change**
 * Fixed issue where `flush(withMarginsOf)`, `flush(withVerticalMarginsOf)`, and
   `flush(withHorizontalMarginsOf)` constant argument would not do what expected
-* Changed `flush(withEdge...)` methods to return collection of constraints
+  **breaking change**
 * Fixed issue where `flush(withEdgesOf)`, `flush(withVerticalEdgesOf)`, and
   `flush(withHorizontalEdgesOf)` constant argument would not do what expected
+  **breaking change**
 * Fixed `by` on `sits(aboveTheTopEdgeOf)` and `sits(aboveTheTopMarginOf)` to not
-  be inverted
+  be inverted **breaking change**
 * Added MacOS support, this includes all non-margin methods
 * Fixed incorrect GitHub source path in Podspec
 * Added `makeSquare()`
