@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Deprecated `limit(byMarginsOf:, constant:)` family use `limit(byMarginsOf:, insetBy:)`
 * Deprecated `limit(byEdgesOf:, constant:)` family use `limit(byEdgesOf:, insetBy:)`
 * Backfilled tests for ConstraintCollection
 * Backfilled tests for Expand From Size methods
