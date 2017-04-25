@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Deprecated `center(withinMarginsOf:)` use `center(withinMarginsOf:, offsetBy:)`
+* Deprecated `center(withinEdgesOf:)` use `center(withinEdgesOf:, offsetBy:)`
 * Deprecated `expand(fromMarginsOf:, constant:)` family use `expand(fromMarginsOf:, offsetBy:)`
 * Deprecated `expand(fromEdgesOf:, constant:)` family use `expand(fromEdgesOf:, offsetBy:)`
 * Deprecated `limit(byMarginsOf:, constant:)` family use `limit(byMarginsOf:, insetBy:)`
