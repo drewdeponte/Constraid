@@ -38,34 +38,34 @@ that you can set version constraints properly.
 * Backfilled tests for `limit(byEdgesOf:)` family of methods
 * Backfilled tests for center within edges and center within margins
 * Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `expand(fromTrailingMarginOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `expand(fromTrailingEdgeOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
-  **breaking change**
+  (**breaking change**)
 * Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
-  **breaking change**
-* Fixed bug with `center(horizontallyWithinMarginsOf:)`
+  (**breaking change**)
 * Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
-  **breaking change**
+  (**breaking change**)
 * Fixed `flush(withMargin...)` issue where `constant` didn't behave as expected
-  **breaking change**
+  (**breaking change**)
 * Fixed issue where `flush(withMarginsOf)`, `flush(withVerticalMarginsOf)`, and
   `flush(withHorizontalMarginsOf)` constant argument would not do what expected
-  **breaking change**
+  (**breaking change**)
 * Fixed issue where `flush(withEdgesOf)`, `flush(withVerticalEdgesOf)`, and
   `flush(withHorizontalEdgesOf)` constant argument would not do what expected
-  **breaking change**
+  (**breaking change**)
 * Fixed `by` on `sits(aboveTheTopEdgeOf)` and `sits(aboveTheTopMarginOf)` to not
-  be inverted **breaking change**
+  be inverted (**breaking change**)
+* Fixed bug with `center(horizontallyWithinMarginsOf:)` (**breaking change**)
 * Added MacOS support, this includes all non-margin methods
 * Fixed incorrect GitHub source path in Podspec
 * Added `makeSquare()`
@@ -81,7 +81,7 @@ that you can set version constraints properly.
 
 #### [v1.0.2][v1.0.2] - 2017-01-07
 
-* Fixed bug where precedes attributes were flipped
+* Fixed bug where precedes attributes were flipped (**breaking change**)
 
 #### [v1.0.1][v1.0.1] - 2017-01-07
 
