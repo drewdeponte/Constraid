@@ -4,18 +4,33 @@
     import AppKit
 #endif
 
+/**
+    Enumeration of vertical offset directions
+*/
 public enum ConstraidVerticalOffsetDirection {
+    /// Vertically offset in the upward direction
     case up
+    /// Vertically offset in the downward direction
     case down
 }
 
+/**
+    Enumeration of horizontal offset directions
+*/
 public enum ConstraidHorizontalOffsetDirection {
+    /// Horizontally offset in the right direction
     case right
+    /// Horizontally offset in the left direction
     case left
 }
 
+/**
+    Enumeration of offset directions
+*/
 public enum ConstraidOffsetDirection {
+    /// Offset in the down and right direction
     case downAndRight
+    /// Offset in the up and left direction
     case upAndLeft
 }
 
