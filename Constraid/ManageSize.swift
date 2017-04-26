@@ -5,6 +5,15 @@
 #endif
 
 extension ConstraidView {
+    /**
+        Set width of receiver using a constraint in auto-layout
+
+        - parameter constant: The value to set the width to
+        - parameter priority: The priority this constraint uses when being
+            evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func setWidth(_ constant: CGFloat = 0.0,
         priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
@@ -32,6 +41,15 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Set height of receiver using a constraint in auto-layout
+
+        - parameter constant: The value to set the height to
+        - parameter priority: The priority this constraint uses when being
+            evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func setHeight(_ constant: CGFloat = 0.0,
         priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
@@ -59,6 +77,18 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Set width of receiver to width of `item`
+
+        - parameter item: The object to set the width based on
+        - parameter constant: The amount to adjust the constraint by
+        - parameter multiplier: The ratio altering the constraint relative to
+          the item
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func matchWidth(of item: Any?,
         by constant: CGFloat = 0.0,
@@ -76,6 +106,18 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Set height of receiver to heigt of `item`
+
+        - parameter item: The object to set the width based on
+        - parameter constant: The amount to adjust the constraint by
+        - parameter multiplier: The ratio altering the constraint relative to
+          the item
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func matchHeight(of item: Any?,
         by constant: CGFloat = 0.0,
@@ -93,6 +135,14 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Add constraint to receiver declaring it square
+
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func makeSquare(
         priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
