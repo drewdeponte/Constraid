@@ -2,6 +2,23 @@
     import UIKit
 
     extension ConstraidView {
+        /**
+            Constrains the receiver's leading edge to the trailing margin of
+            `item`
+         
+            - parameter item: The `item` you want to constrain the current
+              object to
+            - parameter constant: The amount to offset the object's leading
+              edge from the trailing margin of the `item`
+            - parameter multiplier: The ratio altering the constraint relative
+              to the trailing margin of the item prior to the constant being
+              applied
+            - parameter priority: The priority this constraint uses when being
+              evaluated against other constraints
+
+            - returns: Constraint collection containing the generated
+              constraint
+        */
         @discardableResult
         open func follows(theTrailingMarginOf item: Any?,
             by constant: CGFloat = 0.0,
@@ -20,6 +37,23 @@
             return collection
         }
 
+        /**
+            Constrains the receiver's trailing edge to the leading margin of
+            `item`
+         
+            - parameter item: The `item` you want to constrain the current
+              object to
+            - parameter constant: The amount to offset the object's trailing
+              edge from the leading margin of the `item`
+            - parameter multiplier: The ratio altering the constraint relative
+              to the leading margin of the item prior to the constant being
+              applied
+            - parameter priority: The priority this constraint uses when being
+              evaluated against other constraints
+
+            - returns: Constraint collection containing the generated
+              constraint
+        */
         @discardableResult
         open func precedes(theLeadingMarginOf item: Any?,
             by constant: CGFloat = 0.0,
@@ -38,6 +72,23 @@
             return collection
         }
 
+        /**
+            Constrains the receiver's bottom edge to the top margin of
+            `item`
+         
+            - parameter item: The `item` you want to constrain the current
+              object to
+            - parameter constant: The amount to offset the object's bottom
+              edge from the top margin of the `item`
+            - parameter multiplier: The ratio altering the constraint relative
+              to the top margin of the item prior to the constant being
+              applied
+            - parameter priority: The priority this constraint uses when being
+              evaluated against other constraints
+
+            - returns: Constraint collection containing the generated
+              constraint
+        */
         @discardableResult
         open func sits(aboveTheTopMarginOf item: Any?,
             by constant: CGFloat = 0.0,
@@ -56,6 +107,23 @@
             return collection
         }
 
+        /**
+            Constrains the receiver's top edge to the bottom margin of
+            `item`
+         
+            - parameter item: The `item` you want to constrain the current
+              object to
+            - parameter constant: The amount to offset the object's top
+              edge from the bottom margin of the `item`
+            - parameter multiplier: The ratio altering the constraint relative
+              to the bottom margin of the item prior to the constant being
+              applied
+            - parameter priority: The priority this constraint uses when being
+              evaluated against other constraints
+
+            - returns: Constraint collection containing the generated
+              constraint
+        */
         @discardableResult
         open func sits(belowTheBottomMarginOf item: Any?,
             by constant: CGFloat = 0.0,
@@ -79,6 +147,23 @@
 #endif
 
 extension ConstraidView {
+    /**
+        Constrains the receiver's leading edge to the trailing edge of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current
+          object to
+        - parameter constant: The amount to offset the object's leading
+          edge from the trailing edge of the `item`
+        - parameter multiplier: The ratio altering the constraint relative
+          to the trailing edge of the item prior to the constant being
+          applied
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated
+          constraint
+    */
     @discardableResult
     open func follows(theTrailingEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
@@ -96,6 +181,23 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the receiver's trailing edge to the leading edge of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current
+          object to
+        - parameter constant: The amount to offset the object's trailing
+          edge from the leading edge of the `item`
+        - parameter multiplier: The ratio altering the constraint relative
+          to the leading edge of the item prior to the constant being
+          applied
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated
+          constraint
+    */
     @discardableResult
     open func precedes(theLeadingEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
@@ -113,6 +215,23 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the receiver's bottom edge to the top edge of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current
+          object to
+        - parameter constant: The amount to offset the object's bottom
+          edge from the top edge of the `item`
+        - parameter multiplier: The ratio altering the constraint relative
+          to the top edge of the item prior to the constant being
+          applied
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated
+          constraint
+    */
     @discardableResult
     open func sits(aboveTheTopEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
@@ -131,6 +250,23 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the receiver's top edge to the bottom edge of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current
+          object to
+        - parameter constant: The amount to offset the object's top
+          edge from the bottom edge of the `item`
+        - parameter multiplier: The ratio altering the constraint relative
+          to the bottom edge of the item prior to the constant being
+          applied
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated
+          constraint
+    */
     @discardableResult
     open func sits(belowTheBottomEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
