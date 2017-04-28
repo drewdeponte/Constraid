@@ -5,6 +5,20 @@
 #endif
 
 extension ConstraidView {
+    /**
+        Constrains the object's leading edge to be less than or equal to the
+        leading edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          leading edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byLeadingEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -22,6 +36,20 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's trailing edge to be less than or equal to the
+        leading edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          trailing edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byTrailingEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -40,6 +68,20 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's top edge to be less than or equal to the
+        top edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          top edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byTopEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -57,6 +99,20 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's bottom edge to be less than or equal to the
+        bottom edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          bottom edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byBottomEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -75,6 +131,20 @@ extension ConstraidView {
         return collection
     }
 
+    /**
+        Constrains the object's top & bottom edges to be less than or equal
+        to the top & bottom edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          top & bottom edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byHorizontalEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -90,6 +160,20 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's leading & trailing edges to be less than or equal
+        to the leading & trailing edge of `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          leading & trailing edge of the item prior to the `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byVerticalEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
@@ -105,6 +189,22 @@ extension ConstraidView {
         return constraints
     }
 
+    /**
+        Constrains the object's top, bottom, leading & trailing edges to be
+        less than or equal to the top, bottom, leading & trailing edge of
+        `item`
+     
+        - parameter item: The `item` you want to constrain the current object to
+        - parameter constant: The amount to add to the constraint equation
+          after the multiplier.
+        - parameter multiplier: The ratio altering the constraint relative to
+          top, bottom, leading & trailing edge of the item prior to the
+          `constant` being applied.
+        - parameter priority: The priority this constraint uses when being
+          evaluated against other constraints
+
+        - returns: Constraint collection containing the generated constraint
+    */
     @discardableResult
     open func limit(byEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
