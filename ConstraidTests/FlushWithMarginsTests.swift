@@ -8,7 +8,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withLeadingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withLeadingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -21,7 +21,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leadingMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithTrailingMarginOf() {
@@ -29,7 +29,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withTrailingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withTrailingMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -42,7 +42,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.trailingMargin)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithTopMarginOf() {
@@ -50,7 +50,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withTopMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withTopMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -63,7 +63,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.topMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithBottomMarginOf() {
@@ -71,7 +71,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withBottomMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withBottomMarginOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -84,7 +84,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.bottomMargin)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithVerticalMarginsOf() {
@@ -92,7 +92,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withVerticalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withVerticalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
@@ -107,7 +107,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leadingMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -117,7 +117,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.trailingMargin)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithHorizontalMarginsOf() {
@@ -125,7 +125,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withHorizontalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withHorizontalMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
@@ -140,7 +140,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.topMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -150,7 +150,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.bottomMargin)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFlushWithMarginsOf() {
@@ -158,7 +158,7 @@ class FlushWithMarginsTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.flush(withMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = viewOne.flush(withMarginsOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
         let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
@@ -175,7 +175,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.topMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -185,7 +185,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.bottomMargin)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintThree.isActive, true)
         XCTAssertEqual(constraintThree.firstItem as! UIView, viewOne)
@@ -195,7 +195,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintThree.secondAttribute, NSLayoutAttribute.leadingMargin)
         XCTAssertEqual(constraintThree.constant, 10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
-        XCTAssertEqual(constraintThree.priority, 500)
+        XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintFour.isActive, true)
         XCTAssertEqual(constraintFour.firstItem as! UIView, viewOne)
@@ -205,6 +205,6 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintFour.secondAttribute, NSLayoutAttribute.trailingMargin)
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
-        XCTAssertEqual(constraintFour.priority, 500)
+        XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 }

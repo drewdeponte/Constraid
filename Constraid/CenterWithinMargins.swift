@@ -21,7 +21,7 @@ extension ConstraidView {
         - returns: Constraint collection containing the generated constraint
     */
     @discardableResult
-    open func center(verticallyWithinMarginsOf item: Any?,
+    open func middle(verticallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidVerticalOffsetDirection = .down,
         multiplier: CGFloat = 1.0,
@@ -67,7 +67,7 @@ extension ConstraidView {
         - returns: Constraint collection containing the generated constraint
     */
     @discardableResult
-    open func center(horizontallyWithinMarginsOf item: Any?,
+    open func middle(horizontallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidHorizontalOffsetDirection = .right,
         multiplier: CGFloat = 1.0,
@@ -113,7 +113,7 @@ extension ConstraidView {
         - returns: Constraint collection containing the generated constraint
     */
     @discardableResult
-    open func center(withinMarginsOf item: Any?,
+    open func middle(withinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidOffsetDirection = .downAndRight,
         multiplier: CGFloat = 1.0,
@@ -122,19 +122,19 @@ extension ConstraidView {
 
         switch direction {
         case .downAndRight:
-            let constraints = center(horizontallyWithinMarginsOf: item,
+            let constraints = middle(horizontallyWithinMarginsOf: item,
                                 offsetBy: offset, offsetDirection: .right,
                                 multiplier: multiplier, priority: priority) +
-                              center(verticallyWithinMarginsOf: item,
+                              middle(verticallyWithinMarginsOf: item,
                                 offsetBy: offset, offsetDirection: .down,
                                 multiplier: multiplier, priority: priority)
             constraints.activate()
             return constraints
         case .upAndLeft:
-            let constraints = center(horizontallyWithinMarginsOf: item,
+            let constraints = middle(horizontallyWithinMarginsOf: item,
                                 offsetBy: offset, offsetDirection: .left,
                                 multiplier: multiplier, priority: priority) +
-                              center(verticallyWithinMarginsOf: item,
+                              middle(verticallyWithinMarginsOf: item,
                                 offsetBy: offset, offsetDirection: .up,
                                 multiplier: multiplier, priority: priority)
             constraints.activate()
@@ -184,16 +184,16 @@ extension ConstraidView {
 
     @discardableResult
     @available(*, deprecated, message: "use center(withinMarginsOf: , offsetBy: ...)")
-    open func center(withinMarginsOf item: Any?,
+    open func middle(withinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
-        let constraints = center(horizontallyWithinMarginsOf: item,
+        let constraints = middle(horizontallyWithinMarginsOf: item,
                             offsetBy: constant, offsetDirection: .right,
                             multiplier: multiplier, priority: priority) +
-                          center(verticallyWithinMarginsOf: item,
+                          middle(verticallyWithinMarginsOf: item,
                             offsetBy: constant, offsetDirection: .down,
                             multiplier: multiplier, priority: priority)
         constraints.activate()
