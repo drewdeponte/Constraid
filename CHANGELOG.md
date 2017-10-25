@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Update to be compatible with Swift 4
+* Rename the `center(...)` family of methods to `middle(...)`
 * Document the `center(withinEdgesOf:)` and `center(withinMarginsOf:)` families
 * Document the `flush(withEdgesOf:)` and `flush(withMarginsOf:)` families
 * Deprecated `center(withinMarginsOf:)` use `center(withinMarginsOf:, offsetBy:)`
