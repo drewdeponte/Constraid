@@ -35,6 +35,63 @@ public enum ConstraidOffsetDirection {
 }
 
 extension ConstraidView {
+
+    // MARK: - Deprecated
+
+    @discardableResult
+    @available(*, deprecated, message: "use center(verticallyWithin: ...)")
+    open func centerVertically(within item: Any?,
+                               constant: CGFloat = 0.0,
+                               multiplier: CGFloat = 1.0,
+                               priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .centerY,
+                               relatedBy: .equal, toItem: item, attribute: .centerY,
+                               multiplier: multiplier, constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    @available(*, deprecated, message: "use center(horizontallyWithin: ...)")
+    open func centerHorizontally(within item: Any?,
+                                 constant: CGFloat = 0.0,
+                                 multiplier: CGFloat = 1.0,
+                                 priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        self.translatesAutoresizingMaskIntoConstraints = false
+        let collection = ConstraidConstraintCollection([
+            NSLayoutConstraint(item: self, attribute: .centerX,
+                               relatedBy: .equal, toItem: item, attribute: .centerX,
+                               multiplier: multiplier, constant: constant, priority: priority)
+            ])
+        collection.activate()
+        return collection
+    }
+
+    @discardableResult
+    @available(*, deprecated, message: "use center(within: , offsetBy: ...)")
+    open func middle(within item: Any?,
+                     constant: CGFloat = 0.0,
+                     multiplier: CGFloat = 1.0,
+                     priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        ) -> ConstraidConstraintCollection {
+
+        let constraints = middle(horizontallyWithin: item,
+                                 offsetBy: constant, offsetDirection: .right,
+                                 multiplier: multiplier, priority: priority) +
+            middle(verticallyWithin: item,
+                   offsetBy: constant, offsetDirection: .down,
+                   multiplier: multiplier, priority: priority)
+        constraints.activate()
+        return constraints
+    }
+
     /**
         Constrains the object's center to the vertical center of `item`
 
@@ -164,61 +221,5 @@ extension ConstraidView {
             constraints.activate()
             return constraints
         }
-    }
-
-    // MARK: - Deprecated
-
-    @discardableResult
-    @available(*, deprecated, message: "use center(verticallyWithin: ...)")
-    open func centerVertically(within item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .centerY,
-                relatedBy: .equal, toItem: item, attribute: .centerY,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use center(horizontallyWithin: ...)")
-    open func centerHorizontally(within item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .centerX,
-                relatedBy: .equal, toItem: item, attribute: .centerX,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use center(within: , offsetBy: ...)")
-    open func middle(within item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        let constraints = middle(horizontallyWithin: item,
-                            offsetBy: constant, offsetDirection: .right,
-                            multiplier: multiplier, priority: priority) +
-                          middle(verticallyWithin: item,
-                            offsetBy: constant, offsetDirection: .down,
-                            multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
     }
 }
