@@ -145,7 +145,7 @@ extension ConstraidView {
     // MARK: - Deprecated
 
     @discardableResult
-    @available(*, deprecated, message: "use center(verticallyWithinMarginsOf: ...)")
+    @available(*, deprecated, message: "use middle(verticallyWithinMarginsOf: ...)")
     open func centerVertically(withinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
@@ -164,7 +164,7 @@ extension ConstraidView {
     }
 
     @discardableResult
-    @available(*, deprecated, message: "use center(horizontallyWithinMarginsOf: ...)")
+    @available(*, deprecated, message: "use middle(horizontallyWithinMarginsOf: ...)")
     open func centerHorizontally(withinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
@@ -183,8 +183,8 @@ extension ConstraidView {
     }
 
     @discardableResult
-    @available(*, deprecated, message: "use center(withinMarginsOf: , offsetBy: ...)")
-    open func middle(withinMarginsOf item: Any?,
+    @available(*, deprecated, message: "use middle(withinMarginsOf: , offsetBy: ...)")
+    open func center(withinMarginsOf item: Any?,
         constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
