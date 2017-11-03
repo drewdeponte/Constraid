@@ -4,7 +4,7 @@
     import AppKit
 #endif
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Constrains the object's leading edge to be less than or equal to the
         leading edge of `item`

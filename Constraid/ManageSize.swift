@@ -4,7 +4,7 @@
     import AppKit
 #endif
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Set width of receiver using a constraint in auto-layout
 

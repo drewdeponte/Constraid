@@ -1,7 +1,7 @@
 #if os(iOS)
     import UIKit
 
-    extension ConstraidView {
+    extension Constraid.View {
         /**
             Constrains the receiver's leading edge to the trailing margin of
             `item`
@@ -146,7 +146,7 @@
     import AppKit
 #endif
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Constrains the receiver's leading edge to the trailing edge of
         `item`

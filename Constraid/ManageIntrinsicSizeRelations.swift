@@ -4,7 +4,7 @@
     import AppKit
 #endif
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Sets height content hugging and compression resistance priority to 1000
         (required)

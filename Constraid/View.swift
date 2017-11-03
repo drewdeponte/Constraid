@@ -3,11 +3,11 @@
     /**
         Type alias for UIVIew and NSView to make supporting both easier
     */
-    public typealias ConstraidView = UIView
+    public typealias View = UIView
 #else
     import AppKit
     /**
         Type alias for UIVIew and NSView to make supporting both easier
     */
-    public typealias ConstraidView = NSView
+    public typealias View = NSView
 #endif

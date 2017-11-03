@@ -4,7 +4,7 @@
     import AppKit
 #endif
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Constrains the object's width to be greater than or equal to the width
         of `item`

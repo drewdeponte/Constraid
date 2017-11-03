@@ -34,7 +34,7 @@ public enum ConstraidOffsetDirection {
     case upAndLeft
 }
 
-extension ConstraidView {
+extension Constraid.View {
 
     /**
         Constrains the object's center to the vertical center of `item`

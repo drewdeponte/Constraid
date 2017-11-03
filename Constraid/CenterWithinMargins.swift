@@ -3,7 +3,7 @@
 // build target.
 import UIKit
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Constrains the object's center to the vertical center of `item` within
         the margins of `item`

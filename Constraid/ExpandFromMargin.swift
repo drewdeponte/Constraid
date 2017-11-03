@@ -3,7 +3,7 @@
 // build target.
 import UIKit
 
-extension ConstraidView {
+extension Constraid.View {
     /**
         Constrains the object's leading edge to be greater than or equal to the
         leading margin of `item`
