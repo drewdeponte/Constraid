@@ -23,7 +23,7 @@
         open func follows(theTrailingMarginOf item: Any?,
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
-            priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+            priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
             ) -> ConstraidConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +58,7 @@
         open func precedes(theLeadingMarginOf item: Any?,
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
-            priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+            priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
             ) -> ConstraidConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +93,7 @@
         open func sits(aboveTheTopMarginOf item: Any?,
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
-            priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+            priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
             ) -> ConstraidConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
@@ -128,7 +128,7 @@
         open func sits(belowTheBottomMarginOf item: Any?,
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
-            priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+            priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
             ) -> ConstraidConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
@@ -168,7 +168,7 @@ extension Constraid.View {
     open func follows(theTrailingEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -202,7 +202,7 @@ extension Constraid.View {
     open func precedes(theLeadingEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -236,7 +236,7 @@ extension Constraid.View {
     open func sits(aboveTheTopEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -271,7 +271,7 @@ extension Constraid.View {
     open func sits(belowTheBottomEdgeOf item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false

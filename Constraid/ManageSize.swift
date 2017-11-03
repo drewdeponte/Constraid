@@ -16,7 +16,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func setWidth(_ constant: CGFloat = 0.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +52,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func setHeight(_ constant: CGFloat = 0.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +93,7 @@ extension Constraid.View {
     open func matchWidth(of item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -122,7 +122,7 @@ extension Constraid.View {
     open func matchHeight(of item: Any?,
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -145,7 +145,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func makeSquare(
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false

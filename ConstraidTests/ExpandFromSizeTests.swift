@@ -7,7 +7,7 @@ class ExpandFromSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.expand(fromWidthOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.expand(fromWidthOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -26,7 +26,7 @@ class ExpandFromSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.expand(fromHeightOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.expand(fromHeightOf: viewTwo, constant: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)

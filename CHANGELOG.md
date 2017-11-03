@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Rename ConstraidLayoutPriority type aliases to LayoutPriority type aliases
 * Rename ConstraidView type alias to View as it is namespaced by the module
 * Update to be compatible with Swift 4
 * Rename the `center(...)` family of methods to `middle(...)`

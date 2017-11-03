@@ -8,7 +8,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(verticallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .down, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(verticallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .down, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -29,7 +29,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(verticallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .up, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(verticallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .up, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -50,7 +50,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(horizontallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .right, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(horizontallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .right, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -71,7 +71,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(horizontallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .left, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(horizontallyWithinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .left, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -92,7 +92,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(withinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .downAndRight, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(withinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .downAndRight, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
@@ -126,7 +126,7 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.middle(withinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .upAndLeft, multiplier: 2.0, priority: ConstraidLayoutPriority(rawValue: 500))
+        let constraints = viewOne.middle(withinMarginsOf: viewTwo, offsetBy: 10.0, offsetDirection: .upAndLeft, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint

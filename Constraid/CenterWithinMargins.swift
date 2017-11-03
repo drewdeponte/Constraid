@@ -25,7 +25,7 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidVerticalOffsetDirection = .down,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -71,7 +71,7 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidHorizontalOffsetDirection = .right,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +117,7 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         offsetDirection direction: ConstraidOffsetDirection = .downAndRight,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         switch direction {

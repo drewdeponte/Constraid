@@ -22,7 +22,7 @@ extension Constraid.View {
     open func expand(fromLeadingMarginOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +54,7 @@ extension Constraid.View {
     open func expand(fromTrailingMarginOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +86,7 @@ extension Constraid.View {
     open func expand(fromTopMarginOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -118,7 +118,7 @@ extension Constraid.View {
     open func expand(fromBottomMarginOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -150,7 +150,7 @@ extension Constraid.View {
     open func expand(fromHorizontalMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let collection = expand(fromTopMarginOf: item, offsetBy: offset,
@@ -179,7 +179,7 @@ extension Constraid.View {
     open func expand(fromVerticalMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let collection = expand(fromLeadingMarginOf: item, offsetBy: offset,
@@ -210,7 +210,7 @@ extension Constraid.View {
     open func expand(fromMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let collection = expand(fromTopMarginOf: item, offsetBy: offset,

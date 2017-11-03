@@ -21,7 +21,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withLeadingEdgeOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let collection = ConstraidConstraintCollection([
@@ -49,7 +49,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withTrailingEdgeOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let collection = ConstraidConstraintCollection([
@@ -77,7 +77,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withTopEdgeOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -105,7 +105,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withBottomEdgeOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -134,7 +134,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withVerticalEdgesOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         let constraints = flush(withLeadingEdgeOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
@@ -161,7 +161,7 @@ extension Constraid.View {
     @discardableResult
     public func flush(withHorizontalEdgesOf item: Any?, insetBy inset: CGFloat = 0.0,
                     multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         let constraints = flush(withTopEdgeOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
@@ -188,7 +188,7 @@ extension Constraid.View {
     */
     @discardableResult
     public func flush(withEdgesOf item: Any?, insetBy inset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-                    priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
         
         let constraints = flush(withHorizontalEdgesOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +

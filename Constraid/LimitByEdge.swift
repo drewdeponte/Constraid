@@ -23,7 +23,7 @@ extension Constraid.View {
     open func limit(byLeadingEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +54,7 @@ extension Constraid.View {
     open func limit(byTrailingEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -86,7 +86,7 @@ extension Constraid.View {
     open func limit(byTopEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +117,7 @@ extension Constraid.View {
     open func limit(byBottomEdgeOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -149,7 +149,7 @@ extension Constraid.View {
     open func limit(byHorizontalEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let constraints = limit(byTopEdgeOf: item, insetBy: inset,
@@ -178,7 +178,7 @@ extension Constraid.View {
     open func limit(byVerticalEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let constraints = limit(byLeadingEdgeOf: item, insetBy: inset,
@@ -209,7 +209,7 @@ extension Constraid.View {
     open func limit(byEdgesOf item: Any?,
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
+        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> ConstraidConstraintCollection {
 
         let constraints = limit(byTopEdgeOf: item, insetBy: inset,

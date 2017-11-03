@@ -19,7 +19,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withLeadingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -46,7 +46,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withTrailingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -73,7 +73,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withTopMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -100,7 +100,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withBottomMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         let constraints = ConstraidConstraintCollection([
@@ -128,7 +128,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withVerticalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         let constraints = flush(withLeadingMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
@@ -154,7 +154,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withHorizontalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         let constraints = flush(withTopMarginOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
@@ -181,7 +181,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
 
         let constraints = flush(withHorizontalMarginsOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
