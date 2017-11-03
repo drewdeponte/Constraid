@@ -8,7 +8,7 @@
     Type alias for [NSLayoutConstraint] in case Apple makes constraints not
     cross-platform like they have with other parts of the auto-layout API
 */
-public typealias ConstraidConstraintCollection = [NSLayoutConstraint]
+public typealias ConstraintCollection = [NSLayoutConstraint]
 
 public extension Collection where Iterator.Element == NSLayoutConstraint {
     /**

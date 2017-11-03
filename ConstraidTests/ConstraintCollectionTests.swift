@@ -6,7 +6,7 @@ class ConstraintCollectionTests: XCTestCase {
         let viewOne = UIView()
         let viewTwo = UIView()
         
-        _ = ConstraidConstraintCollection([
+        _ = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: viewOne, attribute: .leading, relatedBy: .equal,
                                toItem: viewTwo, attribute: .leading, multiplier: 1.0,
                                constant: 0.0)
@@ -19,7 +19,7 @@ class ConstraintCollectionTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: viewOne, attribute: .leading, relatedBy: .equal,
                                toItem: viewTwo, attribute: .leading, multiplier: 1.0,
                                constant: 0.0)
@@ -39,7 +39,7 @@ class ConstraintCollectionTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: viewOne, attribute: .leading, relatedBy: .equal,
                                toItem: viewTwo, attribute: .leading, multiplier: 1.0,
                                constant: 0.0)

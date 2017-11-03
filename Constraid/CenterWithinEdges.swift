@@ -57,10 +57,10 @@ extension Constraid.View {
         offsetDirection direction: ConstraidVerticalOffsetDirection = .down,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        var collection = ConstraidConstraintCollection()
+        var collection = Constraid.ConstraintCollection()
         switch direction {
         case .down:
             collection.append(
@@ -100,10 +100,10 @@ extension Constraid.View {
         offsetDirection direction: ConstraidHorizontalOffsetDirection = .right,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        var collection = ConstraidConstraintCollection()
+        var collection = Constraid.ConstraintCollection()
         switch direction {
         case .right:
             collection.append(
@@ -143,7 +143,7 @@ extension Constraid.View {
         offsetDirection direction: ConstraidOffsetDirection = .downAndRight,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         switch direction {
         case .downAndRight:

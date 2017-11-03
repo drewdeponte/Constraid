@@ -19,10 +19,10 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withLeadingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal,
                                toItem: item, attribute: .leadingMargin, multiplier: multiplier,
                                constant: inset, priority: priority)
@@ -46,10 +46,10 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withTrailingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
                                toItem: item, attribute: .trailingMargin, multiplier: multiplier,
                                constant: (-1.0 * inset), priority: priority)
@@ -73,10 +73,10 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withTopMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
                                toItem: item, attribute: .topMargin, multiplier: multiplier,
                                constant: inset, priority: priority)
@@ -100,10 +100,10 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withBottomMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
+        let constraints = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
                                toItem: item, attribute: .bottomMargin, multiplier: multiplier,
                                constant: (-1.0 * inset), priority: priority)
@@ -128,7 +128,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withVerticalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         let constraints = flush(withLeadingMarginOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +
@@ -154,7 +154,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withHorizontalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         let constraints = flush(withTopMarginOf: item, insetBy: inset, multiplier: multiplier,
                                 priority: priority) +
@@ -181,7 +181,7 @@ extension Constraid.View {
     */
     @discardableResult
     open func flush(withMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> ConstraidConstraintCollection {
+                    multiplier: CGFloat = 1.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
         let constraints = flush(withHorizontalMarginsOf: item, insetBy: inset,
                                 multiplier: multiplier, priority: priority) +

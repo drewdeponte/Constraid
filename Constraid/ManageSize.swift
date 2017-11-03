@@ -17,7 +17,7 @@ extension Constraid.View {
     @discardableResult
     open func setWidth(_ constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         var targetConstraint: NSLayoutConstraint?
@@ -32,7 +32,7 @@ extension Constraid.View {
             self.removeConstraint(constraint)
         }
 
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .width,
                 relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                 multiplier: 1.0, constant: constant, priority: priority)
@@ -53,7 +53,7 @@ extension Constraid.View {
     @discardableResult
     open func setHeight(_ constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
         var targetConstraint: NSLayoutConstraint?
@@ -68,7 +68,7 @@ extension Constraid.View {
             self.removeConstraint(constraint)
         }
 
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .height,
                 relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                 multiplier: 1.0, constant: constant, priority: priority)
@@ -94,10 +94,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .width,
                 relatedBy: .equal, toItem: item, attribute: .width,
                 multiplier: multiplier, constant: constant, priority: priority)
@@ -123,10 +123,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .height,
                 relatedBy: .equal, toItem: item, attribute: .height,
                 multiplier: multiplier, constant: constant, priority: priority)
@@ -146,10 +146,10 @@ extension Constraid.View {
     @discardableResult
     open func makeSquare(
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .width,
                 relatedBy: .equal, toItem: self, attribute: .height,
                 multiplier: 1.0, constant: 0.0, priority: priority)

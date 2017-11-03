@@ -24,10 +24,10 @@
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
             priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-            ) -> ConstraidConstraintCollection {
+            ) -> Constraid.ConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
-            let collection = ConstraidConstraintCollection([
+            let collection = Constraid.ConstraintCollection([
                 NSLayoutConstraint(item: self, attribute: .leading,
                     relatedBy: .equal, toItem: item,
                     attribute: .trailingMargin, multiplier: multiplier,
@@ -59,10 +59,10 @@
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
             priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-            ) -> ConstraidConstraintCollection {
+            ) -> Constraid.ConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
-            let collection = ConstraidConstraintCollection([
+            let collection = Constraid.ConstraintCollection([
                 NSLayoutConstraint(item: self, attribute: .trailing,
                     relatedBy: .equal, toItem: item, attribute: .leadingMargin,
                     multiplier: multiplier, constant: constant,
@@ -94,10 +94,10 @@
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
             priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-            ) -> ConstraidConstraintCollection {
+            ) -> Constraid.ConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
-            let collection = ConstraidConstraintCollection([
+            let collection = Constraid.ConstraintCollection([
                 NSLayoutConstraint(item: self, attribute: .bottom,
                     relatedBy: .equal, toItem: item,
                     attribute: .topMargin, multiplier: multiplier,
@@ -129,10 +129,10 @@
             by constant: CGFloat = 0.0,
             multiplier: CGFloat = 1.0,
             priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-            ) -> ConstraidConstraintCollection {
+            ) -> Constraid.ConstraintCollection {
 
             self.translatesAutoresizingMaskIntoConstraints = false
-            let collection = ConstraidConstraintCollection([
+            let collection = Constraid.ConstraintCollection([
                 NSLayoutConstraint(item: self, attribute: .top,
                     relatedBy: .equal, toItem: item,
                     attribute: .bottomMargin, multiplier: multiplier,
@@ -169,10 +169,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading,
                 relatedBy: .equal, toItem: item, attribute: .trailing,
                 multiplier: multiplier, constant: constant, priority: priority)
@@ -203,10 +203,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing,
                 relatedBy: .equal, toItem: item, attribute: .leading,
                 multiplier: multiplier, constant: constant, priority: priority)
@@ -237,10 +237,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom,
                 relatedBy: .equal, toItem: item, attribute: .top,
                 multiplier: multiplier, constant: (-1.0 * constant),
@@ -272,10 +272,10 @@ extension Constraid.View {
         by constant: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
                 toItem: item, attribute: .bottom, multiplier: multiplier,
                 constant: constant, priority: priority)

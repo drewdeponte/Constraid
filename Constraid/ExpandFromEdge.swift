@@ -23,10 +23,10 @@ extension Constraid.View {
     open func expand(fromLeadingEdgeOf item: Any?,
         offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading,
                 relatedBy: .greaterThanOrEqual, toItem: item,
                 attribute: .leading, multiplier: multiplier,
@@ -55,10 +55,10 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing,
                 relatedBy: .greaterThanOrEqual, toItem: item,
                 attribute: .trailing, multiplier: multiplier,
@@ -86,10 +86,10 @@ extension Constraid.View {
     open func expand(fromTopEdgeOf item: Any?,
         offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .top,
                 relatedBy: .greaterThanOrEqual, toItem: item, attribute: .top,
                 multiplier: multiplier, constant: offset, priority: priority)
@@ -117,10 +117,10 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom,
                 relatedBy: .greaterThanOrEqual, toItem: item,
                 attribute: .bottom, multiplier: multiplier,
@@ -149,7 +149,7 @@ extension Constraid.View {
         offsetBy offset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = expand(fromTopEdgeOf: item, offsetBy: offset,
                              multiplier: multiplier, priority: priority) +
@@ -177,7 +177,7 @@ extension Constraid.View {
     open func expand(fromVerticalEdgesOf item: Any?,
         offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = expand(fromLeadingEdgeOf: item, offsetBy: offset,
                              multiplier: multiplier, priority: priority) +
@@ -207,7 +207,7 @@ extension Constraid.View {
     open func expand(fromEdgesOf item: Any?,
         offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = expand(fromTopEdgeOf: item, offsetBy: offset,
                              multiplier: multiplier, priority: priority) +

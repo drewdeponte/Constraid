@@ -23,10 +23,10 @@ extension Constraid.View {
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .leading,
                 relatedBy: .lessThanOrEqual, toItem: item,
                 attribute: .leadingMargin, multiplier: multiplier,
@@ -55,10 +55,10 @@ extension Constraid.View {
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .trailing,
                relatedBy: .lessThanOrEqual, toItem: item,
                attribute: .trailingMargin, multiplier: multiplier,
@@ -87,10 +87,10 @@ extension Constraid.View {
         insetBy inset: CGFloat = 0.0,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .top,
                 relatedBy: .lessThanOrEqual, toItem: item,
                 attribute: .topMargin, multiplier: multiplier,
@@ -118,10 +118,10 @@ extension Constraid.View {
     open func limit(byBottomMarginOf item: Any?,
         insetBy inset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
+        let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: self, attribute: .bottom,
                 relatedBy: .lessThanOrEqual, toItem: item,
                 attribute: .bottomMargin, multiplier: multiplier,
@@ -149,7 +149,7 @@ extension Constraid.View {
     open func limit(byHorizontalMarginsOf item: Any?,
         insetBy inset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = limit(byTopMarginOf: item, insetBy: inset,
                              multiplier: multiplier, priority: priority) +
@@ -177,7 +177,7 @@ extension Constraid.View {
     open func limit(byVerticalMarginsOf item: Any?,
         insetBy inset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = limit(byLeadingMarginOf: item, insetBy: inset,
                              multiplier: multiplier, priority: priority) +
@@ -207,7 +207,7 @@ extension Constraid.View {
     open func limit(byMarginsOf item: Any?,
         insetBy inset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+        ) -> Constraid.ConstraintCollection {
 
         let collection = limit(byTopMarginOf: item, insetBy: inset,
                              multiplier: multiplier, priority: priority) +
