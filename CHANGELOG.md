@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Change order of multiplier in flush() params and label it times
+* Switch to Constraid.flush() instead of extension approach
 * Rename ConstraidConstraintCollection type to ConstraintCollection
 * Rename ConstraidLayoutPriority type aliases to LayoutPriority type aliases
 * Rename ConstraidView type alias to View as it is namespaced by the module
