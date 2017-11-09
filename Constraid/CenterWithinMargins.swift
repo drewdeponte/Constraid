@@ -23,7 +23,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(verticallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidVerticalOffsetDirection = .down,
+        offsetDirection direction: Constraid.VerticalOffsetDirection = .down,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {
@@ -69,7 +69,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(horizontallyWithinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidHorizontalOffsetDirection = .right,
+        offsetDirection direction: Constraid.HorizontalOffsetDirection = .right,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {
@@ -115,7 +115,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(withinMarginsOf item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidOffsetDirection = .downAndRight,
+        offsetDirection direction: Constraid.OffsetDirection = .downAndRight,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {

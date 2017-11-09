@@ -7,7 +7,7 @@
 /**
     Enumeration of vertical offset directions
 */
-public enum ConstraidVerticalOffsetDirection {
+public enum VerticalOffsetDirection {
     /// Vertically offset in the upward direction
     case up
     /// Vertically offset in the downward direction
@@ -17,7 +17,7 @@ public enum ConstraidVerticalOffsetDirection {
 /**
     Enumeration of horizontal offset directions
 */
-public enum ConstraidHorizontalOffsetDirection {
+public enum HorizontalOffsetDirection {
     /// Horizontally offset in the right direction
     case right
     /// Horizontally offset in the left direction
@@ -27,7 +27,7 @@ public enum ConstraidHorizontalOffsetDirection {
 /**
     Enumeration of offset directions
 */
-public enum ConstraidOffsetDirection {
+public enum OffsetDirection {
     /// Offset in the down and right direction
     case downAndRight
     /// Offset in the up and left direction
@@ -54,7 +54,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(verticallyWithin item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidVerticalOffsetDirection = .down,
+        offsetDirection direction: Constraid.VerticalOffsetDirection = .down,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {
@@ -97,7 +97,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(horizontallyWithin item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidHorizontalOffsetDirection = .right,
+        offsetDirection direction: Constraid.HorizontalOffsetDirection = .right,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {
@@ -140,7 +140,7 @@ extension Constraid.View {
     @discardableResult
     open func middle(within item: Any?,
         offsetBy offset: CGFloat = 0.0,
-        offsetDirection direction: ConstraidOffsetDirection = .downAndRight,
+        offsetDirection direction: Constraid.OffsetDirection = .downAndRight,
         multiplier: CGFloat = 1.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
         ) -> Constraid.ConstraintCollection {
