@@ -49,7 +49,7 @@ NSLayoutConstraint.activate([
 However, with the aid of [Constraid][constraid] it is as simple as
 
 ```swift
-childView.flush(withVerticalEdgesOf: parentView)
+flush(childView, withVerticalEdgesOf: parentView)
 ```
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
@@ -69,7 +69,7 @@ Lets say you want `viewA` to sit flush or right along `viewB`'s edges, meaning b
 sized the same size as `viewB`. You can accomplish this by using the following:
 
 ```swift
-viewA.flush(withEdgesOf: viewB)
+flush(viewA, withEdgesOf: viewB)
 ```
 
 If on the other hand you wanted `viewA` to fill the space of `viewB` up to `viewB`'s
@@ -84,15 +84,15 @@ and the appropriate attributes. List of the short versions of all the `flush` me
 provided below.
 
 ```swift
-viewA.flush(withLeadingEdgeOf: viewB)
-viewA.flush(withTrailingEdgeOf: viewB)
-viewA.flush(withTopEdgeOf: viewB)
-viewA.flush(withBottomEdgeOf: viewB)
+flush(viewA, withLeadingEdgeOf: viewB)
+flush(viewA, withTrailingEdgeOf: viewB)
+flush(viewA, withTopEdgeOf: viewB)
+flush(viewA, withBottomEdgeOf: viewB)
 
-viewA.flush(withVerticalEdgesOf: viewB)
-viewA.flush(withHorizontalEdgesOf: viewB)
+flush(viewA, withVerticalEdgesOf: viewB)
+flush(viewA, withHorizontalEdgesOf: viewB)
 
-viewA.flush(withEdgesOf: viewB)
+flush(viewA, withEdgesOf: viewB)
 
 viewA.flush(withLeadingMarginOf: viewB)
 viewA.flush(withTrailingMarginOf: viewB)
