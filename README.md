@@ -76,7 +76,7 @@ If on the other hand you wanted `viewA` to fill the space of `viewB` up to `view
 margins, you could simply do.
 
 ```swift
-viewA.flush(withMarginsOf: viewB)
+flush(viewA, withMarginsOf: viewB)
 ```
 
 The `flush` methods simply create one or more equivalency constraints between the two views
@@ -94,15 +94,15 @@ flush(viewA, withHorizontalEdgesOf: viewB)
 
 flush(viewA, withEdgesOf: viewB)
 
-viewA.flush(withLeadingMarginOf: viewB)
-viewA.flush(withTrailingMarginOf: viewB)
-viewA.flush(withTopMarginOf: viewB)
-viewA.flush(withBottomMarginOf: viewB)
+flush(viewA, withLeadingMarginOf: viewB)
+flush(viewA, withTrailingMarginOf: viewB)
+flush(viewA, withTopMarginOf: viewB)
+flush(viewA, withBottomMarginOf: viewB)
 
-viewA.flush(withVerticalMarginsOf: viewB)
-viewA.flush(withHorizontalMarginsOf: viewB)
+flush(viewA, withVerticalMarginsOf: viewB)
+flush(viewA, withHorizontalMarginsOf: viewB)
 
-viewA.flush(withMarginsOf: viewB)
+flush(viewA, withMarginsOf: viewB)
 ```
 
 <img src="resources/first_aid_case.png" alt="First Aid Case" align="left" height="120px" hspace="20px" vspace="30px">
