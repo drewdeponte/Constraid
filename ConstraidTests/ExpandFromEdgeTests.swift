@@ -8,7 +8,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromLeadingEdgeOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromLeadingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -20,7 +20,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandByTrailingEdgeOf() {
@@ -29,7 +29,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromTrailingEdgeOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromTrailingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -41,7 +41,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.trailing)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandFromTopEdgeOf() {
@@ -50,7 +50,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromTopEdgeOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromTopEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -62,7 +62,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandFromBottomEdgeOf() {
@@ -71,7 +71,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromBottomEdgeOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromBottomEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -83,7 +83,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.bottom)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandFromHorizontalEdgesOf() {
@@ -92,7 +92,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromHorizontalEdgesOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromHorizontalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -105,7 +105,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -115,7 +115,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.bottom)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandFromVerticalEdgesOf() {
@@ -124,7 +124,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromVerticalEdgesOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromVerticalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -137,7 +137,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -147,7 +147,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.trailing)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testExpandFromEdgesOf() {
@@ -156,7 +156,7 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromEdgesOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.expand(viewOne, fromEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
         let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
@@ -173,7 +173,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -183,7 +183,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, NSLayoutAttribute.bottom)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, 500)
+        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintThree.isActive, true)
         XCTAssertEqual(constraintThree.firstItem as! UIView, viewOne)
@@ -193,7 +193,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintThree.secondAttribute, NSLayoutAttribute.leading)
         XCTAssertEqual(constraintThree.constant, 10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
-        XCTAssertEqual(constraintThree.priority, 500)
+        XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintFour.isActive, true)
         XCTAssertEqual(constraintFour.firstItem as! UIView, viewOne)
@@ -203,6 +203,6 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintFour.secondAttribute, NSLayoutAttribute.trailing)
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
-        XCTAssertEqual(constraintFour.priority, 500)
+        XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 }

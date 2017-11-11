@@ -1,4 +1,5 @@
 import XCTest
+import Constraid
 
 class ManageRelativePositionTests: XCTestCase {
     func testFollowsTheTrailingMarginOf() {
@@ -6,7 +7,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.follows(theTrailingMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.follow(theTrailingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -18,7 +19,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.trailingMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testPrecedesTheLeadingMarginOf() {
@@ -26,7 +27,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.precedes(theLeadingMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.precede(theLeadingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -38,7 +39,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leadingMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testSitsAboveTheTopMarginOf() {
@@ -46,7 +47,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(aboveTheTopMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.set(viewOne, aboveTheTopMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -58,7 +59,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.topMargin)
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, 500)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testSitsBelowTheBottomMarginOf() {
@@ -66,7 +67,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(belowTheBottomMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.set(viewOne, belowTheBottomMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -78,7 +79,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.bottomMargin)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, 500)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testFollowsTheTrailingEdgeOf() {
@@ -86,7 +87,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.follows(theTrailingEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.follow(theTrailingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -98,7 +99,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.trailing)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testPrecedesTheLeadingEdgeOf() {
@@ -106,7 +107,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.precedes(theLeadingEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.precede(theLeadingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -118,7 +119,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, 500)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testSitsAboveTheTopEdgeOf() {
@@ -126,7 +127,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(aboveTheTopEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.set(viewOne, aboveTheTopEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -138,7 +139,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.top)
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, 500)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 
     func testSitsBelowTheBottomEdgeOf() {
@@ -146,7 +147,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(belowTheBottomEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: 500)
+        let constraints = Constraid.set(viewOne, belowTheBottomEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -158,6 +159,6 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.bottom)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, 500)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
     }
 }

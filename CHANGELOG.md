@@ -10,6 +10,19 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Switch Intrinsic Size Relations out of the extension approach
+* Switch Expand out of the extension approach
+* Switch Limit out of the extension approach
+* Switch Relative Position Management out of the extension approach
+* Switch Size Management out of the extension approach
+* Switch to Constraid.center() instead of extension approach
+* Change order of multiplier in flush() params and label it times
+* Switch to Constraid.flush() instead of extension approach
+* Rename ConstraidConstraintCollection type to ConstraintCollection
+* Rename ConstraidLayoutPriority type aliases to LayoutPriority type aliases
+* Rename ConstraidView type alias to View as it is namespaced by the module
+* Update to be compatible with Swift 4
+* Rename the `center(...)` family of methods to `middle(...)`
 * Document the `center(withinEdgesOf:)` and `center(withinMarginsOf:)` families
 * Document the `flush(withEdgesOf:)` and `flush(withMarginsOf:)` families
 * Deprecated `center(withinMarginsOf:)` use `center(withinMarginsOf:, offsetBy:)`

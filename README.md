@@ -49,7 +49,7 @@ NSLayoutConstraint.activate([
 However, with the aid of [Constraid][constraid] it is as simple as
 
 ```swift
-childView.flush(withVerticalEdgesOf: parentView)
+flush(childView, withVerticalEdgesOf: parentView)
 ```
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
@@ -59,7 +59,7 @@ childView.flush(withVerticalEdgesOf: parentView)
 [Constraid][constraid] tries to simplify things by building on top of the lower level
 constructs provided by Apple's AutoLayout system.
 
-In general [Constraid][constraid] extends `UIView` to have a number of methods that aid with
+In general [Constraid][constraid] provides a number of methods that aid with
 defining constraint relationships between views. Currently, the provided methods are grouped
 into the following sections.
 
@@ -69,40 +69,40 @@ Lets say you want `viewA` to sit flush or right along `viewB`'s edges, meaning b
 sized the same size as `viewB`. You can accomplish this by using the following:
 
 ```swift
-viewA.flush(withEdgesOf: viewB)
+flush(viewA, withEdgesOf: viewB)
 ```
 
 If on the other hand you wanted `viewA` to fill the space of `viewB` up to `viewB`'s
 margins, you could simply do.
 
 ```swift
-viewA.flush(withMarginsOf: viewB)
+flush(viewA, withMarginsOf: viewB)
 ```
 
 The `flush` methods simply create one or more equivalency constraints between the two views
-and the appropriate attributes. List of the short versions of all the `flush` methods are
-provided below.
+and the appropriate attributes. A list of the short versions of all the `flush`
+methods are provided below.
 
 ```swift
-viewA.flush(withLeadingEdgeOf: viewB)
-viewA.flush(withTrailingEdgeOf: viewB)
-viewA.flush(withTopEdgeOf: viewB)
-viewA.flush(withBottomEdgeOf: viewB)
+flush(viewA, withLeadingEdgeOf: viewB)
+flush(viewA, withTrailingEdgeOf: viewB)
+flush(viewA, withTopEdgeOf: viewB)
+flush(viewA, withBottomEdgeOf: viewB)
 
-viewA.flush(withVerticalEdgesOf: viewB)
-viewA.flush(withHorizontalEdgesOf: viewB)
+flush(viewA, withVerticalEdgesOf: viewB)
+flush(viewA, withHorizontalEdgesOf: viewB)
 
-viewA.flush(withEdgesOf: viewB)
+flush(viewA, withEdgesOf: viewB)
 
-viewA.flush(withLeadingMarginOf: viewB)
-viewA.flush(withTrailingMarginOf: viewB)
-viewA.flush(withTopMarginOf: viewB)
-viewA.flush(withBottomMarginOf: viewB)
+flush(viewA, withLeadingMarginOf: viewB)
+flush(viewA, withTrailingMarginOf: viewB)
+flush(viewA, withTopMarginOf: viewB)
+flush(viewA, withBottomMarginOf: viewB)
 
-viewA.flush(withVerticalMarginsOf: viewB)
-viewA.flush(withHorizontalMarginsOf: viewB)
+flush(viewA, withVerticalMarginsOf: viewB)
+flush(viewA, withHorizontalMarginsOf: viewB)
 
-viewA.flush(withMarginsOf: viewB)
+flush(viewA, withMarginsOf: viewB)
 ```
 
 <img src="resources/first_aid_case.png" alt="First Aid Case" align="left" height="120px" hspace="20px" vspace="30px">
@@ -113,31 +113,31 @@ Ok so you want `viewA` to be centered inside of `viewB`'s edges. You can accompl
 using the following:
 
 ```swift
-viewA.center(within: viewB)
+center(viewA, within: viewB)
 ```
 
 If on the other hand you wanted `viewA` to be centred inside of `viewB`s margins you could
 simply do.
 
 ```swift
-viewA.center(withinMarginsOf: viewB)
+center(viewA, withinMarginsOf: viewB)
 ```
 
 The `center` methods simply create one or more equivalency constraints between the two views
 and the appropriate attributes (`centerX`, `centerY`, `centerXwithinMargins`,
-`centerYwithinMargins`). List of the short versions of all the `center` methods are
-provided below.
+`centerYwithinMargins`). A list of the short versions of all the `center`
+methods are provided below.
 
 ```swift
-viewA.center(verticallyWithin: viewB)
-viewA.center(horizontallyWithin: viewB)
+center(viewA, verticallyWithin: viewB)
+center(viewA, horizontallyWithin: viewB)
 
-viewA.center(within: viewB)
+center(viewA, within: viewB)
 
-viewA.center(verticallyWithinMarginsOf: viewB)
-viewA.center(horizontallyWithinMarginsOf: viewB)
+center(viewA, verticallyWithinMarginsOf: viewB)
+center(viewA, horizontallyWithinMarginsOf: viewB)
 
-viewA.center(withinMarginsOf: viewB)
+center(viewA, withinMarginsOf: viewB)
 ```
 
 ### Manage Size
@@ -146,7 +146,7 @@ Lets say you want `viewA`'s width to be explicitly sized to some 100 pts. You ca
 this by using the following:
 
 ```swift
-viewA.setWidth(100)
+setWidth(of: viewA, to: 100)
 ```
 
 <img src="resources/bandaid.png" alt="Bandaid" align="right" height="120px" hspace="20px" vspace="30px">
@@ -155,33 +155,34 @@ If on the other hand you wanted `viewA`'s height to be explicitly sized to 100 p
 do.
 
 ```swift
-viewA.setHeight(100)
+setHeight(of: viewA, to: 100)
 ```
 
 The `setWidth` and `setHeght` methods simply create one or more equivalency constraints
-between the view and the appropriate attributes. List of the short versions of all the
-`setWidth` and `setHeight` methods are provided below.
+between the view and the appropriate attributes. A list of the short versions
+of all the `setWidth` and `setHeight` methods are provided below.
 
 ```swift
-viewA.setWidth(_ constant:)
-viewA.setHeight(_ constant:)
+setWidth(of: item, to: constant)
+setHeight(of: item, to: constant)
 ```
 
 Similarly, if you want to make the width of one view equal to another view's width you can do this:
 
 ```swift
-viewA.matchWidth(of: viewB)
+matchWidth(of: viewA, to: viewB)
 ```
 
 And for the height:
 
 ```swift
-viewA.matchHeight(of: viewB)
+matchHeight(of: viewA, to: viewB)
 ```
 
-When you want to make a view's hieght and width equal you can do:
+When you want to make a view's height and width equal you can do:
+
 ```swift
-viewA.makeSquare()
+equalize(viewA)
 ```
 
 ### Manage Relative Position
@@ -190,33 +191,33 @@ Lets say you want `viewA` to be position right after `viewB`'s edge. You can acc
 by using the following:
 
 ```swift
-viewA.follows(theTrailingEdgeOf: viewB)
+follow(theTrailingEdgeOf: viewB, with: viewA)
 ```
 
 Or lets say you want `viewA` to be positioned in front of `viewB`'s edge. You could do the
 following.
 
 ```swift
-viewA.precedes(theLeadingEdgeOf: viewB)
+precede(theLeadingEdgeOf: viewB, with: viewA)
 ```
 
-If on the other hand you want to control the vertical position you can use `sits`.
+If on the other hand you want to control the vertical position you can use `set`.
 
 These methods simply create one or more equivalency constraints between the two views and the
-appropriate attributes. List of the short versions of all the these methods are provided
+appropriate attributes. A list of the short versions of all these methods are provided
 below.
 
 ```swift
-viewA.follows(theTrailingEdgeOf:)
-viewA.follows(theTrailingMarginOf:)
+follow(theTrailingEdgeOf:with:)
+follow(theTrailingMarginOf:with:)
 
-viewA.precedes(theLeadingEdgeOf:)
-viewA.precedes(theLeadingMarginOf:)
+precede(theLeadingEdgeOf:with:)
+precede(theLeadingMarginOf:with:)
 
-viewA.sits(aboveTheTopEdgeOf:)
-viewA.sits(aboveTheTopMarginOf:)
-viewA.sits(belowTheBottomEdgeOf:)
-viewA.sits(belowTheBottomMarginOf:)
+set(viewA, aboveTheTopEdgeOf:)
+set(viewA, aboveTheTopMarginOf:)
+set(viewA, belowTheBottomEdgeOf:)
+set(viewA, belowTheBottomMarginOf:)
 ```
 
 <img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px">
@@ -227,7 +228,7 @@ Lets say you want `viewA` to be limited by `viewB`'s edges. You can accomplish t
 the following:
 
 ```swift
-viewA.limit(byEdgesOf: viewB)
+limit(viewA, byEdgesOf: viewB)
 ```
 
 This sets up constraints saying that each of `viewA`'s edges must be `<=` `viewB`'s
@@ -237,33 +238,33 @@ If on the other hand you wanted `viewA` limited by `viewB`s margins you could
 simply do.
 
 ```swift
-viewA.limit(byMarginsOf: viewB)
+limit(viewA, byMarginsOf: viewB)
 ```
 
 The `limit` methods simply create one or more `<=` constraints between the two views and the
-appropriate attributes. List of the short versions of all the `limit` methods are provided
+appropriate attributes. A list of the short versions of all the `limit` methods are provided
 below.
 
 ```swift
-viewA.limit(byLeadingEdgeOf: viewB)
-viewA.limit(byTrailingEdgeOf: viewB)
-viewA.limit(byTopEdgeOf: viewB)
-viewA.limit(byBottomEdgeOf: viewB)
+limit(viewA, byLeadingEdgeOf: viewB)
+limit(viewA, byTrailingEdgeOf: viewB)
+limit(viewA, byTopEdgeOf: viewB)
+limit(viewA, byBottomEdgeOf: viewB)
 
-viewA.limit(byVerticalEdgesOf: viewB)
-viewA.limit(byHorizontalEdgesOf: viewB)
+limit(viewA, byVerticalEdgesOf: viewB)
+limit(viewA, byHorizontalEdgesOf: viewB)
 
-viewA.limit(byEdgesOf: viewB)
+limit(viewA, byEdgesOf: viewB)
 
-viewA.limit(byLeadingMarginOf: viewB)
-viewA.limit(byTrailingMarginOf: viewB)
-viewA.limit(byTopMarginOf: viewB)
-viewA.limit(byBottomMarginOf: viewB)
+limit(viewA, byLeadingMarginOf: viewB)
+limit(viewA, byTrailingMarginOf: viewB)
+limit(viewA, byTopMarginOf: viewB)
+limit(viewA, byBottomMarginOf: viewB)
 
-viewA.limit(byVerticalMarginsOf: viewB)
-viewA.limit(byHorizontalMarginsOf: viewB)
+limit(viewA, byVerticalMarginsOf: viewB)
+limit(viewA, byHorizontalMarginsOf: viewB)
 
-viewA.limit(byMarginsOf: viewB)
+limit(viewA, byMarginsOf: viewB)
 ```
 
 ### Expand
@@ -272,7 +273,7 @@ Lets say you want `viewA` to be expanded from `viewB`'s edges out. You can accom
 by using the following:
 
 ```swift
-viewA.expand(fromEdgesOf: viewB)
+expand(viewA, fromEdgesOf: viewB)
 ```
 
 This sets up constraints saying that each of `viewA`'s edges must be `>=` `viewB`'s
@@ -282,36 +283,36 @@ If on the other hand you wanted `viewA` to be expanded from `viewB`s margins you
 simply do.
 
 ```swift
-viewA.expand(fromMarginsOf: viewB)
+expand(viewA, fromMarginsOf: viewB)
 ```
 
 The `expand` methods simply create one or more `>=` constraints between the two views and
-the appropriate attributes. List of the short versions of all the `expand` methods are
+the appropriate attributes. A list of the short versions of all the `expand` methods are
 provided below.
 
 ```swift
-viewA.expand(fromLeadingEdgeOf: viewB)
-viewA.expand(fromTrailingEdgeOf: viewB)
-viewA.expand(fromTopEdgeOf: viewB)
-viewA.expand(fromBottomEdgeOf: viewB)
+expand(viewA, fromLeadingEdgeOf: viewB)
+expand(viewA, fromTrailingEdgeOf: viewB)
+expand(viewA, fromTopEdgeOf: viewB)
+expand(viewA, fromBottomEdgeOf: viewB)
 
-viewA.expand(fromVerticalEdgesOf: viewB)
-viewA.expand(fromHorizontalEdgesOf: viewB)
+expand(viewA, fromVerticalEdgesOf: viewB)
+expand(viewA, fromHorizontalEdgesOf: viewB)
 
-viewA.expand(fromEdgesOf: viewB)
+expand(viewA, fromEdgesOf: viewB)
 
-viewA.expand(fromLeadingMarginOf: viewB)
-viewA.expand(fromTrailingMarginOf: viewB)
-viewA.expand(fromTopMarginOf: viewB)
-viewA.expand(fromBottomMarginOf: viewB)
+expand(viewA, fromLeadingMarginOf: viewB)
+expand(viewA, fromTrailingMarginOf: viewB)
+expand(viewA, fromTopMarginOf: viewB)
+expand(viewA, fromBottomMarginOf: viewB)
 
-viewA.expand(fromVerticalMarginsOf: viewB)
-viewA.expand(fromHorizontalMarginsOf: viewB)
+expand(viewA, fromVerticalMarginsOf: viewB)
+expand(viewA, fromHorizontalMarginsOf: viewB)
 
-viewA.expand(fromMarginsOf: viewB)
+expand(viewA, fromMarginsOf: viewB)
 
-viewA.expand(fromWidthOf: viewB)
-viewA.expand(fromHeightOf: viewB)
+expand(viewA, fromWidthOf: viewB)
+expand(viewA, fromHeightOf: viewB)
 ```
 
 ### Manage Intrinsic Size Relations
@@ -322,10 +323,10 @@ same. If you want to set them independently you should use the native API provid
 for this.
 
 ```swift
-viewA.keepIntrinsicHeight(priority:)
-viewA.keepIntrinsicWidth(priority:)
+keepIntrinsicHeight(of: viewA, priority:)
+keepIntrinsicWidth(of: viewA, priority:)
 
-viewA.keepIntrinsicSize(priority:)
+keepIntrinsicSize(of: viewA, priority:)
 ```
 
 ## Build

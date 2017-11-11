@@ -4,351 +4,228 @@
     import AppKit
 #endif
 
-extension ConstraidView {
-    /**
-        Constrains the object's leading edge to be less than or equal to the
-        leading edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's leading edge to be less than or equal to the
+ leading edge of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byLeadingEdgeOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .leading,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .leading,
-                multiplier: multiplier, constant: inset, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byLeadingEdgeOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Constrains the object's trailing edge to be less than or equal to the
-        leading edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          trailing edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .leading,
+                           relatedBy: .lessThanOrEqual, toItem: itemB, attribute: .leading,
+                           multiplier: multiplier, constant: inset, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byTrailingEdgeOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+/**
+ Constrains the object's trailing edge to be less than or equal to the
+ leading edge of `item`
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .trailing,
-                relatedBy: .lessThanOrEqual, toItem: item,
-                attribute: .trailing, multiplier: multiplier,
-                constant: (inset * -1), priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ trailing edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    /**
-        Constrains the object's top edge to be less than or equal to the
-        top edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byTrailingEdgeOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byTopEdgeOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .trailing,
+                           relatedBy: .lessThanOrEqual, toItem: itemB,
+                           attribute: .trailing, multiplier: multiplier,
+                           constant: (inset * -1), priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .top,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .top,
-                multiplier: multiplier, constant: inset, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+/**
+ Constrains the object's top edge to be less than or equal to the
+ top edge of `item`
 
-    /**
-        Constrains the object's bottom edge to be less than or equal to the
-        bottom edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          bottom edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byBottomEdgeOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byTopEdgeOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .bottom,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .bottom,
-                multiplier: multiplier, constant: (inset * -1),
-                priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .top,
+                           relatedBy: .lessThanOrEqual, toItem: itemB, attribute: .top,
+                           multiplier: multiplier, constant: inset, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-    /**
-        Constrains the object's top & bottom edges to be less than or equal
-        to the top & bottom edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top & bottom edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's bottom edge to be less than or equal to the
+ bottom edge of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byHorizontalEdgesOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ bottom edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        let constraints = limit(byTopEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byBottomEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byBottomEdgeOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Constrains the object's leading & trailing edges to be less than or equal
-        to the leading & trailing edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading & trailing edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .bottom,
+                           relatedBy: .lessThanOrEqual, toItem: itemB, attribute: .bottom,
+                           multiplier: multiplier, constant: (inset * -1),
+                           priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byVerticalEdgesOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+/**
+ Constrains the object's top & bottom edges to be less than or equal
+ to the top & bottom edge of `item`
 
-        let constraints = limit(byLeadingEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byTrailingEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top & bottom edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    /**
-        Constrains the object's top, bottom, leading & trailing edges to be
-        less than or equal to the top, bottom, leading & trailing edge of
-        `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top, bottom, leading & trailing edge of the item prior to the
-          `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byHorizontalEdgesOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func limit(byEdgesOf item: Any?,
-        insetBy inset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+    let constraints = Constraid.limit(itemA, byTopEdgeOf: itemB, times: multiplier, insetBy: inset,
+                             priority: priority) +
+        Constraid.limit(itemA, byBottomEdgeOf: itemB, times: multiplier, insetBy: inset,
+               priority: priority)
+    constraints.activate()
+    return constraints
+}
 
-        let constraints = limit(byTopEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byBottomEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byLeadingEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byTrailingEdgeOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
+/**
+ Constrains the object's leading & trailing edges to be less than or equal
+ to the leading & trailing edge of `item`
 
-    // MARK: - Deprecated
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading & trailing edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byLeadigEdgeOf: , insetBy: ...)")
-    open func limit(byLeadingEdgeOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byVerticalEdgesOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .leading,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .leading,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+    let constraints = Constraid.limit(itemA, byLeadingEdgeOf: itemB, times: multiplier, insetBy: inset,
+                            priority: priority) +
+        Constraid.limit(itemA, byTrailingEdgeOf: itemB, times: multiplier, insetBy: inset,
+              priority: priority)
+    constraints.activate()
+    return constraints
+}
 
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byTrailingEdgeOf: , insetBy: ...)")
-    open func limit(byTrailingEdgeOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+/**
+ Constrains the object's top, bottom, leading & trailing edges to be
+ less than or equal to the top, bottom, leading & trailing edge of
+ `item`
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .trailing,
-                relatedBy: .lessThanOrEqual, toItem: item,
-                attribute: .trailing, multiplier: multiplier,
-                constant: (constant * -1), priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top, bottom, leading & trailing edge of the item prior to the
+ `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byTopEdgeOf: , insetBy: ...)")
-    open func limit(byTopEdgeOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limit(_ itemA: Constraid.View, byEdgesOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                insetBy inset: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .top,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .top,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byBottomEdgeOf: , insetBy: ...)")
-    open func limit(byBottomEdgeOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .bottom,
-                relatedBy: .lessThanOrEqual, toItem: item, attribute: .bottom,
-                multiplier: multiplier, constant: (constant * -1),
-                priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byHorizontalEdgesOf: , insetBy: ...)")
-    open func limit(byHorizontalEdgesOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        let constraints = limit(byTopEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byBottomEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byVerticalEdgesOf: , insetBy: ...)")
-    open func limit(byVerticalEdgesOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        let constraints = limit(byLeadingEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byTrailingEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use limit(byEdgesOf: , insetBy: ...)")
-    open func limit(byEdgesOf item: Any?,
-        constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired
-        ) -> ConstraidConstraintCollection {
-
-        let constraints = limit(byTopEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byBottomEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byLeadingEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          limit(byTrailingEdgeOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
+    let constraints = Constraid.limit(itemA, byTopEdgeOf: itemB, times: multiplier, insetBy: inset,
+                            priority: priority) +
+        Constraid.limit(itemA, byBottomEdgeOf: itemB, times: multiplier, insetBy: inset,
+              priority: priority) +
+        Constraid.limit(itemA, byLeadingEdgeOf: itemB, times: multiplier, insetBy: inset,
+              priority: priority) +
+        Constraid.limit(itemA, byTrailingEdgeOf: itemB, times: multiplier, insetBy: inset,
+              priority: priority)
+    constraints.activate()
+    return constraints
 }

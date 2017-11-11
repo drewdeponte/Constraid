@@ -31,7 +31,7 @@ public extension NSLayoutConstraint {
         attribute attr2: NSLayoutAttribute,
         multiplier: CGFloat,
         constant: CGFloat,
-        priority: ConstraidLayoutPriority) {
+        priority: Constraid.LayoutPriority) {
 
         self.init(item: item, attribute: attr1, relatedBy: relatedBy,
             toItem: toItem, attribute: attr2, multiplier: multiplier,

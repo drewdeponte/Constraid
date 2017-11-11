@@ -3,292 +3,188 @@
 // build target.
 import UIKit
 
-extension ConstraidView {
-    /**
-        Constrains the object's leading edge to the leading margin of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the leading
-          margin of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading margin of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's leading edge to the leading margin of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading margin of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the leading
+ margin of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withLeadingMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .leading, relatedBy: .equal,
+                           toItem: itemB, attribute: .leadingMargin, multiplier: multiplier,
+                           constant: inset, priority: priority)
+        ])
+    constraints.activate()
+    return constraints
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withLeadingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+/**
+ Constrains the object's trailing edge to the trailing margin of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ trailing margin of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the trailing
+ margin of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withTrailingMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal,
+                           toItem: itemB, attribute: .trailingMargin, multiplier: multiplier,
+                           constant: (-1.0 * inset), priority: priority)
+        ])
+    constraints.activate()
+    return constraints
+}
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal,
-                               toItem: item, attribute: .leadingMargin, multiplier: multiplier,
-                               constant: inset, priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
+/**
+ Constrains the object's top edge to the top margin of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top margin of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the top
+ margin of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withTopMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .top, relatedBy: .equal,
+                           toItem: itemB, attribute: .topMargin, multiplier: multiplier,
+                           constant: inset, priority: priority)
+        ])
+    constraints.activate()
+    return constraints
+}
 
-    /**
-        Constrains the object's trailing edge to the trailing margin of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the trailing
-          margin of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          trailing margin of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's bottom edge to the bottom margin of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ bottom margin of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the bottom
+ margin of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withBottomMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let constraints = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal,
+                           toItem: itemB, attribute: .bottomMargin, multiplier: multiplier,
+                           constant: (-1.0 * inset), priority: priority)
+        ])
+    constraints.activate()
+    return constraints
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withTrailingMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
+/**
+ Constrains the object's top & bottom edge to the top & bottom margins of
+ `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top & bottom margins of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the top & bottom
+ margins of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withVerticalMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    let constraints = Constraid.flush(itemA, withLeadingMarginOf: itemB, times: multiplier, insetBy: inset,
+                            priority: priority) +
+        Constraid.flush(itemA, withTrailingMarginOf: itemB, times: multiplier, insetBy: inset, priority: priority)
+    constraints.activate()
+    return constraints
+}
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
-                               toItem: item, attribute: .trailingMargin, multiplier: multiplier,
-                               constant: (-1.0 * inset), priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
+/**
+ Constrains the object's leading & trailing edge to the leading &
+ trailing margins of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading & trailing margins of the item prior to the `inset` being applied.
+ - parameter inset: The amount to inset the object from the leading & trailing
+ margins of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withHorizontalMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    let constraints = Constraid.flush(itemA, withTopMarginOf: itemB, times: multiplier, insetBy: inset,
+                            priority: priority) +
+        Constraid.flush(itemA, withBottomMarginOf: itemB, times: multiplier, insetBy: inset,
+               priority: priority)
+    constraints.activate()
+    return constraints
+}
 
-    /**
-        Constrains the object's top edge to the top margin of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the top
-          margin of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          top margin of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withTopMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
-                               toItem: item, attribute: .topMargin, multiplier: multiplier,
-                               constant: inset, priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    /**
-        Constrains the object's bottom edge to the bottom margin of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the bottom
-          margin of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          bottom margin of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withBottomMarginOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
-                               toItem: item, attribute: .bottomMargin, multiplier: multiplier,
-                               constant: (-1.0 * inset), priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    /**
-        Constrains the object's top & bottom edge to the top & bottom margins of
-        `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the top & bottom
-          margins of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          top & bottom margins of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withVerticalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withLeadingMarginOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          flush(withTrailingMarginOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    /**
-        Constrains the object's leading & trailing edge to the leading &
-        trailing margins of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the leading & trailing
-          margins of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading & trailing margins of the item prior to the `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withHorizontalMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withTopMarginOf: item, insetBy: inset, multiplier: multiplier,
-                                priority: priority) +
-                          flush(withBottomMarginOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    /**
-        Constrains the object's leading, trailing, top, & bottom  edge to the
-        leading, trailing, top & bottom  margins of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter inset: The amount to inset the object from the leading,
-          trailing, top and bottom margins of the item
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading, trailing, top & bottom  margins of the item prior to the
-          `inset` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func flush(withMarginsOf item: Any?, insetBy inset: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withHorizontalMarginsOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority) +
-                          flush(withVerticalMarginsOf: item, insetBy: inset,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    // MARK: - Deprecated
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withLeadingMarginOf: , insetBy: ...)")
-    open func flush(withLeadingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .leading, relatedBy: .equal,
-                               toItem: item, attribute: .leadingMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withTrailingMarginOf: , insetBy: ...)")
-    open func flush(withTrailingMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal,
-                               toItem: item, attribute: .trailingMargin, multiplier: multiplier,
-                               constant: (-1.0 * constant), priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withTopMarginOf: , insetBy: ...)")
-    open func flush(withTopMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .top, relatedBy: .equal,
-                               toItem: item, attribute: .topMargin, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withBottomMarginOf: , insetBy: ...)")
-    open func flush(withBottomMarginOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let constraints = ConstraidConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal,
-                               toItem: item, attribute: .bottomMargin, multiplier: multiplier,
-                               constant: (-1.0 * constant), priority: priority)
-            ])
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withVerticalMarginsOf: , insetBy: ...)")
-    open func flush(withVerticalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withLeadingMarginOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          flush(withTrailingMarginOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withHorizontalMarginsOf: , insetBy: ...)")
-    open func flush(withHorizontalMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withTopMarginOf: item, constant: constant, multiplier: multiplier,
-                                priority: priority) +
-                          flush(withBottomMarginOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
-
-    @discardableResult
-    @available(*, deprecated, message: "use flush(withMarginsOf: , insetBy: ...)")
-    open func flush(withMarginsOf item: Any?, constant: CGFloat = 0.0,
-                    multiplier: CGFloat = 1.0, priority: ConstraidLayoutPriority = ConstraidLayoutPriorityRequired) -> ConstraidConstraintCollection {
-
-        let constraints = flush(withHorizontalMarginsOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority) +
-                          flush(withVerticalMarginsOf: item, constant: constant,
-                                multiplier: multiplier, priority: priority)
-        constraints.activate()
-        return constraints
-    }
+/**
+ Constrains the object's leading, trailing, top, & bottom  edge to the
+ leading, trailing, top & bottom  margins of `item`
+ 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading, trailing, top & bottom  margins of the item prior to the
+ `inset` being applied.
+ - parameter inset: The amount to inset the object from the leading,
+ trailing, top and bottom margins of the item
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ 
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func flush(_ itemA: Constraid.View, withMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    
+    let constraints = Constraid.flush(itemA, withHorizontalMarginsOf: itemB, times: multiplier, insetBy: inset,
+                            priority: priority) +
+        Constraid.flush(itemA, withVerticalMarginsOf: itemB, times: multiplier, insetBy: inset,
+              priority: priority)
+    constraints.activate()
+    return constraints
 }
