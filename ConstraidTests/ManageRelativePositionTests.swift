@@ -7,7 +7,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.follows(theTrailingMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.follow(theTrailingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -27,7 +27,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.precedes(theLeadingMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.precede(theLeadingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -47,7 +47,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(aboveTheTopMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.set(viewOne, aboveTheTopMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -67,7 +67,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(belowTheBottomMarginOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.set(viewOne, belowTheBottomMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -87,7 +87,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.follows(theTrailingEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.follow(theTrailingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -107,7 +107,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.precedes(theLeadingEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.precede(theLeadingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -127,7 +127,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(aboveTheTopEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.set(viewOne, aboveTheTopEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -147,7 +147,7 @@ class ManageRelativePositionTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.sits(belowTheBottomEdgeOf: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.set(viewOne, belowTheBottomEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 

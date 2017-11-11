@@ -59,7 +59,7 @@ flush(childView, withVerticalEdgesOf: parentView)
 [Constraid][constraid] tries to simplify things by building on top of the lower level
 constructs provided by Apple's AutoLayout system.
 
-In general [Constraid][constraid] extends `UIView` to have a number of methods that aid with
+In general [Constraid][constraid] provides a number of methods that aid with
 defining constraint relationships between views. Currently, the provided methods are grouped
 into the following sections.
 
@@ -80,8 +80,8 @@ flush(viewA, withMarginsOf: viewB)
 ```
 
 The `flush` methods simply create one or more equivalency constraints between the two views
-and the appropriate attributes. List of the short versions of all the `flush` methods are
-provided below.
+and the appropriate attributes. A list of the short versions of all the `flush`
+methods are provided below.
 
 ```swift
 flush(viewA, withLeadingEdgeOf: viewB)
@@ -125,8 +125,8 @@ center(viewA, withinMarginsOf: viewB)
 
 The `center` methods simply create one or more equivalency constraints between the two views
 and the appropriate attributes (`centerX`, `centerY`, `centerXwithinMargins`,
-`centerYwithinMargins`). List of the short versions of all the `center` methods are
-provided below.
+`centerYwithinMargins`). A list of the short versions of all the `center`
+methods are provided below.
 
 ```swift
 center(viewA, verticallyWithin: viewB)
@@ -159,8 +159,8 @@ setHeight(of: viewA, to: 100)
 ```
 
 The `setWidth` and `setHeght` methods simply create one or more equivalency constraints
-between the view and the appropriate attributes. List of the short versions of all the
-`setWidth` and `setHeight` methods are provided below.
+between the view and the appropriate attributes. A list of the short versions
+of all the `setWidth` and `setHeight` methods are provided below.
 
 ```swift
 setWidth(of: item, to: constant)
@@ -191,33 +191,33 @@ Lets say you want `viewA` to be position right after `viewB`'s edge. You can acc
 by using the following:
 
 ```swift
-viewA.follows(theTrailingEdgeOf: viewB)
+follow(theTrailingEdgeOf: viewB, with: viewA)
 ```
 
 Or lets say you want `viewA` to be positioned in front of `viewB`'s edge. You could do the
 following.
 
 ```swift
-viewA.precedes(theLeadingEdgeOf: viewB)
+precede(theLeadingEdgeOf: viewB, with: viewA)
 ```
 
-If on the other hand you want to control the vertical position you can use `sits`.
+If on the other hand you want to control the vertical position you can use `set`.
 
 These methods simply create one or more equivalency constraints between the two views and the
-appropriate attributes. List of the short versions of all the these methods are provided
+appropriate attributes. A list of the short versions of all these methods are provided
 below.
 
 ```swift
-viewA.follows(theTrailingEdgeOf:)
-viewA.follows(theTrailingMarginOf:)
+follow(theTrailingEdgeOf:with:)
+follow(theTrailingMarginOf:with:)
 
-viewA.precedes(theLeadingEdgeOf:)
-viewA.precedes(theLeadingMarginOf:)
+precede(theLeadingEdgeOf:with:)
+precede(theLeadingMarginOf:with:)
 
-viewA.sits(aboveTheTopEdgeOf:)
-viewA.sits(aboveTheTopMarginOf:)
-viewA.sits(belowTheBottomEdgeOf:)
-viewA.sits(belowTheBottomMarginOf:)
+set(viewA, aboveTheTopEdgeOf:)
+set(viewA, aboveTheTopMarginOf:)
+set(viewA, belowTheBottomEdgeOf:)
+set(viewA, belowTheBottomMarginOf:)
 ```
 
 <img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px">
