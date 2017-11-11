@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Switch Intrinsic Size Relations out of the extension approach
 * Switch Expand out of the extension approach
 * Switch Limit out of the extension approach
 * Switch Relative Position Management out of the extension approach

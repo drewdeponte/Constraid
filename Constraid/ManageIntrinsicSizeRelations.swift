@@ -4,31 +4,38 @@
     import AppKit
 #endif
 
-extension Constraid.View {
-    /**
-        Sets height content hugging and compression resistance priority to 1000
-        (required)
-    */
-    open func keepIntrinsicHeight(priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
-        self.setContentCompressionResistancePriority(priority, for: .vertical)
-        self.setContentHuggingPriority(priority, for: .vertical)
-    }
+/**
+ Sets height content hugging and compression resistance priority
+ 
+ - parameter itemA: The `item` you want to constrain
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ */
+public func keepIntrinsicHeight(of itemA: Constraid.View, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
+    itemA.setContentCompressionResistancePriority(priority, for: .vertical)
+    itemA.setContentHuggingPriority(priority, for: .vertical)
+}
 
-    /**
-        Sets width content hugging and compression resistance priority to 1000
-        (required)
-    */
-    open func keepIntrinsicWidth(priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
-        self.setContentCompressionResistancePriority(priority, for: .horizontal)
-        self.setContentHuggingPriority(priority, for: .horizontal)
-    }
+/**
+ Sets width content hugging and compression resistance priority
 
-    /**
-        Sets height & width content hugging and compression resistance priority to 1000
-        (required)
-    */
-    open func keepIntrinsicSize(priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
-        keepIntrinsicHeight(priority: priority)
-        keepIntrinsicWidth(priority: priority)
-    }
+ - parameter itemA: The `item` you want to constrain
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ */
+public func keepIntrinsicWidth(of itemA: Constraid.View, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
+    itemA.setContentCompressionResistancePriority(priority, for: .horizontal)
+    itemA.setContentHuggingPriority(priority, for: .horizontal)
+}
+
+/**
+ Sets height & width content hugging and compression resistance priority
+
+ - parameter itemA: The `item` you want to constrain
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+ */
+public func keepIntrinsicSize(of itemA: Constraid.View, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) {
+    Constraid.keepIntrinsicHeight(of: itemA, priority: priority)
+    Constraid.keepIntrinsicWidth(of: itemA, priority: priority)
 }

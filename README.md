@@ -323,10 +323,10 @@ same. If you want to set them independently you should use the native API provid
 for this.
 
 ```swift
-viewA.keepIntrinsicHeight(priority:)
-viewA.keepIntrinsicWidth(priority:)
+keepIntrinsicHeight(of: viewA, priority:)
+keepIntrinsicWidth(of: viewA, priority:)
 
-viewA.keepIntrinsicSize(priority:)
+keepIntrinsicSize(of: viewA, priority:)
 ```
 
 ## Build
