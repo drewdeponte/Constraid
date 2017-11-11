@@ -10,84 +10,36 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
-* Switch Intrinsic Size Relations out of the extension approach
-* Switch Expand out of the extension approach
-* Switch Limit out of the extension approach
-* Switch Relative Position Management out of the extension approach
-* Switch Size Management out of the extension approach
-* Switch to Constraid.center() instead of extension approach
-* Change order of multiplier in flush() params and label it times
-* Switch to Constraid.flush() instead of extension approach
-* Rename ConstraidConstraintCollection type to ConstraintCollection
-* Rename ConstraidLayoutPriority type aliases to LayoutPriority type aliases
-* Rename ConstraidView type alias to View as it is namespaced by the module
-* Update to be compatible with Swift 4
-* Rename the `center(...)` family of methods to `middle(...)`
-* Document the `center(withinEdgesOf:)` and `center(withinMarginsOf:)` families
-* Document the `flush(withEdgesOf:)` and `flush(withMarginsOf:)` families
-* Deprecated `center(withinMarginsOf:)` use `center(withinMarginsOf:, offsetBy:)`
-* Deprecated `center(withinEdgesOf:)` use `center(withinEdgesOf:, offsetBy:)`
-* Deprecated `expand(fromMarginsOf:, constant:)` family use `expand(fromMarginsOf:, offsetBy:)`
-* Deprecated `expand(fromEdgesOf:, constant:)` family use `expand(fromEdgesOf:, offsetBy:)`
-* Deprecated `limit(byMarginsOf:, constant:)` family use `limit(byMarginsOf:, insetBy:)`
-* Deprecated `limit(byEdgesOf:, constant:)` family use `limit(byEdgesOf:, insetBy:)`
-* Deprecated `flush(withMarginsOf:, constant:)` use `flush(withMarginsOf:, insetBy:)`
-* Deprecated `flush(withEdgesOf:, constant:)` use `flush(withEdgesOf:, insetBy:)`
-* Deprecated `centerVertically` & `centerHorizontally` use `center(vertically...)` and `center(horizontally...)`
-* Changed Expand From Size methods to return collection of constraints
-* Changed Manage Size methods to return collection of constraints
-* Changed Manage Relative Position family of methods to return collection of constraints
-* Changed `expand(fromMarginsOf:)` family to return collection of constraints
-* Changed `expand(fromEdgesOf:)` family to return collection of constraints
-* Changed `limit(byMarginsOf:)` family to return collection of constraints
-* Changed `limit(byEdgesOf:)` family to return collection of constraints
-* Changed center methods to return constraint collections
-* Changed `flush(withMargin...)` methods to return collection of constraints
-* Changed `flush(withEdge...)` methods to return collection of constraints
-* Backfilled tests for ConstraintCollection
-* Backfilled tests for Expand From Size methods
-* Backfilled tests for Manage Size methods
-* Backfilled tests for Manage Intrinsic Size Relations methods
-* Backfilled tests for Manage Relative Position family of methods
-* Backfilled tests for `expand(fromMarginsOf:)` family of methods
-* Backfilled tests for `expand(fromEdgesOf:)` family of methods
-* Backfilled tests for `limit(byMarginsOf:)` family of methods
-* Backfilled tests for `limit(byEdgesOf:)` family of methods
-* Backfilled tests for center within edges and center within margins
-* Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `expand(fromTrailingMarginOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `expand(fromTrailingEdgeOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
-  (**breaking change**)
-* Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
-  (**breaking change**)
-* Fixed `flush(withMargin...)` issue where `constant` didn't behave as expected
-  (**breaking change**)
-* Fixed issue where `flush(withMarginsOf)`, `flush(withVerticalMarginsOf)`, and
-  `flush(withHorizontalMarginsOf)` constant argument would not do what expected
-  (**breaking change**)
-* Fixed issue where `flush(withEdgesOf)`, `flush(withVerticalEdgesOf)`, and
-  `flush(withHorizontalEdgesOf)` constant argument would not do what expected
-  (**breaking change**)
-* Fixed `by` on `sits(aboveTheTopEdgeOf)` and `sits(aboveTheTopMarginOf)` to not
-  be inverted (**breaking change**)
-* Fixed bug with `center(horizontallyWithinMarginsOf:)` (**breaking change**)
+* Change API style from UIView extension to Constraid methods
+* Remove smurfy naming, ex: `Constraid.CostraridView` to `Constraid.View`
+* Change `multiplier` param to `times` and position after `itemB`
+* Changed to be compatible with Swift 4.0.2
 * Added MacOS support, this includes all non-margin methods
+* Change `constant` param to more meaningful contextual names, ex: offsetBy, insetBy
+* Change `centerVertically` & `centerHorizontally` to `center(vertically...)`, etc.
+* Change all methods to return collection of constraints, to allow activate/deactivate
 * Fixed incorrect GitHub source path in Podspec
-* Added `makeSquare()`
+* Changed `sits(), follows(), precedes()` to `set(), follow(), procede()` respectively
+* Added `equalize()`
 * Added `matchWidth(of:)` and `matchHeight(of:)`
 * Added `expand(fromWidthof)` and `expand(fromHeightOf)`
+* Fixed bug with `center(horizontallyWithinMarginsOf:)`
+* Fixed bug with `expand(fromBottomMarginOf:)` treating `constant` as a positive
+* Fixed bug with `expand(fromTrailingMarginOf:)` treating `constant` as a positive
+* Fixed bug with `expand(fromBottomEdgeOf:)` treating `constant` as a positive
+* Fixed bug with `expand(fromTrailingEdgeOf:)` treating `constant` as a positive
+* Fixed bug with `limit(byBottomMarginOf:)` treating `constant` as a positive
+* Fixed bug with `limit(byTrailingMarginOf:)` treating `constant` as a positive
+* Fixed bug with `limit(byBottomEdgeOf:)` treating `constant` as a positive
+* Fixed bug with `limit(byTrailingEdgeOf:)` treating `constant` as a positive
+* Fixed `flush(withEdge...)` issue where `constant` didn't behave as expected
+* Fixed `flush(withMargin...)` issue where `constant` didn't behave as expected
+* Fixed issue where `flush(withMarginsOf)`, `flush(withVerticalMarginsOf)`, and
+  `flush(withHorizontalMarginsOf)` constant argument would not do what expected
+* Fixed issue where `flush(withEdgesOf)`, `flush(withVerticalEdgesOf)`, and
+  `flush(withHorizontalEdgesOf)` constant argument would not do what expected
+* Fixed `by` on `sits(aboveTheTopEdgeOf)` and `sits(aboveTheTopMarginOf)` to not
+  be inverted (**breaking change**)
 
 #### [v1.1.0][v1.1.0] - 2017-01-07
 
