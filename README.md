@@ -146,7 +146,7 @@ Lets say you want `viewA`'s width to be explicitly sized to some 100 pts. You ca
 this by using the following:
 
 ```swift
-viewA.setWidth(100)
+setWidth(of: viewA, to: 100)
 ```
 
 <img src="resources/bandaid.png" alt="Bandaid" align="right" height="120px" hspace="20px" vspace="30px">
@@ -155,7 +155,7 @@ If on the other hand you wanted `viewA`'s height to be explicitly sized to 100 p
 do.
 
 ```swift
-viewA.setHeight(100)
+setHeight(of: viewA, to: 100)
 ```
 
 The `setWidth` and `setHeght` methods simply create one or more equivalency constraints
@@ -163,25 +163,26 @@ between the view and the appropriate attributes. List of the short versions of a
 `setWidth` and `setHeight` methods are provided below.
 
 ```swift
-viewA.setWidth(_ constant:)
-viewA.setHeight(_ constant:)
+setWidth(of: item, to: constant)
+setHeight(of: item, to: constant)
 ```
 
 Similarly, if you want to make the width of one view equal to another view's width you can do this:
 
 ```swift
-viewA.matchWidth(of: viewB)
+matchWidth(of: viewA, to: viewB)
 ```
 
 And for the height:
 
 ```swift
-viewA.matchHeight(of: viewB)
+matchHeight(of: viewA, to: viewB)
 ```
 
-When you want to make a view's hieght and width equal you can do:
+When you want to make a view's height and width equal you can do:
+
 ```swift
-viewA.makeSquare()
+equalize(viewA)
 ```
 
 ### Manage Relative Position

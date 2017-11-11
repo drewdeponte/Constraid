@@ -4,157 +4,156 @@
     import AppKit
 #endif
 
-extension Constraid.View {
-    /**
-        Set width of receiver using a constraint in auto-layout
+/**
+ Set width of receiver using a constraint in auto-layout
 
-        - parameter constant: The value to set the width to
-        - parameter priority: The priority this constraint uses when being
-            evaluated against other constraints
+ - parameter item: The `item` you want to constrain
+ - parameter constant: The value to set the width to
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func setWidth(_ constant: CGFloat = 0.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var targetConstraint: NSLayoutConstraint?
+    item.translatesAutoresizingMaskIntoConstraints = false
+    var targetConstraint: NSLayoutConstraint?
 
-        for constraint in self.constraints {
-            if constraint.firstAttribute == .width && constraint.relation == .equal {
-                targetConstraint = constraint
-            }
+    for constraint in item.constraints {
+        if constraint.firstAttribute == .width && constraint.relation == .equal {
+            targetConstraint = constraint
         }
+    }
 
-        if let constraint = targetConstraint {
-            self.removeConstraint(constraint)
+    if let constraint = targetConstraint {
+        item.removeConstraint(constraint)
+    }
+
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .width,
+                           relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
+                           multiplier: 1.0, constant: constant, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
+
+/**
+ Set height of receiver using a constraint in auto-layout
+
+ - parameter item: The `item` you want to constrain
+ - parameter constant: The value to set the height to
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func setHeight(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+
+    item.translatesAutoresizingMaskIntoConstraints = false
+    var targetConstraint: NSLayoutConstraint?
+
+    for constraint in item.constraints {
+        if constraint.firstAttribute == .height && constraint.relation == .equal {
+            targetConstraint = constraint
         }
-
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .width,
-                relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-                multiplier: 1.0, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
     }
 
-    /**
-        Set height of receiver using a constraint in auto-layout
-
-        - parameter constant: The value to set the height to
-        - parameter priority: The priority this constraint uses when being
-            evaluated against other constraints
-
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func setHeight(_ constant: CGFloat = 0.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
-
-        self.translatesAutoresizingMaskIntoConstraints = false
-        var targetConstraint: NSLayoutConstraint?
-
-        for constraint in self.constraints {
-            if constraint.firstAttribute == .height && constraint.relation == .equal {
-                targetConstraint = constraint
-            }
-        }
-
-        if let constraint = targetConstraint {
-            self.removeConstraint(constraint)
-        }
-
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .height,
-                relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-                multiplier: 1.0, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
+    if let constraint = targetConstraint {
+        item.removeConstraint(constraint)
     }
 
-    /**
-        Set width of receiver to width of `item`
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .height,
+                           relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
+                           multiplier: 1.0, constant: constant, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - parameter item: The object to set the width based on
-        - parameter constant: The amount to adjust the constraint by
-        - parameter multiplier: The ratio altering the constraint relative to
-          the item
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Set width of receiver to width of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func matchWidth(of item: Any?,
-        by constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ the item
+ - parameter constant: The amount to adjust the constraint by
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .width,
-                relatedBy: .equal, toItem: item, attribute: .width,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func matchWidth(of itemA: Constraid.View, to itemB: Any?,
+                     times multiplier: CGFloat = 1.0,
+                     by constant: CGFloat = 0.0,
+                     priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Set height of receiver to heigt of `item`
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .width,
+                           relatedBy: .equal, toItem: itemB, attribute: .width,
+                           multiplier: multiplier, constant: constant, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - parameter item: The object to set the width based on
-        - parameter constant: The amount to adjust the constraint by
-        - parameter multiplier: The ratio altering the constraint relative to
-          the item
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Set height of receiver to heigt of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func matchHeight(of item: Any?,
-        by constant: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ the item
+ - parameter constant: The amount to adjust the constraint by
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .height,
-                relatedBy: .equal, toItem: item, attribute: .height,
-                multiplier: multiplier, constant: constant, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func matchHeight(of itemA: Constraid.View, to itemB: Any?,
+                      times multiplier: CGFloat = 1.0,
+                      by constant: CGFloat = 0.0,
+                      priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Add constraint to receiver declaring it square
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .height,
+                           relatedBy: .equal, toItem: itemB, attribute: .height,
+                           multiplier: multiplier, constant: constant, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Add constraint to receiver declaring it square
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func makeSquare(
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - parameter item: The `item` you want to constrain
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .width,
-                relatedBy: .equal, toItem: self, attribute: .height,
-                multiplier: 1.0, constant: 0.0, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func equalize(_ item: Constraid.View,
+    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    item.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .width,
+                           relatedBy: .equal, toItem: item, attribute: .height,
+                           multiplier: 1.0, constant: 0.0, priority: priority)
+        ])
+    collection.activate()
+    return collection
 }

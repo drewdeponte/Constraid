@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Switch Size Management out of the extension approach
 * Switch to Constraid.center() instead of extension approach
 * Change order of multiplier in flush() params and label it times
 * Switch to Constraid.flush() instead of extension approach

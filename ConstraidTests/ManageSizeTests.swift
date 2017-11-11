@@ -5,7 +5,7 @@ class ManageSizeTests: XCTestCase {
     func testSetWidth() {
         let viewOne = UIView()
 
-        let constraints = viewOne.setWidth(10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.setWidth(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
@@ -22,7 +22,7 @@ class ManageSizeTests: XCTestCase {
     func testSetHeight() {
         let viewOne = UIView()
 
-        let constraints = viewOne.setHeight(10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.setHeight(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -40,7 +40,7 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.matchWidth(of: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.matchWidth(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -58,7 +58,7 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
-        let constraints = viewOne.matchHeight(of: viewTwo, by: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.matchHeight(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -74,7 +74,7 @@ class ManageSizeTests: XCTestCase {
     func testMakeSquare() {
         let viewOne = UIView()
 
-        let constraints = viewOne.makeSquare(priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.equalize(viewOne, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraint = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
