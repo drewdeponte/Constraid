@@ -273,7 +273,7 @@ Lets say you want `viewA` to be expanded from `viewB`'s edges out. You can accom
 by using the following:
 
 ```swift
-viewA.expand(fromEdgesOf: viewB)
+expand(viewA, fromEdgesOf: viewB)
 ```
 
 This sets up constraints saying that each of `viewA`'s edges must be `>=` `viewB`'s
@@ -283,36 +283,36 @@ If on the other hand you wanted `viewA` to be expanded from `viewB`s margins you
 simply do.
 
 ```swift
-viewA.expand(fromMarginsOf: viewB)
+expand(viewA, fromMarginsOf: viewB)
 ```
 
 The `expand` methods simply create one or more `>=` constraints between the two views and
-the appropriate attributes. List of the short versions of all the `expand` methods are
+the appropriate attributes. A list of the short versions of all the `expand` methods are
 provided below.
 
 ```swift
-viewA.expand(fromLeadingEdgeOf: viewB)
-viewA.expand(fromTrailingEdgeOf: viewB)
-viewA.expand(fromTopEdgeOf: viewB)
-viewA.expand(fromBottomEdgeOf: viewB)
+expand(viewA, fromLeadingEdgeOf: viewB)
+expand(viewA, fromTrailingEdgeOf: viewB)
+expand(viewA, fromTopEdgeOf: viewB)
+expand(viewA, fromBottomEdgeOf: viewB)
 
-viewA.expand(fromVerticalEdgesOf: viewB)
-viewA.expand(fromHorizontalEdgesOf: viewB)
+expand(viewA, fromVerticalEdgesOf: viewB)
+expand(viewA, fromHorizontalEdgesOf: viewB)
 
-viewA.expand(fromEdgesOf: viewB)
+expand(viewA, fromEdgesOf: viewB)
 
-viewA.expand(fromLeadingMarginOf: viewB)
-viewA.expand(fromTrailingMarginOf: viewB)
-viewA.expand(fromTopMarginOf: viewB)
-viewA.expand(fromBottomMarginOf: viewB)
+expand(viewA, fromLeadingMarginOf: viewB)
+expand(viewA, fromTrailingMarginOf: viewB)
+expand(viewA, fromTopMarginOf: viewB)
+expand(viewA, fromBottomMarginOf: viewB)
 
-viewA.expand(fromVerticalMarginsOf: viewB)
-viewA.expand(fromHorizontalMarginsOf: viewB)
+expand(viewA, fromVerticalMarginsOf: viewB)
+expand(viewA, fromHorizontalMarginsOf: viewB)
 
-viewA.expand(fromMarginsOf: viewB)
+expand(viewA, fromMarginsOf: viewB)
 
-viewA.expand(fromWidthOf: viewB)
-viewA.expand(fromHeightOf: viewB)
+expand(viewA, fromWidthOf: viewB)
+expand(viewA, fromHeightOf: viewB)
 ```
 
 ### Manage Intrinsic Size Relations

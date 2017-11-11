@@ -8,7 +8,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromLeadingMarginOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromLeadingMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -29,7 +29,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromTrailingMarginOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromTrailingMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -50,7 +50,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromTopMarginOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromTopMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -71,7 +71,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromBottomMarginOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromBottomMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -92,7 +92,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromHorizontalMarginsOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromHorizontalMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -124,7 +124,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromVerticalMarginsOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromVerticalMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -156,7 +156,7 @@ class ExpandFromMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.expand(fromMarginsOf: viewTwo, offsetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.expand(viewOne, fromMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
         let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint

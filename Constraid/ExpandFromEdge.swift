@@ -4,220 +4,225 @@
     import AppKit
 #endif
 
-extension Constraid.View {
-    /**
-        Constrains the object's leading edge to be greater than or equal to the
-        leading edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's leading edge to be greater than or equal to the
+ leading edge of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromLeadingEdgeOf item: Any?,
-        offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .leading,
-                relatedBy: .greaterThanOrEqual, toItem: item,
-                attribute: .leading, multiplier: multiplier,
-                constant: offset, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromLeadingEdgeOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Constrains the object's trailing edge to be greater than or equal to the
-        leading edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          trailing edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .leading,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB,
+                           attribute: .leading, multiplier: multiplier,
+                           constant: offset, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromTrailingEdgeOf item: Any?,
-        offsetBy offset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+/**
+ Constrains the object's trailing edge to be greater than or equal to the
+ leading edge of `item`
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .trailing,
-                relatedBy: .greaterThanOrEqual, toItem: item,
-                attribute: .trailing, multiplier: multiplier,
-                constant: (offset * -1), priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ trailing edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    /**
-        Constrains the object's top edge to be greater than or equal to the
-        top edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromTrailingEdgeOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0,
+                 offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromTopEdgeOf item: Any?,
-        offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .trailing,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB,
+                           attribute: .trailing, multiplier: multiplier,
+                           constant: (offset * -1), priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .top,
-                relatedBy: .greaterThanOrEqual, toItem: item, attribute: .top,
-                multiplier: multiplier, constant: offset, priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+/**
+ Constrains the object's top edge to be greater than or equal to the
+ top edge of `item`
 
-    /**
-        Constrains the object's bottom edge to be greater than or equal to the
-        bottom edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          bottom edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromBottomEdgeOf item: Any?,
-        offsetBy offset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromTopEdgeOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        self.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: self, attribute: .bottom,
-                relatedBy: .greaterThanOrEqual, toItem: item,
-                attribute: .bottom, multiplier: multiplier,
-                constant: (offset * -1), priority: priority)
-            ])
-        collection.activate()
-        return collection
-    }
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .top,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB, attribute: .top,
+                           multiplier: multiplier, constant: offset, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-    /**
-        Constrains the object's top & bottom edges to be greater than or equal
-        to the top & bottom edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top & bottom edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+/**
+ Constrains the object's bottom edge to be greater than or equal to the
+ bottom edge of `item`
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromHorizontalEdgesOf item: Any?,
-        offsetBy offset: CGFloat = 0.0,
-        multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ bottom edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-        let collection = expand(fromTopEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority) +
-                         expand(fromBottomEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority)
-        collection.activate()
-        return collection
-    }
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromBottomEdgeOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0,
+                 offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-    /**
-        Constrains the object's leading & trailing edges to be greater than or equal
-        to the leading & trailing edge of `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          leading & trailing edge of the item prior to the `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .bottom,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB,
+                           attribute: .bottom, multiplier: multiplier,
+                           constant: (offset * -1), priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromVerticalEdgesOf item: Any?,
-        offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+/**
+ Constrains the object's top & bottom edges to be greater than or equal
+ to the top & bottom edge of `item`
 
-        let collection = expand(fromLeadingEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority) +
-                         expand(fromTrailingEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority)
-        collection.activate()
-        return collection
-    }
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top & bottom edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
 
-    /**
-        Constrains the object's top, bottom, leading & trailing edges to be
-        greater than or equal to the top, bottom, leading & trailing edge of
-        `item`
-     
-        - parameter item: The `item` you want to constrain the current object to
-        - parameter constant: The amount to add to the constraint equation
-          after the multiplier.
-        - parameter multiplier: The ratio altering the constraint relative to
-          top, bottom, leading & trailing edge of the item prior to the
-          `constant` being applied.
-        - parameter priority: The priority this constraint uses when being
-          evaluated against other constraints
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromHorizontalEdgesOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0,
+                 offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
 
-        - returns: Constraint collection containing the generated constraint
-    */
-    @discardableResult
-    open func expand(fromEdgesOf item: Any?,
-        offsetBy offset: CGFloat = 0.0, multiplier: CGFloat = 1.0,
-        priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-        ) -> Constraid.ConstraintCollection {
+    let collection = Constraid.expand(itemA, fromTopEdgeOf: itemB, times: multiplier, offsetBy: offset,
+                            priority: priority) +
+        Constraid.expand(itemA, fromBottomEdgeOf: itemB, times: multiplier, offsetBy: offset,
+               priority: priority)
+    collection.activate()
+    return collection
+}
 
-        let collection = expand(fromTopEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority) +
-                         expand(fromBottomEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority) +
-                         expand(fromLeadingEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority) +
-                         expand(fromTrailingEdgeOf: item, offsetBy: offset,
-                             multiplier: multiplier, priority: priority)
-        collection.activate()
-        return collection
-    }
+/**
+ Constrains the object's leading & trailing edges to be greater than or equal
+ to the leading & trailing edge of `item`
+
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ leading & trailing edge of the item prior to the `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromVerticalEdgesOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    let collection = Constraid.expand(itemA, fromLeadingEdgeOf: itemB, times: multiplier, offsetBy: offset,
+                            priority: priority) +
+        Constraid.expand(itemA, fromTrailingEdgeOf: itemB, times: multiplier, offsetBy: offset,
+               priority: priority)
+    collection.activate()
+    return collection
+}
+
+/**
+ Constrains the object's top, bottom, leading & trailing edges to be
+ greater than or equal to the top, bottom, leading & trailing edge of
+ `item`
+
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative to
+ top, bottom, leading & trailing edge of the item prior to the
+ `constant` being applied.
+ - parameter constant: The amount to add to the constraint equation
+ after the multiplier.
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expand(_ itemA: Constraid.View, fromEdgesOf itemB: Any?,
+                 times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
+                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    let collection = Constraid.expand(itemA, fromTopEdgeOf: itemB, times: multiplier, offsetBy: offset,
+                            priority: priority) +
+        Constraid.expand(itemA, fromBottomEdgeOf: itemB, times: multiplier, offsetBy: offset,
+               priority: priority) +
+        Constraid.expand(itemA, fromLeadingEdgeOf: itemB, times: multiplier, offsetBy: offset,
+               priority: priority) +
+        Constraid.expand(itemA, fromTrailingEdgeOf: itemB, times: multiplier, offsetBy: offset,
+               priority: priority)
+    collection.activate()
+    return collection
 }
