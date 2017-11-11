@@ -113,14 +113,14 @@ Ok so you want `viewA` to be centered inside of `viewB`'s edges. You can accompl
 using the following:
 
 ```swift
-viewA.center(within: viewB)
+center(viewA, within: viewB)
 ```
 
 If on the other hand you wanted `viewA` to be centred inside of `viewB`s margins you could
 simply do.
 
 ```swift
-viewA.center(withinMarginsOf: viewB)
+center(viewA, withinMarginsOf: viewB)
 ```
 
 The `center` methods simply create one or more equivalency constraints between the two views
@@ -129,15 +129,15 @@ and the appropriate attributes (`centerX`, `centerY`, `centerXwithinMargins`,
 provided below.
 
 ```swift
-viewA.center(verticallyWithin: viewB)
-viewA.center(horizontallyWithin: viewB)
+center(viewA, verticallyWithin: viewB)
+center(viewA, horizontallyWithin: viewB)
 
-viewA.center(within: viewB)
+center(viewA, within: viewB)
 
-viewA.center(verticallyWithinMarginsOf: viewB)
-viewA.center(horizontallyWithinMarginsOf: viewB)
+center(viewA, verticallyWithinMarginsOf: viewB)
+center(viewA, horizontallyWithinMarginsOf: viewB)
 
-viewA.center(withinMarginsOf: viewB)
+center(viewA, withinMarginsOf: viewB)
 ```
 
 ### Manage Size
