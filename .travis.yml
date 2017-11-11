@@ -1,6 +1,5 @@
 language: objective-c
-osx_image: xcode9
-before_install: gem install jazzy --version '0.9.0'
+osx_image: xcode9.1
 script: xcodebuild test -project Constraid.xcodeproj -scheme Constraid-iOS -sdk iphonesimulator -destination "OS=11.1,name=iPhone 8"
 notifications:
   webhooks:
