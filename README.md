@@ -358,7 +358,7 @@ available for licensing if you like from [shutterstock][crazyman].
 ## About <img src="http://upte.ch/img/logo.png" width="180">
 
 `Constraid` is maintained and funded by [UpTech Works, LLC][uptech], a
-software design & development agency & consultancy.
+software product, design & development consultancy.
 
 We love open source software. See [our other projects][community] or
 [hire us][hire] to design, develop, and grow your product.
