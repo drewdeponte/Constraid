@@ -355,7 +355,7 @@ may be redistributed under the terms specified in the LICENSE file.
 The mascots for our project are the work of [Ron Leishman][]. We licensed them and they are
 available for licensing if you like from [shutterstock][crazyman].
 
-## About ![uptech](http://upte.ch/img/logo.png)
+## About <img src="http://upte.ch/img/logo.png" width="180">
 
 `Constraid` is maintained and funded by [UpTech Works, LLC][uptech], a
 software design & development agency & consultancy.
