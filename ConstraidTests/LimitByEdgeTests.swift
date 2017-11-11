@@ -8,7 +8,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byLeadingEdgeOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -29,7 +29,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byTrailingEdgeOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -50,7 +50,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byTopEdgeOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -71,7 +71,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byBottomEdgeOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -92,7 +92,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byHorizontalEdgesOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byHorizontalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -124,7 +124,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byVerticalEdgesOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byVerticalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
         let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
 
@@ -156,7 +156,7 @@ class LimitByEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = viewOne.limit(byEdgesOf: viewTwo, insetBy: 10.0, multiplier: 2.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
         let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
         let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint

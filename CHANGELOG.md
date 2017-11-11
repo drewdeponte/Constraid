@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Switch Limit out of the extension approach
 * Switch Relative Position Management out of the extension approach
 * Switch Size Management out of the extension approach
 * Switch to Constraid.center() instead of extension approach

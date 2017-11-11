@@ -228,7 +228,7 @@ Lets say you want `viewA` to be limited by `viewB`'s edges. You can accomplish t
 the following:
 
 ```swift
-viewA.limit(byEdgesOf: viewB)
+limit(viewA, byEdgesOf: viewB)
 ```
 
 This sets up constraints saying that each of `viewA`'s edges must be `<=` `viewB`'s
@@ -238,33 +238,33 @@ If on the other hand you wanted `viewA` limited by `viewB`s margins you could
 simply do.
 
 ```swift
-viewA.limit(byMarginsOf: viewB)
+limit(viewA, byMarginsOf: viewB)
 ```
 
 The `limit` methods simply create one or more `<=` constraints between the two views and the
-appropriate attributes. List of the short versions of all the `limit` methods are provided
+appropriate attributes. A list of the short versions of all the `limit` methods are provided
 below.
 
 ```swift
-viewA.limit(byLeadingEdgeOf: viewB)
-viewA.limit(byTrailingEdgeOf: viewB)
-viewA.limit(byTopEdgeOf: viewB)
-viewA.limit(byBottomEdgeOf: viewB)
+limit(viewA, byLeadingEdgeOf: viewB)
+limit(viewA, byTrailingEdgeOf: viewB)
+limit(viewA, byTopEdgeOf: viewB)
+limit(viewA, byBottomEdgeOf: viewB)
 
-viewA.limit(byVerticalEdgesOf: viewB)
-viewA.limit(byHorizontalEdgesOf: viewB)
+limit(viewA, byVerticalEdgesOf: viewB)
+limit(viewA, byHorizontalEdgesOf: viewB)
 
-viewA.limit(byEdgesOf: viewB)
+limit(viewA, byEdgesOf: viewB)
 
-viewA.limit(byLeadingMarginOf: viewB)
-viewA.limit(byTrailingMarginOf: viewB)
-viewA.limit(byTopMarginOf: viewB)
-viewA.limit(byBottomMarginOf: viewB)
+limit(viewA, byLeadingMarginOf: viewB)
+limit(viewA, byTrailingMarginOf: viewB)
+limit(viewA, byTopMarginOf: viewB)
+limit(viewA, byBottomMarginOf: viewB)
 
-viewA.limit(byVerticalMarginsOf: viewB)
-viewA.limit(byHorizontalMarginsOf: viewB)
+limit(viewA, byVerticalMarginsOf: viewB)
+limit(viewA, byHorizontalMarginsOf: viewB)
 
-viewA.limit(byMarginsOf: viewB)
+limit(viewA, byMarginsOf: viewB)
 ```
 
 ### Expand
