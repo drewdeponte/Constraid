@@ -140,6 +140,38 @@ center(viewA, horizontallyWithinMarginsOf: viewB)
 center(viewA, withinMarginsOf: viewB)
 ```
 
+### Cup
+
+Lets say you want `viewA` to sit flush or right along `viewB`'s leading, top,
+and trailing edges. You can accomplish this by using the following:
+
+```swift
+cup(viewA, byTopEdgeOf: viewB)
+```
+
+If on the other hand you wanted `viewA` to sit flush or right along `viewB` up to `viewB`'s
+leading, top, and trailing margins, you could simply do.
+
+```swift
+cup(viewA, byTopMarginOf: viewB)
+```
+
+The `cup` methods simply create three equivalency constraints between the two
+views and the appropriate attributes to cup the `viewA` along 3 edges. A list
+of the short versions of all the `cup` methods are provided below.
+
+```swift
+cup(viewA, byTopEdgeOf: viewB)
+cup(viewA, byBottomEdgeOf: viewB)
+cup(viewA, byLeadingEdgeOf: viewB)
+cup(viewA, byTrailingEdgeOf: viewB)
+
+cup(viewA, byTopMarginOf: viewB)
+cup(viewA, byBottomMarginOf: viewB)
+cup(viewA, byLeadingMarginOf: viewB)
+cup(viewA, byTrailingMarginOf: viewB)
+```
+
 ### Manage Size
 
 Lets say you want `viewA`'s width to be explicitly sized to some 100 pts. You can accomplish

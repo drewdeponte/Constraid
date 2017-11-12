@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added `cup` family of methods
 * Change API style from UIView extension to Constraid methods
 * Remove smurfy naming, ex: `Constraid.CostraridView` to `Constraid.View`
 * Change `multiplier` param to `times` and position after `itemB`

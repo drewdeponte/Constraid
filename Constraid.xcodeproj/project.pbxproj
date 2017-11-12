@@ -17,6 +17,11 @@
 		E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */; };
 		E99C6E321E530E1A00C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
 		E99C6E331E530E2000C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
+		E9BA3EAF1FB7B8EB00772FA4 /* CupByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */; };
+		E9BA3EB01FB7B8EB00772FA4 /* CupByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */; };
+		E9BA3EB21FB7B90000772FA4 /* CubByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */; };
+		E9BA3EB41FB7C5E800772FA4 /* CupByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */; };
+		E9BA3EB61FB7CD8300772FA4 /* CupByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */; };
 		E9C0FE531EAAD0FD003FCF15 /* LimitByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */; };
 		E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */; };
 		E9C0FE571EAD6D70003FCF15 /* ExpandFromMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */; };
@@ -74,6 +79,10 @@
 		E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithMarginsTests.swift; sourceTree = "<group>"; };
 		E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByEdgeTests.swift; sourceTree = "<group>"; };
 		E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintCollection.swift; sourceTree = "<group>"; };
+		E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdge.swift; sourceTree = "<group>"; };
+		E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubByMargin.swift; sourceTree = "<group>"; };
+		E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdgeTests.swift; sourceTree = "<group>"; };
+		E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByMarginTests.swift; sourceTree = "<group>"; };
 		E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByMarginTests.swift; sourceTree = "<group>"; };
 		E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromEdgeTests.swift; sourceTree = "<group>"; };
 		E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromMarginTests.swift; sourceTree = "<group>"; };
@@ -172,6 +181,8 @@
 				E9CAB2D41E21D8A300CDA4E2 /* ExpandFromMargin.swift */,
 				51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */,
 				E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */,
+				E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */,
+				E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */,
 			);
 			path = Constraid;
 			sourceTree = "<group>";
@@ -194,6 +205,8 @@
 				E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */,
 				516653851E2D41BF00E28FB3 /* ExpandFromSizeTests.swift */,
 				E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */,
+				E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */,
+				E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -363,6 +376,7 @@
 				E9EDB5D41E2E18AF00C0D060 /* View.swift in Sources */,
 				E9EDB5E21E2E1EE000C0D060 /* ExpandFromEdge.swift in Sources */,
 				E91BE1FC1E54062800861A52 /* Constraint.swift in Sources */,
+				E9BA3EB21FB7B90000772FA4 /* CubByMargin.swift in Sources */,
 				E9EDB5D61E2E1A7C00C0D060 /* FlushWithMargins.swift in Sources */,
 				E9EDB5E51E2E1F0100C0D060 /* ExpandFromMargin.swift in Sources */,
 				E9EDB5E71E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */,
@@ -373,6 +387,7 @@
 				E9EDB5DA1E2E1D5300C0D060 /* ManageSize.swift in Sources */,
 				E9EDB6001E2E9FDE00C0D060 /* CenterWithinMargins.swift in Sources */,
 				E9EDB5E81E2E1F6200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */,
+				E9BA3EAF1FB7B8EB00772FA4 /* CupByEdge.swift in Sources */,
 				E9EDB5D21E2E18AF00C0D060 /* LayoutPriority.swift in Sources */,
 				E9EDB5DC1E2E1DF300C0D060 /* LimitByMargin.swift in Sources */,
 				E9EDB5E01E2E1EBF00C0D060 /* LimitByEdge.swift in Sources */,
@@ -385,8 +400,10 @@
 			files = (
 				E9CAB2BC1E219A9500CDA4E2 /* PriorityConstructionTests.swift in Sources */,
 				E9EFFFC51E8A5DA100F26BAB /* CenterWithinMarginsTests.swift in Sources */,
+				E9BA3EB41FB7C5E800772FA4 /* CupByEdgeTests.swift in Sources */,
 				E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */,
 				E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */,
+				E9BA3EB61FB7CD8300772FA4 /* CupByMarginTests.swift in Sources */,
 				E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */,
 				516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */,
 				E9C0FE5D1EADC872003FCF15 /* ConstraintCollectionTests.swift in Sources */,
@@ -411,6 +428,7 @@
 				E9EDB6061E2EA03B00C0D060 /* ExpandFromSize.swift in Sources */,
 				E9EDB5FF1E2E9FD100C0D060 /* CenterWithinEdges.swift in Sources */,
 				E9EDB6021E2EA00A00C0D060 /* ManageSize.swift in Sources */,
+				E9BA3EB01FB7B8EB00772FA4 /* CupByEdge.swift in Sources */,
 				E99C6E331E530E2000C72E5E /* ConstraintCollection.swift in Sources */,
 				E9EDB6041E2EA02100C0D060 /* LimitByEdge.swift in Sources */,
 				E9EDB5FB1E2E9FBA00C0D060 /* LayoutPriority.swift in Sources */,
