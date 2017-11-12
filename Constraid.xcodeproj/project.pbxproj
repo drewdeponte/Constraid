@@ -22,6 +22,7 @@
 		E9BA3EB21FB7B90000772FA4 /* CubByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */; };
 		E9BA3EB41FB7C5E800772FA4 /* CupByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */; };
 		E9BA3EB61FB7CD8300772FA4 /* CupByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */; };
+		E9BA3EB81FB7E26F00772FA4 /* LayoutGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */; };
 		E9C0FE531EAAD0FD003FCF15 /* LimitByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */; };
 		E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */; };
 		E9C0FE571EAD6D70003FCF15 /* ExpandFromMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */; };
@@ -83,6 +84,7 @@
 		E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubByMargin.swift; sourceTree = "<group>"; };
 		E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdgeTests.swift; sourceTree = "<group>"; };
 		E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByMarginTests.swift; sourceTree = "<group>"; };
+		E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideTests.swift; sourceTree = "<group>"; };
 		E9C0FE511EAAD0F3003FCF15 /* LimitByMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByMarginTests.swift; sourceTree = "<group>"; };
 		E9C0FE541EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromEdgeTests.swift; sourceTree = "<group>"; };
 		E9C0FE561EAD6D70003FCF15 /* ExpandFromMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandFromMarginTests.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				E9C0FE5A1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift */,
 				E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */,
 				E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */,
+				E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				E9C0FE5D1EADC872003FCF15 /* ConstraintCollectionTests.swift in Sources */,
 				E9C0FE5B1EADB2BB003FCF15 /* ManageIntrinsicSizeRelationsTests.swift in Sources */,
 				E9112A631E31AC6100F5CEC5 /* FlushWithEdgesTests.swift in Sources */,
+				E9BA3EB81FB7E26F00772FA4 /* LayoutGuideTests.swift in Sources */,
 				E9112A611E31A94A00F5CEC5 /* ManageRelativePositionTests.swift in Sources */,
 				E9C0FE531EAAD0FD003FCF15 /* LimitByMarginTests.swift in Sources */,
 				E9EFFFC41E8A5DA100F26BAB /* CenterWithinEdgesTests.swift in Sources */,
