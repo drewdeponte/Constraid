@@ -21,6 +21,8 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterVerticallyWithinMarginsOffsetUp() {
@@ -42,6 +44,8 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterHorizontallyWithinMarginsOffsetRight() {
@@ -63,6 +67,8 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterHorizontallyWithinMarginsOffsetLeft() {
@@ -84,6 +90,8 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterWithinMarginsOffsetDownAndRight() {
@@ -118,6 +126,8 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, 10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterWithinMarginsOffsetUpAndRight() {
@@ -152,5 +162,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

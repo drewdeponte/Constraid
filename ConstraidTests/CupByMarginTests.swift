@@ -44,6 +44,8 @@ class CupByMarginTests: XCTestCase {
         XCTAssertEqual(constraintThree.constant, -10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
         XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCupByTrailingMarginOf() {
@@ -88,6 +90,8 @@ class CupByMarginTests: XCTestCase {
         XCTAssertEqual(constraintThree.constant, -10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
         XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCupByTopMarginOf() {
@@ -132,6 +136,8 @@ class CupByMarginTests: XCTestCase {
         XCTAssertEqual(constraintThree.constant, -10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
         XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCupByBottomMarginOf() {
@@ -176,5 +182,7 @@ class CupByMarginTests: XCTestCase {
         XCTAssertEqual(constraintThree.constant, -10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
         XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

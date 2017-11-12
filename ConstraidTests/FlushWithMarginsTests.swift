@@ -22,6 +22,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithTrailingMarginOf() {
@@ -43,6 +45,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithTopMarginOf() {
@@ -64,6 +68,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithBottomMarginOf() {
@@ -85,6 +91,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithVerticalMarginsOf() {
@@ -118,6 +126,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithHorizontalMarginsOf() {
@@ -151,6 +161,8 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFlushWithMarginsOf() {
@@ -206,5 +218,7 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
         XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

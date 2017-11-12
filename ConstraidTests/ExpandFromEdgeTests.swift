@@ -21,6 +21,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandByTrailingEdgeOf() {
@@ -42,6 +44,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromTopEdgeOf() {
@@ -63,6 +67,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromBottomEdgeOf() {
@@ -84,6 +90,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromHorizontalEdgesOf() {
@@ -116,6 +124,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromVerticalEdgesOf() {
@@ -148,6 +158,8 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromEdgesOf() {
@@ -204,5 +216,7 @@ class ExpandFromEdgeTests: XCTestCase {
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
         XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

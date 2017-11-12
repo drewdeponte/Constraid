@@ -17,6 +17,8 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testSetHeight() {
@@ -33,6 +35,8 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testMatchWidthOf() {
@@ -51,6 +55,8 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.width)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testMatchHeightOf() {
@@ -69,6 +75,8 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testMakeSquare() {
@@ -85,5 +93,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
         XCTAssertEqual(constraint.constant, 0.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

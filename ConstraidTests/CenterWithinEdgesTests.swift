@@ -21,6 +21,8 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterVerticallyWithinOffsetUp() {
@@ -42,6 +44,8 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterHorizontallyWithinOffsetRight() {
@@ -63,6 +67,8 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterHorizontallyWithinOffsetLeft() {
@@ -84,6 +90,8 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterWithinOffsetDownAndRight() {
@@ -118,6 +126,8 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, 10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testCenterWithinOffsetUpAndLeft() {
@@ -152,5 +162,7 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

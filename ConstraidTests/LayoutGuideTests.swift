@@ -4,6 +4,18 @@ import Constraid
 
 class LayoutGuideTests: XCTestCase {
 
+//    @available(iOS 11.0, *)
+//    func testSafeAreaGuideFlush() {
+//        let viewOne = UIView()
+//        let layoutGuide = UILayoutGuide()
+//
+//        viewOne.addLayoutGuide(layoutGuide)
+//
+//        let constraints = Constraid.flush(layoutGuide, withLeadingEdgeOf: viewOne, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+//
+//        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+//    }
+
     @available(iOS 11.0, *)
     func testFlushWithEdgesOfsafeAreaLayoutGuide() {
         let viewOne = UIView()
@@ -58,5 +70,7 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
         XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

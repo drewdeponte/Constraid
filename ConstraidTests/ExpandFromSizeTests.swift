@@ -19,6 +19,8 @@ class ExpandFromSizeTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testExpandFromHeightOf() {
@@ -38,5 +40,7 @@ class ExpandFromSizeTests: XCTestCase {
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }

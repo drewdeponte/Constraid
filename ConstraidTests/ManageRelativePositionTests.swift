@@ -20,6 +20,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testPrecedesTheLeadingMarginOf() {
@@ -40,6 +42,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testSitsAboveTheTopMarginOf() {
@@ -60,6 +64,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testSitsBelowTheBottomMarginOf() {
@@ -80,6 +86,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testFollowsTheTrailingEdgeOf() {
@@ -100,6 +108,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testPrecedesTheLeadingEdgeOf() {
@@ -120,6 +130,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testSitsAboveTheTopEdgeOf() {
@@ -140,6 +152,8 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
     func testSitsBelowTheBottomEdgeOf() {
@@ -160,5 +174,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
