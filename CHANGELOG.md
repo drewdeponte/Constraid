@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v2.0.0][v2.0.0] - 2017-11-20
+
 * Added `cup` family of methods
 * Change API style from UIView extension to Constraid methods
 * Remove smurfy naming, ex: `Constraid.CostraridView` to `Constraid.View`
@@ -95,8 +97,9 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/1.1.0...HEAD
-[v1.0.0]: https://github.com/uptech/Constraid/compare/d21a21...1.0.0
-[v1.0.1]: https://github.com/uptech/Constraid/compare/1.0.0...1.0.1
-[v1.0.2]: https://github.com/uptech/Constraid/compare/1.0.1...1.0.2
+[unreleased]: https://github.com/uptech/Constraid/compare/2.0.0...HEAD
+[v2.0.0]: https://github.com/uptech/Constraid/compare/1.1.0...2.0.0
 [v1.1.0]: https://github.com/uptech/Constraid/compare/1.0.2...1.1.0
+[v1.0.2]: https://github.com/uptech/Constraid/compare/1.0.1...1.0.2
+[v1.0.1]: https://github.com/uptech/Constraid/compare/1.0.0...1.0.1
+[v1.0.0]: https://github.com/uptech/Constraid/compare/d21a21...1.0.0
