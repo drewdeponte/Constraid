@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				E9CAB2A11E21954B00CDA4E2 /* Constraid */,
-				E9EDB5F41E2E9F6500C0D060 /* Constraid-MacOS */,
 				E9CAB2AC1E21954B00CDA4E2 /* ConstraidTests */,
 				E9CAB2A01E21954B00CDA4E2 /* Products */,
 			);
@@ -210,13 +209,6 @@
 				E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */,
 			);
 			path = ConstraidTests;
-			sourceTree = "<group>";
-		};
-		E9EDB5F41E2E9F6500C0D060 /* Constraid-MacOS */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Constraid-MacOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
