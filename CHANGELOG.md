@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added macOS 10.13.1 support
+
 #### [v2.0.0][v2.0.0] - 2017-11-20
 
 * Added `cup` family of methods

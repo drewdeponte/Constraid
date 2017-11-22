@@ -19,12 +19,12 @@
         Type alias for UILayoutPriority and NSLayoutPriority to make supporting
         both iOS and Mac OS easier
     */
-    public typealias LayoutPriority = NSLayoutPriority
-    public let LayoutPriorityRequired: Constraid.LayoutPriority = NSLayoutPriorityRequired
-    public let LayoutPriorityDefaultHigh: Constraid.LayoutPriority = NSLayoutPriorityDefaultHigh
-    public let LayoutPriorityDragThatCanResizeWindow: Constraid.LayoutPriority = NSLayoutPriorityDragThatCanResizeWindow
-    public let LayoutPriorityWindowSizeStayPut: Constraid.LayoutPriority = NSLayoutPriorityWindowSizeStayPut
-    public let LayoutPriorityDragThatCannotResizeWindow: Constraid.LayoutPriority = NSLayoutPriorityDragThatCannotResizeWindow
-    public let LayoutPriorityDefaultLow: Constraid.LayoutPriority = NSLayoutPriorityDefaultLow
-    public let LayoutPriorityFittingSizeCompression: Constraid.LayoutPriority = NSLayoutPriorityFittingSizeCompression
+    public typealias LayoutPriority = NSLayoutConstraint.Priority
+    public let LayoutPriorityRequired: Constraid.LayoutPriority = NSLayoutConstraint.Priority.required
+    public let LayoutPriorityDefaultHigh: Constraid.LayoutPriority = NSLayoutConstraint.Priority.defaultHigh
+    public let LayoutPriorityDragThatCanResizeWindow: Constraid.LayoutPriority = NSLayoutConstraint.Priority.dragThatCanResizeWindow
+    public let LayoutPriorityWindowSizeStayPut: Constraid.LayoutPriority = NSLayoutConstraint.Priority.windowSizeStayPut
+    public let LayoutPriorityDragThatCannotResizeWindow: Constraid.LayoutPriority = NSLayoutConstraint.Priority.dragThatCannotResizeWindow
+    public let LayoutPriorityDefaultLow: Constraid.LayoutPriority = NSLayoutConstraint.Priority.defaultLow
+    public let LayoutPriorityFittingSizeCompression: Constraid.LayoutPriority = NSLayoutConstraint.Priority.fittingSizeCompression
 #endif

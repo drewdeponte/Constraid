@@ -4,6 +4,14 @@
     import AppKit
 #endif
 
+#if os(iOS)
+    public typealias LayoutAttribute = NSLayoutAttribute
+    public typealias LayoutRelation = NSLayoutRelation
+#else
+    public typealias LayoutAttribute = NSLayoutConstraint.Attribute
+    public typealias LayoutRelation = NSLayoutConstraint.Relation
+#endif
+
 public extension NSLayoutConstraint {
     /**
         Construct instance of NSLayoutConstraint with priority set
@@ -25,10 +33,10 @@ public extension NSLayoutConstraint {
         - returns: the constructed NSLayoutConstraint
     */
     public convenience init(item: Any,
-        attribute attr1: NSLayoutAttribute,
-        relatedBy: NSLayoutRelation,
+        attribute attr1: LayoutAttribute,
+        relatedBy: LayoutRelation,
         toItem: Any?,
-        attribute attr2: NSLayoutAttribute,
+        attribute attr2: LayoutAttribute,
         multiplier: CGFloat,
         constant: CGFloat,
         priority: Constraid.LayoutPriority) {
