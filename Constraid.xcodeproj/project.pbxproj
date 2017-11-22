@@ -14,6 +14,7 @@
 		E91BE1FC1E54062800861A52 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FB1E54062800861A52 /* Constraint.swift */; };
 		E91BE1FD1E54062800861A52 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FB1E54062800861A52 /* Constraint.swift */; };
 		E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */; };
+		E94F31991FC569D1006A37B8 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */; };
 		E99C6E321E530E1A00C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
 		E99C6E331E530E2000C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
@@ -44,7 +45,6 @@
 		E9EDB5E51E2E1F0100C0D060 /* ExpandFromMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D41E21D8A300CDA4E2 /* ExpandFromMargin.swift */; };
 		E9EDB5E71E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */; };
 		E9EDB5E81E2E1F6200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */; };
-		E9EDB5F71E2E9F6600C0D060 /* Constraid-MacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EDB5F51E2E9F6500C0D060 /* Constraid-MacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9EDB5FB1E2E9FBA00C0D060 /* LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */; };
 		E9EDB5FC1E2E9FBE00C0D060 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB5D11E2E18AF00C0D060 /* View.swift */; };
 		E9EDB5FE1E2E9FC900C0D060 /* FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CAB2BD1E21A2B800CDA4E2 /* FlushWithEdges.swift */; };
@@ -110,8 +110,6 @@
 		E9EDB5D01E2E18AF00C0D060 /* LayoutPriority.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutPriority.swift; sourceTree = "<group>"; };
 		E9EDB5D11E2E18AF00C0D060 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E9EDB5F31E2E9F6500C0D060 /* Constraid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Constraid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9EDB5F51E2E9F6500C0D060 /* Constraid-MacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Constraid-MacOS.h"; sourceTree = "<group>"; };
-		E9EDB5F61E2E9F6600C0D060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9EFFFC21E8A5DA100F26BAB /* CenterWithinEdgesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinEdgesTests.swift; sourceTree = "<group>"; };
 		E9EFFFC31E8A5DA100F26BAB /* CenterWithinMarginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterWithinMarginsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,8 +215,6 @@
 		E9EDB5F41E2E9F6500C0D060 /* Constraid-MacOS */ = {
 			isa = PBXGroup;
 			children = (
-				E9EDB5F51E2E9F6500C0D060 /* Constraid-MacOS.h */,
-				E9EDB5F61E2E9F6600C0D060 /* Info.plist */,
 			);
 			path = "Constraid-MacOS";
 			sourceTree = "<group>";
@@ -238,7 +234,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EDB5F71E2E9F6600C0D060 /* Constraid-MacOS.h in Headers */,
+				E94F31991FC569D1006A37B8 /* Constraid.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,7 +643,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Constraid-MacOS/Info.plist";
+				INFOPLIST_FILE = Constraid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -670,7 +666,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Constraid-MacOS/Info.plist";
+				INFOPLIST_FILE = Constraid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
