@@ -10,7 +10,9 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
-* Added macOS 10.13.1 support
+#### [v2.0.1][v2.0.1] - 2017-11-21
+
+* Fix macOS 10.13.1 support
 
 #### [v2.0.0][v2.0.0] - 2017-11-20
 
@@ -99,7 +101,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/2.0.0...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/2.0.1...HEAD
+[v2.0.1]: https://github.com/uptech/Constraid/compare/2.0.0...2.0.1
 [v2.0.0]: https://github.com/uptech/Constraid/compare/1.1.0...2.0.0
 [v1.1.0]: https://github.com/uptech/Constraid/compare/1.0.2...1.1.0
 [v1.0.2]: https://github.com/uptech/Constraid/compare/1.0.1...1.0.2
