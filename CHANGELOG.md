@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Collapse macOS build config to eliminate some duplication and typos
+
 #### [v2.0.1][v2.0.1] - 2017-11-21
 
 * Fix macOS 10.13.1 support
