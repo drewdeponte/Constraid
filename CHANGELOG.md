@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v2.0.2][v2.0.2] - 2017-11-21
+
 * Collapse macOS build config to eliminate some duplication and typos
 
 #### [v2.0.1][v2.0.1] - 2017-11-21
@@ -103,7 +105,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/2.0.1...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/2.0.2...HEAD
+[v2.0.2]: https://github.com/uptech/Constraid/compare/2.0.1...2.0.2
 [v2.0.1]: https://github.com/uptech/Constraid/compare/2.0.0...2.0.1
 [v2.0.0]: https://github.com/uptech/Constraid/compare/1.1.0...2.0.0
 [v1.1.0]: https://github.com/uptech/Constraid/compare/1.0.2...1.1.0
