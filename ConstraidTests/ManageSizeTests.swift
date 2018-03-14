@@ -26,7 +26,7 @@ class ManageSizeTests: XCTestCase {
 
         let constraints = Constraid.expandWidth(of: viewOne, from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
