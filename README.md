@@ -54,6 +54,19 @@ flush(childView, withVerticalEdgesOf: parentView)
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
 
+## Setup
+
+[Carthage][carthage] is the best way to add [Constraid][constraid] to your project. 
+
+1. Add the following to your [Cartfile][cartfile].
+
+    ```
+    github "uptech/Constraid"
+    ```
+
+2. Follow the [Carthage][cartfile] instructions for adding frameworks to your application.
+
+
 ## Usage
 
 [Constraid][constraid] tries to simplify things by building on top of the lower level
@@ -363,7 +376,7 @@ keepIntrinsicSize(of: viewA, priority:)
 
 ## Build
 
-We supports [Carthage][carthage] and therefore this project can be built using the folowing.
+We supports [Carthage][carthage] and therefore this project can be built using the following.
 
 ```
 carthage build --no-skip-current
@@ -404,3 +417,4 @@ We love open source software. See [our other projects][community] or
 [Ron Leishman]: https://www.shutterstock.com/g/Ron+Leishman
 [travisproject]: https://travis-ci.org/uptech/Constraid
 [gitterroom]: https://gitter.im/uptech/Constraid?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[cartfile]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
