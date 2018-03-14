@@ -21,6 +21,25 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
+    func testExpandWidth() {
+        let viewOne = UIView()
+
+        let constraints = Constraid.expandWidth(of: viewOne, from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+
+        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutRelation.greaterThanOrEqual)
+        XCTAssertNil(constraint.secondItem)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.constant, 10.0)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
     func testSetHeight() {
         let viewOne = UIView()
 

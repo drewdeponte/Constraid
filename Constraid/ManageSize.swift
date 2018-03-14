@@ -40,6 +40,29 @@ public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Co
 }
 
 /**
+ Expand width of receiver using a constraint in auto-layout
+
+ - parameter item: The `item` you want to constrain
+ - parameter constant: The minimum width to expand from
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func expandWidth(of item: Constraid.View, from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+
+    item.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .width,
+                           relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute,
+                           multiplier: 1.0, constant: constant, priority: priority)
+        ])
+    collection.activate()
+    return collection
+}
+
+/**
  Set height of receiver using a constraint in auto-layout
 
  - parameter item: The `item` you want to constrain
