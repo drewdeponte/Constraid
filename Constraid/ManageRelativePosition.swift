@@ -33,7 +33,6 @@
                                attribute: .trailingMargin, multiplier: multiplier,
                                constant: constant, priority: priority)
             ])
-        collection.activate()
         return collection
     }
 
@@ -69,7 +68,6 @@
                                multiplier: multiplier, constant: constant,
                                priority: priority)
             ])
-        collection.activate()
         return collection
     }
 
@@ -104,7 +102,6 @@
                                attribute: .topMargin, multiplier: multiplier,
                                constant: (-1.0 * constant), priority: priority)
             ])
-        collection.activate()
         return collection
     }
 
@@ -139,7 +136,6 @@
                                attribute: .bottomMargin, multiplier: multiplier,
                                constant: constant, priority: priority)
             ])
-        collection.activate()
         return collection
     }
 #else
@@ -177,7 +173,6 @@ public func follow(theTrailingEdgeOf itemB: Any?,
                            relatedBy: .equal, toItem: itemB, attribute: .trailing,
                            multiplier: multiplier, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -212,7 +207,6 @@ public func precede(theLeadingEdgeOf itemB: Any?,
                            relatedBy: .equal, toItem: itemB, attribute: .leading,
                            multiplier: multiplier, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -247,7 +241,6 @@ public func set(_ itemA: Constraid.View, aboveTheTopEdgeOf itemB: Any?,
                            multiplier: multiplier, constant: (-1.0 * constant),
                            priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -281,6 +274,5 @@ public func set(_ itemA: Constraid.View, belowTheBottomEdgeOf itemB: Any?,
                            toItem: itemB, attribute: .bottom, multiplier: multiplier,
                            constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }

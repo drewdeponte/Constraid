@@ -30,7 +30,6 @@ public func cup(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .leading, relatedBy: .equal, toItem: itemB, attribute: .leadingMargin, multiplier: multiplier, constant: inset, priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottomMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -61,7 +60,6 @@ public func cup(_ itemA: Constraid.View, byTrailingMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailingMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottomMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -92,7 +90,6 @@ public func cup(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .top, relatedBy: .equal, toItem: itemB, attribute: .topMargin, multiplier: multiplier, constant: inset, priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailingMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         ])
-    collection.activate()
     return collection
 }
 
@@ -123,6 +120,5 @@ public func cup(_ itemA: Constraid.View, byBottomMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottomMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailingMargin, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         ])
-    collection.activate()
     return collection
 }

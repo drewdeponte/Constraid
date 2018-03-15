@@ -9,6 +9,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromLeadingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -32,6 +33,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromTrailingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -55,6 +57,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromTopEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -78,6 +81,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromBottomEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -101,6 +105,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromHorizontalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -135,6 +140,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromVerticalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -169,6 +175,7 @@ class ExpandFromEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.expand(viewOne, fromEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]

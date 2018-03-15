@@ -26,7 +26,6 @@ public func flush(_ itemA: Constraid.View, withLeadingMarginOf itemB: Any?, time
                            toItem: itemB, attribute: .leadingMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
-    constraints.activate()
     return constraints
 }
 
@@ -53,7 +52,6 @@ public func flush(_ itemA: Constraid.View, withTrailingMarginOf itemB: Any?, tim
                            toItem: itemB, attribute: .trailingMargin, multiplier: multiplier,
                            constant: (-1.0 * inset), priority: priority)
         ])
-    constraints.activate()
     return constraints
 }
 
@@ -80,7 +78,6 @@ public func flush(_ itemA: Constraid.View, withTopMarginOf itemB: Any?, times mu
                            toItem: itemB, attribute: .topMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
-    constraints.activate()
     return constraints
 }
 
@@ -107,7 +104,6 @@ public func flush(_ itemA: Constraid.View, withBottomMarginOf itemB: Any?, times
                            toItem: itemB, attribute: .bottomMargin, multiplier: multiplier,
                            constant: (-1.0 * inset), priority: priority)
         ])
-    constraints.activate()
     return constraints
 }
 
@@ -132,7 +128,6 @@ public func flush(_ itemA: Constraid.View, withVerticalMarginsOf itemB: Any?, ti
     let constraints = Constraid.flush(itemA, withLeadingMarginOf: itemB, times: multiplier, insetBy: inset,
                             priority: priority) +
         Constraid.flush(itemA, withTrailingMarginOf: itemB, times: multiplier, insetBy: inset, priority: priority)
-    constraints.activate()
     return constraints
 }
 
@@ -158,7 +153,6 @@ public func flush(_ itemA: Constraid.View, withHorizontalMarginsOf itemB: Any?, 
                             priority: priority) +
         Constraid.flush(itemA, withBottomMarginOf: itemB, times: multiplier, insetBy: inset,
                priority: priority)
-    constraints.activate()
     return constraints
 }
 
@@ -185,6 +179,5 @@ public func flush(_ itemA: Constraid.View, withMarginsOf itemB: Any?, times mult
                             priority: priority) +
         Constraid.flush(itemA, withVerticalMarginsOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    constraints.activate()
     return constraints
 }

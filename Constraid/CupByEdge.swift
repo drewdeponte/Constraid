@@ -31,7 +31,6 @@ public func cup(_ itemA: Constraid.View, byLeadingEdgeOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .leading, relatedBy: .equal, toItem: itemB, attribute: .leading, multiplier: multiplier, constant: inset, priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottom, multiplier: multiplier, constant: (-1.0 * inset), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -62,7 +61,6 @@ public func cup(_ itemA: Constraid.View, byTrailingEdgeOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailing, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottom, multiplier: multiplier, constant: (-1.0 * inset), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -93,7 +91,6 @@ public func cup(_ itemA: Constraid.View, byTopEdgeOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .top, relatedBy: .equal, toItem: itemB, attribute: .top, multiplier: multiplier, constant: inset, priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailing, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         ])
-    collection.activate()
     return collection
 }
 
@@ -124,6 +121,5 @@ public func cup(_ itemA: Constraid.View, byBottomEdgeOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .bottom, relatedBy: .equal, toItem: itemB, attribute: .bottom, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         NSLayoutConstraint(item: itemA, attribute: .trailing, relatedBy: .equal, toItem: itemB, attribute: .trailing, multiplier: multiplier, constant: (-1.0 * inset), priority: priority),
         ])
-    collection.activate()
     return collection
 }

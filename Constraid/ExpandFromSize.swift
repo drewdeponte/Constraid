@@ -33,7 +33,6 @@ public func expand(_ itemA: Constraid.View, fromWidthOf itemB: Any?,
                            attribute: .width, multiplier: multiplier,
                            constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -66,6 +65,5 @@ public func expand(_ itemA: Constraid.View, fromHeightOf itemB: Any?,
                            attribute: .height, multiplier: multiplier,
                            constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }

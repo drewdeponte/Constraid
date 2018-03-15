@@ -49,8 +49,19 @@ NSLayoutConstraint.activate([
 However, with the aid of [Constraid][constraid] it is as simple as
 
 ```swift
-flush(childView, withVerticalEdgesOf: parentView)
+flush(childView, withVerticalEdgesOf: parentView).activate()
 ```
+
+or if you want to combine constraint collections you can do so as follows:
+
+```swift
+let constraints = flush(childView, withVerticalEdgesOf: parentView) +
+                  center(childView, verticallyWithin: parentView)
+constraints.activate()
+```
+
+The above is extremely useful when doing AutoLayout Animation or when you
+simply want to deactivate or activate a collection of constraints.
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
 

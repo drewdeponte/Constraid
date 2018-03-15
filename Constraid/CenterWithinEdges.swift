@@ -74,7 +74,6 @@ public func center(_ itemA: Constraid.View, verticallyWithin itemB: Any?,
                                multiplier: multiplier, constant: (offset * -1), priority: priority)
         )
     }
-    collection.activate()
     return collection
 }
 
@@ -118,7 +117,6 @@ public func center(_ itemA: Constraid.View, horizontallyWithin itemB: Any?,
                                multiplier: multiplier, constant: (offset * -1), priority: priority)
         )
     }
-    collection.activate()
     return collection
 }
 
@@ -154,7 +152,6 @@ public func center(_ itemA: Constraid.View, within itemB: Any?,
             Constraid.center(itemA, verticallyWithin: itemB, times: multiplier,
                    offsetBy: offset, offsetDirection: .down,
                    priority: priority)
-        constraints.activate()
         return constraints
     case .upAndLeft:
         let constraints = Constraid.center(itemA, horizontallyWithin: itemB,
@@ -165,7 +162,6 @@ public func center(_ itemA: Constraid.View, within itemB: Any?,
                              times: multiplier,
                    offsetBy: offset, offsetDirection: .up,
                    priority: priority)
-        constraints.activate()
         return constraints
     }
 }

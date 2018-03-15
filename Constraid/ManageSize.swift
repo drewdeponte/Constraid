@@ -23,7 +23,6 @@ public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Co
                            relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                            multiplier: 1.0, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -46,7 +45,6 @@ public func expandWidth(of item: Constraid.View, from constant: CGFloat, priorit
                            relatedBy: .greaterThanOrEqual, toItem: nil, attribute: .notAnAttribute,
                            multiplier: 1.0, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -69,7 +67,6 @@ public func setHeight(of item: Constraid.View, to constant: CGFloat, priority: C
                            relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
                            multiplier: 1.0, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -99,7 +96,6 @@ public func matchWidth(of itemA: Constraid.View, to itemB: Any?,
                            relatedBy: .equal, toItem: itemB, attribute: .width,
                            multiplier: multiplier, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -129,7 +125,6 @@ public func matchHeight(of itemA: Constraid.View, to itemB: Any?,
                            relatedBy: .equal, toItem: itemB, attribute: .height,
                            multiplier: multiplier, constant: constant, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -153,6 +148,5 @@ public func equalize(_ item: Constraid.View,
                            relatedBy: .equal, toItem: item, attribute: .height,
                            multiplier: 1.0, constant: 0.0, priority: priority)
         ])
-    collection.activate()
     return collection
 }
