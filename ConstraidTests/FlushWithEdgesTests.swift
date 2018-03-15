@@ -10,7 +10,7 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
@@ -33,7 +33,7 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
@@ -56,7 +56,7 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
@@ -79,7 +79,7 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
@@ -102,8 +102,8 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withVerticalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
+        let constraintTwo = viewOne.constraints.last!
 
         XCTAssertEqual(constraints, viewOne.constraints)
 
@@ -137,8 +137,8 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withHorizontalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints.last! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
+        let constraintTwo = viewOne.constraints.last!
 
         XCTAssertEqual(constraints, viewOne.constraints)
 
@@ -172,10 +172,10 @@ class FlushWithEdgesTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
-        let constraintThree = viewOne.constraints[2] as NSLayoutConstraint
-        let constraintFour = viewOne.constraints[3] as NSLayoutConstraint
+        let constraintOne = viewOne.constraints[0]
+        let constraintTwo = viewOne.constraints[1]
+        let constraintThree = viewOne.constraints[2]
+        let constraintFour = viewOne.constraints[3]
 
         XCTAssertEqual(constraints, viewOne.constraints)
 

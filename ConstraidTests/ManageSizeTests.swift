@@ -7,7 +7,7 @@ class ManageSizeTests: XCTestCase {
 
         let constraints = Constraid.setWidth(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -44,7 +44,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.setHeight(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -64,7 +64,7 @@ class ManageSizeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.matchWidth(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -84,7 +84,7 @@ class ManageSizeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.matchHeight(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -102,7 +102,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.equalize(viewOne, priority: Constraid.LayoutPriority(rawValue: 500))
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)

@@ -9,7 +9,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.follow(theTrailingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
@@ -31,7 +31,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.precede(theLeadingMarginOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
@@ -53,7 +53,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.set(viewOne, aboveTheTopMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -75,7 +75,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.set(viewOne, belowTheBottomMarginOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -97,7 +97,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.follow(theTrailingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
@@ -119,7 +119,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.precede(theLeadingEdgeOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
@@ -141,7 +141,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.set(viewOne, aboveTheTopEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
@@ -163,7 +163,7 @@ class ManageRelativePositionTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.set(viewOne, belowTheBottomEdgeOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraint = viewOne.constraints.first! as NSLayoutConstraint
+        let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
