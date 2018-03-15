@@ -10,6 +10,7 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Remove functionality of setWidth & setHeight removing previous width height constraints
 * Added `expandWidth` method
 
 #### [v2.0.2][v2.0.2] - 2017-11-21

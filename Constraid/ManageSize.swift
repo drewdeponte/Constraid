@@ -18,18 +18,6 @@
 public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
-    var targetConstraint: NSLayoutConstraint?
-
-    for constraint in item.constraints {
-        if constraint.firstAttribute == .width && constraint.relation == .equal {
-            targetConstraint = constraint
-        }
-    }
-
-    if let constraint = targetConstraint {
-        item.removeConstraint(constraint)
-    }
-
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: item, attribute: .width,
                            relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
@@ -76,18 +64,6 @@ public func expandWidth(of item: Constraid.View, from constant: CGFloat, priorit
 public func setHeight(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
-    var targetConstraint: NSLayoutConstraint?
-
-    for constraint in item.constraints {
-        if constraint.firstAttribute == .height && constraint.relation == .equal {
-            targetConstraint = constraint
-        }
-    }
-
-    if let constraint = targetConstraint {
-        item.removeConstraint(constraint)
-    }
-
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: item, attribute: .height,
                            relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
