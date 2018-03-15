@@ -212,6 +212,12 @@ setWidth(of: item, to: constant)
 setHeight(of: item, to: constant)
 ```
 
+If you want to expand from a minimum width you can do so using the following:
+
+```swift
+expandWidth(of: item, from: constant)
+```
+
 Similarly, if you want to make the width of one view equal to another view's width you can do this:
 
 ```swift
