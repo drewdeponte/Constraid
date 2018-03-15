@@ -9,9 +9,9 @@ class CupByEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
-        let constraintThree = viewOne.constraints[2] as NSLayoutConstraint
+        let constraintOne = viewOne.constraints[0]
+        let constraintTwo = viewOne.constraints[1]
+        let constraintThree = viewOne.constraints[2]
 
         XCTAssertEqual(constraints, viewOne.constraints)
 
@@ -55,9 +55,9 @@ class CupByEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
-        let constraintThree = viewOne.constraints[2] as NSLayoutConstraint
+        let constraintOne = viewOne.constraints[0]
+        let constraintTwo = viewOne.constraints[1]
+        let constraintThree = viewOne.constraints[2]
 
         XCTAssertEqual(constraints, viewOne.constraints)
 
@@ -101,9 +101,9 @@ class CupByEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
-        let constraintThree = viewOne.constraints[2] as NSLayoutConstraint
+        let constraintOne = viewOne.constraints[0]
+        let constraintTwo = viewOne.constraints[1]
+        let constraintThree = viewOne.constraints[2]
 
         XCTAssertEqual(constraints, viewOne.constraints)
 
@@ -147,9 +147,9 @@ class CupByEdgeTests: XCTestCase {
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
 
-        let constraintOne = viewOne.constraints[0] as NSLayoutConstraint
-        let constraintTwo = viewOne.constraints[1] as NSLayoutConstraint
-        let constraintThree = viewOne.constraints[2] as NSLayoutConstraint
+        let constraintOne = viewOne.constraints[0]
+        let constraintTwo = viewOne.constraints[1]
+        let constraintThree = viewOne.constraints[2]
 
         XCTAssertEqual(constraints, viewOne.constraints)
 

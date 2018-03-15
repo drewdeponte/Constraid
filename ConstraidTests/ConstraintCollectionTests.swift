@@ -27,7 +27,7 @@ class ConstraintCollectionTests: XCTestCase {
 
         constraints.activate()
 
-        let constraintOne = viewOne.constraints.first! as NSLayoutConstraint
+        let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
@@ -47,7 +47,7 @@ class ConstraintCollectionTests: XCTestCase {
 
         constraints.deactivate()
 
-        let constraintOne = constraints.first! as NSLayoutConstraint
+        let constraintOne = constraints.first!
 
         XCTAssertEqual(viewOne.constraints, [])
         XCTAssertEqual(constraintOne.isActive, false)
