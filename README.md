@@ -409,7 +409,7 @@ xcodebuild -scheme Constraid-iOS -project Constraid.xcodeproj build
 
 ## License
 
-`Constraid` is Copyright © 2017 UpTech Works, LLC. It is free software, and
+`Constraid` is Copyright © 2017-2018 UpTech Works, LLC. It is free software, and
 may be redistributed under the terms specified in the LICENSE file.
 
 ## Our Mascots
