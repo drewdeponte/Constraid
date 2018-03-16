@@ -9,6 +9,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byLeadingMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -32,6 +33,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byTrailingMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -55,6 +57,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byTopMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -78,6 +81,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byBottomMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -101,6 +105,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byHorizontalMarginsOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -135,6 +140,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byVerticalMarginsOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -169,6 +175,7 @@ class LimitByMarginTests: XCTestCase {
         viewOne.addSubview(viewTwo)
 
         let constraints = Constraid.limit(viewOne, byMarginsOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]

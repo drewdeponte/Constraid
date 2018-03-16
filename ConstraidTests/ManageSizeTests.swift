@@ -6,6 +6,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.setWidth(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -25,6 +26,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.expandWidth(of: viewOne, from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -44,6 +46,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.setHeight(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -64,6 +67,7 @@ class ManageSizeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.matchWidth(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -84,6 +88,7 @@ class ManageSizeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.matchHeight(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -102,6 +107,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = UIView()
 
         let constraints = Constraid.equalize(viewOne, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)

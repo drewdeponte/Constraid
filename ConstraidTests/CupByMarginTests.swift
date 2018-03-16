@@ -8,6 +8,7 @@ class CupByMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byLeadingMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -54,6 +55,7 @@ class CupByMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byTrailingMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -100,6 +102,7 @@ class CupByMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byTopMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -146,6 +149,7 @@ class CupByMarginTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.cup(viewOne, byBottomMarginOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]

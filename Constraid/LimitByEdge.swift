@@ -32,7 +32,6 @@ public func limit(_ itemA: Constraid.View, byLeadingEdgeOf itemB: Any?,
                            relatedBy: .lessThanOrEqual, toItem: itemB, attribute: .leading,
                            multiplier: multiplier, constant: inset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -65,7 +64,6 @@ public func limit(_ itemA: Constraid.View, byTrailingEdgeOf itemB: Any?,
                            attribute: .trailing, multiplier: multiplier,
                            constant: (inset * -1), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -97,7 +95,6 @@ public func limit(_ itemA: Constraid.View, byTopEdgeOf itemB: Any?,
                            relatedBy: .lessThanOrEqual, toItem: itemB, attribute: .top,
                            multiplier: multiplier, constant: inset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -130,7 +127,6 @@ public func limit(_ itemA: Constraid.View, byBottomEdgeOf itemB: Any?,
                            multiplier: multiplier, constant: (inset * -1),
                            priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -160,7 +156,6 @@ public func limit(_ itemA: Constraid.View, byHorizontalEdgesOf itemB: Any?,
                              priority: priority) +
         Constraid.limit(itemA, byBottomEdgeOf: itemB, times: multiplier, insetBy: inset,
                priority: priority)
-    constraints.activate()
     return constraints
 }
 
@@ -190,7 +185,6 @@ public func limit(_ itemA: Constraid.View, byVerticalEdgesOf itemB: Any?,
                             priority: priority) +
         Constraid.limit(itemA, byTrailingEdgeOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    constraints.activate()
     return constraints
 }
 
@@ -226,6 +220,5 @@ public func limit(_ itemA: Constraid.View, byEdgesOf itemB: Any?,
               priority: priority) +
         Constraid.limit(itemA, byTrailingEdgeOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    constraints.activate()
     return constraints
 }

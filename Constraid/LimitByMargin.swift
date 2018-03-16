@@ -32,7 +32,6 @@ public func limit(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
                            attribute: .leadingMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -65,7 +64,6 @@ public func limit(_ itemA: Constraid.View, byTrailingMarginOf itemB: Any?,
                            attribute: .trailingMargin, multiplier: multiplier,
                            constant: (inset * -1), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -98,7 +96,6 @@ public func limit(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
                            attribute: .topMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -130,7 +127,6 @@ public func limit(_ itemA: Constraid.View, byBottomMarginOf itemB: Any?,
                            attribute: .bottomMargin, multiplier: multiplier,
                            constant: (inset * -1), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -159,7 +155,6 @@ public func limit(_ itemA: Constraid.View, byHorizontalMarginsOf itemB: Any?,
                            priority: priority) +
         Constraid.limit(itemA, byBottomMarginOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    collection.activate()
     return collection
 }
 
@@ -188,7 +183,6 @@ public func limit(_ itemA: Constraid.View, byVerticalMarginsOf itemB: Any?,
                            priority: priority) +
         Constraid.limit(itemA, byTrailingMarginOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    collection.activate()
     return collection
 }
 
@@ -223,6 +217,5 @@ public func limit(_ itemA: Constraid.View, byMarginsOf itemB: Any?,
               priority: priority) +
         Constraid.limit(itemA, byTrailingMarginOf: itemB, times: multiplier, insetBy: inset,
               priority: priority)
-    collection.activate()
     return collection
 }

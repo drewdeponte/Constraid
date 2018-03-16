@@ -32,7 +32,6 @@ public func expand(_ itemA: Constraid.View, fromLeadingEdgeOf itemB: Any?,
                            attribute: .leading, multiplier: multiplier,
                            constant: offset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -65,7 +64,6 @@ public func expand(_ itemA: Constraid.View, fromTrailingEdgeOf itemB: Any?,
                            attribute: .trailing, multiplier: multiplier,
                            constant: (offset * -1), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -96,7 +94,6 @@ public func expand(_ itemA: Constraid.View, fromTopEdgeOf itemB: Any?,
                            relatedBy: .greaterThanOrEqual, toItem: itemB, attribute: .top,
                            multiplier: multiplier, constant: offset, priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -129,7 +126,6 @@ public func expand(_ itemA: Constraid.View, fromBottomEdgeOf itemB: Any?,
                            attribute: .bottom, multiplier: multiplier,
                            constant: (offset * -1), priority: priority)
         ])
-    collection.activate()
     return collection
 }
 
@@ -159,7 +155,6 @@ public func expand(_ itemA: Constraid.View, fromHorizontalEdgesOf itemB: Any?,
                             priority: priority) +
         Constraid.expand(itemA, fromBottomEdgeOf: itemB, times: multiplier, offsetBy: offset,
                priority: priority)
-    collection.activate()
     return collection
 }
 
@@ -188,7 +183,6 @@ public func expand(_ itemA: Constraid.View, fromVerticalEdgesOf itemB: Any?,
                             priority: priority) +
         Constraid.expand(itemA, fromTrailingEdgeOf: itemB, times: multiplier, offsetBy: offset,
                priority: priority)
-    collection.activate()
     return collection
 }
 
@@ -223,6 +217,5 @@ public func expand(_ itemA: Constraid.View, fromEdgesOf itemB: Any?,
                priority: priority) +
         Constraid.expand(itemA, fromTrailingEdgeOf: itemB, times: multiplier, offsetBy: offset,
                priority: priority)
-    collection.activate()
     return collection
 }
