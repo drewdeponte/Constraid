@@ -13,6 +13,7 @@ that you can set version constraints properly.
 * Remove auto activate so that can be used with AutoLayout animations
 * Remove functionality of setWidth & setHeight removing previous width height constraints
 * Added `expandWidth` method
+* Added `expandHeight` method
 
 #### [v2.0.2][v2.0.2] - 2017-11-21
 
