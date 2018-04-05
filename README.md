@@ -227,6 +227,9 @@ If you want to expand from a minimum width you can do so using the following:
 
 ```swift
 expandWidth(of: item, from: constant)
+expandHeight(of: item, from: constant)
+limitWidth(of: item, by: constant)
+limitHeight(of: item, by: constant)
 ```
 
 Similarly, if you want to make the width of one view equal to another view's width you can do this:
