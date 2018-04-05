@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v3.0.0][v3.0.0] - 2018-04-05
+
 * Remove auto activate so that can be used with AutoLayout animations
 * Remove functionality of setWidth & setHeight removing previous width height constraints
 * Added `expandWidth` method
@@ -112,7 +114,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/2.0.2...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/3.0.0...HEAD
+[v3.0.0]: https://github.com/uptech/Constraid/compare/2.0.2...3.0.0
 [v2.0.2]: https://github.com/uptech/Constraid/compare/2.0.1...2.0.2
 [v2.0.1]: https://github.com/uptech/Constraid/compare/2.0.0...2.0.1
 [v2.0.0]: https://github.com/uptech/Constraid/compare/1.1.0...2.0.0
