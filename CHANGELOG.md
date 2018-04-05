@@ -15,6 +15,7 @@ that you can set version constraints properly.
 * Added `expandWidth` method
 * Added `expandHeight` method
 * Added `limitWidth` method
+* Added `limitHeight` method
 
 #### [v2.0.2][v2.0.2] - 2017-11-21
 

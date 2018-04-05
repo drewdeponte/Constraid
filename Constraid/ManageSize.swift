@@ -115,6 +115,28 @@ public func expandHeight(of item: Constraid.View, from constant: CGFloat, priori
 }
 
 /**
+ Limit height of receiver using a constraint in auto-layout
+
+ - parameter item: The `item` you want to constrain
+ - parameter constant: The maximum height to limit by
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func limitHeight(of item: Constraid.View, by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+
+    item.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .height,
+                           relatedBy: .lessThanOrEqual, toItem: nil, attribute: .notAnAttribute,
+                           multiplier: 1.0, constant: constant, priority: priority)
+        ])
+    return collection
+}
+
+/**
  Set width of receiver to width of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
