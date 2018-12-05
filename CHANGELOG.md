@@ -10,7 +10,9 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
-* Fixed expand and limit family of functions to correctly limit/expand the entities (breaking change)
+#### [v4.0.0][v4.0.0] - 2018-12-05
+
+* Fixed expand and limit family of functions to correctly limit/expand the entities
 
 #### [v3.0.0][v3.0.0] - 2018-04-05
 
@@ -116,7 +118,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/3.0.0...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/4.0.0...HEAD
+[v4.0.0]: https://github.com/uptech/Constraid/compare/3.0.0...4.0.0
 [v3.0.0]: https://github.com/uptech/Constraid/compare/2.0.2...3.0.0
 [v2.0.2]: https://github.com/uptech/Constraid/compare/2.0.1...2.0.2
 [v2.0.1]: https://github.com/uptech/Constraid/compare/2.0.0...2.0.1
