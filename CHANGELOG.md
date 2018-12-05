@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Fixed expand and limit family of functions to correctly limit/expand the entities (breaking change)
+
 #### [v3.0.0][v3.0.0] - 2018-04-05
 
 * Remove auto activate so that can be used with AutoLayout animations

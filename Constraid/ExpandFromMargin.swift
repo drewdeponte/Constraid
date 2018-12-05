@@ -4,7 +4,7 @@
 import UIKit
 
 /**
- Constrains the object's leading edge to be greater than or equal to the
+ Constrains the object's leading edge to expand outward from the
  leading margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -28,16 +28,16 @@ public func expand(_ itemA: Constraid.View, fromLeadingMarginOf itemB: Any?,
     itemA.translatesAutoresizingMaskIntoConstraints = false
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: itemA, attribute: .leading,
-                           relatedBy: .greaterThanOrEqual, toItem: itemB,
+                           relatedBy: .lessThanOrEqual, toItem: itemB,
                            attribute: .leadingMargin, multiplier: multiplier,
-                           constant: offset, priority: priority)
+                           constant: (offset * -1), priority: priority)
         ])
     return collection
 }
 
 /**
- Constrains the object's trailing edge to be greater than or equal to the
- leading margin of `item`
+ Constrains the object's trailing edge to expand outward from the
+ trailing margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -62,13 +62,13 @@ public func expand(_ itemA: Constraid.View, fromTrailingMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .trailing,
                            relatedBy: .greaterThanOrEqual, toItem: itemB,
                            attribute: .trailingMargin, multiplier: multiplier,
-                           constant: (offset * -1), priority: priority)
+                           constant: offset, priority: priority)
         ])
     return collection
 }
 
 /**
- Constrains the object's top edge to be greater than or equal to the
+ Constrains the object's top edge to expand outward from the
  top margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -92,15 +92,15 @@ public func expand(_ itemA: Constraid.View, fromTopMarginOf itemB: Any?,
     itemA.translatesAutoresizingMaskIntoConstraints = false
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: itemA, attribute: .top,
-                           relatedBy: .greaterThanOrEqual, toItem: itemB,
+                           relatedBy: .lessThanOrEqual, toItem: itemB,
                            attribute: .topMargin, multiplier: multiplier,
-                           constant: offset, priority: priority)
+                           constant: (offset * -1), priority: priority)
         ])
     return collection
 }
 
 /**
- Constrains the object's bottom edge to be greater than or equal to the
+ Constrains the object's bottom edge to expand outward from the
  bottom margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -126,14 +126,14 @@ public func expand(_ itemA: Constraid.View, fromBottomMarginOf itemB: Any?,
         NSLayoutConstraint(item: itemA, attribute: .bottom,
                            relatedBy: .greaterThanOrEqual, toItem: itemB,
                            attribute: .bottomMargin, multiplier: multiplier,
-                           constant: (offset * -1), priority: priority)
+                           constant: offset, priority: priority)
         ])
     return collection
 }
 
 /**
- Constrains the object's top & bottom edges to be greater than or equal
- to the top & bottom margin of `item`
+ Constrains the object's top & bottom edges to expand outward from
+ the top & bottom margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -161,8 +161,8 @@ public func expand(_ itemA: Constraid.View, fromHorizontalMarginsOf itemB: Any?,
 }
 
 /**
- Constrains the object's leading & trailing edges to be greater than or equal
- to the leading & trailing margin of `item`
+ Constrains the object's leading & trailing edges to expand outward
+ from the leading & trailing margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -190,8 +190,8 @@ public func expand(_ itemA: Constraid.View, fromVerticalMarginsOf itemB: Any?,
 }
 
 /**
- Constrains the object's top, bottom, leading & trailing edges to be
- greater than or equal to the top, bottom, leading & trailing margin of
+ Constrains the object's top, bottom, leading & trailing edges to expand
+ outward from the top, bottom, leading & trailing margin of
  `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object

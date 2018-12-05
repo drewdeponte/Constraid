@@ -4,7 +4,7 @@
 import UIKit
 
 /**
- Constrains the object's leading edge to be less than or equal to the
+ Constrains the object's leading edge to be limited by the
  leading margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -28,7 +28,7 @@ public func limit(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
     itemA.translatesAutoresizingMaskIntoConstraints = false
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: itemA, attribute: .leading,
-                           relatedBy: .lessThanOrEqual, toItem: itemB,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB,
                            attribute: .leadingMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
@@ -36,8 +36,8 @@ public func limit(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
 }
 
 /**
- Constrains the object's trailing edge to be less than or equal to the
- leading margin of `item`
+ Constrains the object's trailing edge to be limited by the
+ trailing margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -68,7 +68,7 @@ public func limit(_ itemA: Constraid.View, byTrailingMarginOf itemB: Any?,
 }
 
 /**
- Constrains the object's top edge to be less than or equal to the
+ Constrains the object's top edge to be limited by the
  top margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -92,7 +92,7 @@ public func limit(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
     itemA.translatesAutoresizingMaskIntoConstraints = false
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: itemA, attribute: .top,
-                           relatedBy: .lessThanOrEqual, toItem: itemB,
+                           relatedBy: .greaterThanOrEqual, toItem: itemB,
                            attribute: .topMargin, multiplier: multiplier,
                            constant: inset, priority: priority)
         ])
@@ -100,7 +100,7 @@ public func limit(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
 }
 
 /**
- Constrains the object's bottom edge to be less than or equal to the
+ Constrains the object's bottom edge to be limited by the
  bottom margin of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
@@ -131,8 +131,8 @@ public func limit(_ itemA: Constraid.View, byBottomMarginOf itemB: Any?,
 }
 
 /**
- Constrains the object's top & bottom edges to be less than or equal
- to the top & bottom margin of `item`
+ Constrains the object's top & bottom edges to be limited
+ by the top & bottom margins of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -159,8 +159,8 @@ public func limit(_ itemA: Constraid.View, byHorizontalMarginsOf itemB: Any?,
 }
 
 /**
- Constrains the object's leading & trailing edges to be less than or equal
- to the leading & trailing margin of `item`
+ Constrains the object's leading & trailing edges to be limited
+ by the leading & trailing margins of `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
  - parameter itemB: The `item` you want to constrain itemA against
@@ -188,7 +188,7 @@ public func limit(_ itemA: Constraid.View, byVerticalMarginsOf itemB: Any?,
 
 /**
  Constrains the object's top, bottom, leading & trailing edges to be
- less than or equal to the top, bottom, leading & trailing margin of
+ limited by the top, bottom, leading & trailing margins of
  `item`
 
  - parameter itemA: The `item` you want to constrain in relation to another object
