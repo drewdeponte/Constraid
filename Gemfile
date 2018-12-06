@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'jazzy', '0.9.0'
+gem 'jazzy', '0.9.4'
