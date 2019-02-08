@@ -250,6 +250,13 @@ When you want to make a view's height and width equal you can do:
 equalize(viewA)
 ```
 
+When you want to make a view have a specific aspect ratio you can do:
+
+```swift
+let size = CGSize(width: 3, height: 5)
+setAspectRatio(of: viewA, toSize: size)
+```
+
 ### Manage Relative Position
 
 Lets say you want `viewA` to be position right after `viewB`'s edge. You can accomplish this
