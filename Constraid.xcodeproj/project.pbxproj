@@ -20,7 +20,7 @@
 		E99C6E331E530E2000C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
 		E9BA3EAF1FB7B8EB00772FA4 /* CupByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */; };
 		E9BA3EB01FB7B8EB00772FA4 /* CupByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */; };
-		E9BA3EB21FB7B90000772FA4 /* CubByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */; };
+		E9BA3EB21FB7B90000772FA4 /* CupByMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB11FB7B90000772FA4 /* CupByMargin.swift */; };
 		E9BA3EB41FB7C5E800772FA4 /* CupByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */; };
 		E9BA3EB61FB7CD8300772FA4 /* CupByMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */; };
 		E9BA3EB81FB7E26F00772FA4 /* LayoutGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */; };
@@ -81,7 +81,7 @@
 		E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByEdgeTests.swift; sourceTree = "<group>"; };
 		E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintCollection.swift; sourceTree = "<group>"; };
 		E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdge.swift; sourceTree = "<group>"; };
-		E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubByMargin.swift; sourceTree = "<group>"; };
+		E9BA3EB11FB7B90000772FA4 /* CupByMargin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByMargin.swift; sourceTree = "<group>"; };
 		E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdgeTests.swift; sourceTree = "<group>"; };
 		E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByMarginTests.swift; sourceTree = "<group>"; };
 		E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutGuideTests.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 				51E19A9C1E2A82F900998194 /* ExpandFromSize.swift */,
 				E9CAB2D11E21A5C500CDA4E2 /* ManageIntrinsicSizeRelations.swift */,
 				E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */,
-				E9BA3EB11FB7B90000772FA4 /* CubByMargin.swift */,
+				E9BA3EB11FB7B90000772FA4 /* CupByMargin.swift */,
 			);
 			path = Constraid;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				E9EDB5D41E2E18AF00C0D060 /* View.swift in Sources */,
 				E9EDB5E21E2E1EE000C0D060 /* ExpandFromEdge.swift in Sources */,
 				E91BE1FC1E54062800861A52 /* Constraint.swift in Sources */,
-				E9BA3EB21FB7B90000772FA4 /* CubByMargin.swift in Sources */,
+				E9BA3EB21FB7B90000772FA4 /* CupByMargin.swift in Sources */,
 				E9EDB5D61E2E1A7C00C0D060 /* FlushWithMargins.swift in Sources */,
 				E9EDB5E51E2E1F0100C0D060 /* ExpandFromMargin.swift in Sources */,
 				E9EDB5E71E2E1F4100C0D060 /* ExpandFromSize.swift in Sources */,

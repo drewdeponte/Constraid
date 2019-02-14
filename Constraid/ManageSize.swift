@@ -216,3 +216,25 @@ public func equalize(_ item: Constraid.View,
         ])
     return collection
 }
+
+/**
+ Set aspect ratio of receiver using a constraint in auto-layout
+
+ - parameter item: The `item` you want to constrain
+ - parameter size: The CGSize of your height and width used to calculate the ratio
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated constraint
+ */
+@discardableResult
+public func setAspectRatio(of item: Constraid.View, toSize size: CGSize, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
+    let ratio = size.width/size.height as CGFloat
+    item.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: item, attribute: .width,
+                           relatedBy: .equal, toItem: item, attribute: .height,
+                           multiplier: ratio, constant: 0, priority: priority)
+        ])
+    return collection
+}

@@ -181,4 +181,25 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
+
+    func testSetAspectRatio() {
+        let viewOne = UIView()
+        let size = CGSize(width: 50, height: 5)
+        let ratio = size.width/size.height as CGFloat
+        let constraints = Constraid.setAspectRatio(of: viewOne, toSize: size, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+
+        let constraint = viewOne.constraints.first!
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, viewOne)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
+        XCTAssertEqual(constraint.multiplier, ratio)
+        XCTAssertEqual(constraint.constant, 0)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
 }
