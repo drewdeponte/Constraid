@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v4.1.0][v4.1.0] - 2019-02-13
+
 * Added `setAspectRatio` method
 * Fixed `precedes(leadingEdgeOf:` & `precedes(leadingMarginOf:` so that `by:` is applied in the correct direction
 
@@ -121,7 +123,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/4.0.0...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/4.1.0...HEAD
+[v4.1.0]: https://github.com/uptech/Constraid/compare/4.0.0...4.1.0
 [v4.0.0]: https://github.com/uptech/Constraid/compare/3.0.0...4.0.0
 [v3.0.0]: https://github.com/uptech/Constraid/compare/2.0.2...3.0.0
 [v2.0.2]: https://github.com/uptech/Constraid/compare/2.0.1...2.0.2
