@@ -41,7 +41,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.relation, NSLayoutRelation.equal)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leadingMargin)
-        XCTAssertEqual(constraintOne.constant, 10.0)
+        XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -133,7 +133,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.relation, NSLayoutRelation.equal)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, NSLayoutAttribute.leading)
-        XCTAssertEqual(constraintOne.constant, 10.0)
+        XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 

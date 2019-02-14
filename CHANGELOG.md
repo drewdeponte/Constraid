@@ -11,6 +11,7 @@ that you can set version constraints properly.
 #### [Unreleased][unreleased] -
 
 * Added `setAspectRatio` method
+* Fixed `precedes(leadingEdgeOf:` & `precedes(leadingMarginOf:` so that `by:` is applied in the correct direction
 
 #### [v4.0.0][v4.0.0] - 2018-12-05
 

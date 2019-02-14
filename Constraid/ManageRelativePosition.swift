@@ -65,7 +65,7 @@
         let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: itemA, attribute: .trailing,
                                relatedBy: .equal, toItem: itemB, attribute: .leadingMargin,
-                               multiplier: multiplier, constant: constant,
+                               multiplier: multiplier, constant: (-1.0 * constant),
                                priority: priority)
             ])
         return collection
@@ -205,7 +205,7 @@ public func precede(theLeadingEdgeOf itemB: Any?,
     let collection = Constraid.ConstraintCollection([
         NSLayoutConstraint(item: itemA, attribute: .trailing,
                            relatedBy: .equal, toItem: itemB, attribute: .leading,
-                           multiplier: multiplier, constant: constant, priority: priority)
+                           multiplier: multiplier, constant: (-1.0 * constant), priority: priority)
         ])
     return collection
 }
