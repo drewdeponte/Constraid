@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added `setAspectRatio` method
+
 #### [v4.0.0][v4.0.0] - 2018-12-05
 
 * Fixed expand and limit family of functions to correctly limit/expand the entities
