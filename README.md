@@ -23,33 +23,15 @@ normally do the following with AutoLayout:
 
 ```swift
 childView.translatesAutoresizingMaskIntoConstraints = false
-
-NSLayoutConstraint.activate([
-    NSLayoutConstraint(
-        item: childView,
-        attribute: .leadingEdge,
-        relatedBy: .equal,
-        toItem: parentView,
-        attribute: .leadingEdge,
-        multiplier: 1.0,
-        constant: 0.0
-    ),
-    NSLayoutConstraint(
-        item: childView,
-        attribute: .trailingEdge,
-        relatedBy: .equal,
-        toItem: parentView,
-        attribute: .trailingEdge,
-        multiplier: 1.0,
-        constant: 0.0
-    )
-])
+childView.leadingAnchor.constraint(equalTo: parentView.leadingAnchor).isActive = true
+childView.trailingAnchor.constraint(equalTo: parentView.trailingAnchor).isActive = true
+childView.topAnchor.constraint(equalTo: parentView.topAnchor).isActive = true
 ```
 
 However, with the aid of [Constraid][constraid] it is as simple as
 
 ```swift
-flush(childView, withVerticalEdgesOf: parentView).activate()
+cup(childView, byTopEdgeOf: parentView).activate()
 ```
 
 or if you want to combine constraint collections you can do so as follows:
