@@ -35,7 +35,13 @@ However, with the aid of [Constraid][constraid] it is as simple as
 cup(childView, byTopEdgeOf: parentView).activate()
 ```
 
-or if you want to combine constraint collections you can do so as follows:
+The power of [Constraid][constraid] is that it provides higher level concepts
+such as `cup`, `flush`, etc.  that make it easier to reason about your layouts,
+and does so in a way fully discoverable via auto-completion and focused on
+reducing the amount of code necessary to properly define layouts.
+
+Another powerful concept it introduces is constraint collections which can be
+combined as follows:
 
 ```swift
 let constraints = flush(childView, withVerticalEdgesOf: parentView) +
