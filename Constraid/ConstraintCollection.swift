@@ -14,14 +14,14 @@ public extension Collection where Iterator.Element == NSLayoutConstraint {
     /**
         Activate the collection of constraints
     */
-    public func activate() {
+    func activate() {
         NSLayoutConstraint.activate(self as! [NSLayoutConstraint])
     }
 
     /**
         Deactivate the collection of constraints
     */
-    public func deactivate() {
+    func deactivate() {
         NSLayoutConstraint.deactivate(self as! [NSLayoutConstraint])
     }
 }

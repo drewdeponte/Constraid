@@ -12,10 +12,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -32,10 +32,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.greaterThanOrEqual)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -52,10 +52,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.lessThanOrEqual)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -71,10 +71,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.height)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -91,10 +91,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.height)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.greaterThanOrEqual)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -111,10 +111,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.height)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.lessThanOrEqual)
         XCTAssertNil(constraint.secondItem)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.notAnAttribute)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -132,10 +132,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.width)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.width)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -153,10 +153,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.height)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.height)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.height)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -172,10 +172,10 @@ class ManageSizeTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertEqual(constraint.secondItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.height)
         XCTAssertEqual(constraint.constant, 0.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
@@ -192,10 +192,10 @@ class ManageSizeTests: XCTestCase {
         let constraint = viewOne.constraints.first!
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.firstAttribute, NSLayoutAttribute.width)
-        XCTAssertEqual(constraint.relation, NSLayoutRelation.equal)
+        XCTAssertEqual(constraint.firstAttribute, NSLayoutConstraint.Attribute.width)
+        XCTAssertEqual(constraint.relation, NSLayoutConstraint.Relation.equal)
         XCTAssertEqual(constraint.secondItem as! UIView, viewOne)
-        XCTAssertEqual(constraint.secondAttribute, NSLayoutAttribute.height)
+        XCTAssertEqual(constraint.secondAttribute, NSLayoutConstraint.Attribute.height)
         XCTAssertEqual(constraint.multiplier, ratio)
         XCTAssertEqual(constraint.constant, 0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
