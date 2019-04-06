@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v5.0.0][v5.0.0] - 2019-04-05
+
 * Changed from Swift 4.0 to Swift 5.0
 
 #### [v4.1.0][v4.1.0] - 2019-02-13
@@ -125,7 +127,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/4.1.0...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/5.0.0...HEAD
+[v5.0.0]: https://github.com/uptech/Constraid/compare/4.1.0...5.0.0
 [v4.1.0]: https://github.com/uptech/Constraid/compare/4.0.0...4.1.0
 [v4.0.0]: https://github.com/uptech/Constraid/compare/3.0.0...4.0.0
 [v3.0.0]: https://github.com/uptech/Constraid/compare/2.0.2...3.0.0
