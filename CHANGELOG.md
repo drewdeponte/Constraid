@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Changed from Swift 4.0 to Swift 5.0
+
 #### [v4.1.0][v4.1.0] - 2019-02-13
 
 * Added `setAspectRatio` method

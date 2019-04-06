@@ -5,8 +5,8 @@
 #endif
 
 #if os(iOS)
-    public typealias LayoutAttribute = NSLayoutAttribute
-    public typealias LayoutRelation = NSLayoutRelation
+    public typealias LayoutAttribute = NSLayoutConstraint.Attribute
+    public typealias LayoutRelation = NSLayoutConstraint.Relation
 #else
     public typealias LayoutAttribute = NSLayoutConstraint.Attribute
     public typealias LayoutRelation = NSLayoutConstraint.Relation
@@ -32,7 +32,7 @@ public extension NSLayoutConstraint {
 
         - returns: the constructed NSLayoutConstraint
     */
-    public convenience init(item: Any,
+    convenience init(item: Any,
         attribute attr1: LayoutAttribute,
         relatedBy: LayoutRelation,
         toItem: Any?,
