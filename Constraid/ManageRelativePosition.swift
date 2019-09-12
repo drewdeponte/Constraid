@@ -36,22 +36,6 @@
         return collection
     }
 
-    public func follow(theCenterOf itemB: Any?,
-                   with itemA: Constraid.View,
-                   times multiplier: CGFloat = 1.0,
-                   by constant: CGFloat = 0.0,
-                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-    ) -> Constraid.ConstraintCollection {
-        itemA.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: itemA, attribute: .leading,
-                               relatedBy: .equal, toItem: itemB,
-                               attribute: .centerX, multiplier: multiplier,
-                               constant: constant, priority: priority)
-            ])
-        return collection
-    }
-
     /**
      Constrains the receiver's trailing edge to the leading margin of
      `item`
@@ -81,23 +65,6 @@
         let collection = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: itemA, attribute: .trailing,
                                relatedBy: .equal, toItem: itemB, attribute: .leadingMargin,
-                               multiplier: multiplier, constant: (-1.0 * constant),
-                               priority: priority)
-            ])
-        return collection
-    }
-
-    public func precede(theCenterOf itemB: Any?,
-                    with itemA: Constraid.View,
-                    times multiplier: CGFloat = 1.0,
-                    by constant: CGFloat = 0.0,
-                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
-) -> Constraid.ConstraintCollection {
-
-        itemA.translatesAutoresizingMaskIntoConstraints = false
-        let collection = Constraid.ConstraintCollection([
-            NSLayoutConstraint(item: itemA, attribute: .trailing,
-                               relatedBy: .equal, toItem: itemB, attribute: .centerX,
                                multiplier: multiplier, constant: (-1.0 * constant),
                                priority: priority)
             ])
@@ -174,6 +141,41 @@
 #else
     import AppKit
 #endif
+
+
+public func precede(theCenterOf itemB: Any?,
+                    with itemA: Constraid.View,
+                    times multiplier: CGFloat = 1.0,
+                    by constant: CGFloat = 0.0,
+                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .trailing,
+                           relatedBy: .equal, toItem: itemB, attribute: .centerX,
+                           multiplier: multiplier, constant: (-1.0 * constant),
+                           priority: priority)
+        ])
+    return collection
+}
+
+public func follow(theCenterOf itemB: Any?,
+                   with itemA: Constraid.View,
+                   times multiplier: CGFloat = 1.0,
+                   by constant: CGFloat = 0.0,
+                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .leading,
+                           relatedBy: .equal, toItem: itemB,
+                           attribute: .centerX, multiplier: multiplier,
+                           constant: constant, priority: priority)
+        ])
+    return collection
+}
+
 
 /**
  Constrains the receiver's leading edge to the trailing edge of
