@@ -10,6 +10,12 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added `follow(theCenterOf:with:)`
+* Added `precede(theCenterOf:with:)`
+* Added `set(viewA, aboveTheCenterOf:)`
+* Added `set(viewA, belowTheCenterOf:)`
+* Removed `@discardableResult` from all functions
+
 #### [v5.0.0][v5.0.0] - 2019-04-05
 
 * Changed from Swift 4.0 to Swift 5.0
