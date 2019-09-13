@@ -138,7 +138,23 @@
     import AppKit
 #endif
 
+/**
+ Constrains the receiver's trailing edge to the centerX of
+ `item`
 
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative
+ to the leading edge of the item prior to the constant being
+ applied
+ - parameter constant: The amount to offset the object's trailing
+ edge from the leading edge of the `item`
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated
+ constraint
+ */
 public func precede(theCenterOf itemB: Any?,
                     with itemA: Constraid.View,
                     times multiplier: CGFloat = 1.0,
@@ -156,6 +172,23 @@ public func precede(theCenterOf itemB: Any?,
     return collection
 }
 
+/**
+ Constrains the receiver's leading edge to the centerX of
+ `item`
+
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative
+ to the trailing edge of the item prior to the constant being
+ applied
+ - parameter constant: The amount to offset the object's leading
+ edge from the trailing edge of the `item`
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated
+ constraint
+ */
 public func follow(theCenterOf itemB: Any?,
                    with itemA: Constraid.View,
                    times multiplier: CGFloat = 1.0,
@@ -171,7 +204,6 @@ public func follow(theCenterOf itemB: Any?,
         ])
     return collection
 }
-
 
 /**
  Constrains the receiver's leading edge to the trailing edge of

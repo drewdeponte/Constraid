@@ -94,6 +94,52 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
+    func testPrecedesTheCenterOf() {
+        let viewOne = UIView()
+        let viewTwo = UIView()
+
+        viewOne.addSubview(viewTwo)
+        let constraints = Constraid.precede(theCenterOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+
+        let constraintOne = viewOne.constraints.first!
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.trailing)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
+        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
+        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.multiplier, 2.0)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
+    func testFollowsTheCenterOf() {
+        let viewOne = UIView()
+        let viewTwo = UIView()
+
+        viewOne.addSubview(viewTwo)
+        let constraints = Constraid.follow(theCenterOf: viewTwo, with: viewOne, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+
+        let constraintOne = viewOne.constraints.first!
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.leading)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
+        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
+        XCTAssertEqual(constraintOne.constant, 10.0)
+        XCTAssertEqual(constraintOne.multiplier, 2.0)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
     func testFollowsTheTrailingEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
