@@ -209,6 +209,29 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
+    func testSitsAboveTheCenterOf() {
+        let viewOne = UIView()
+        let viewTwo = UIView()
+
+        viewOne.addSubview(viewTwo)
+        let constraints = Constraid.set(viewOne, aboveTheCenterOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+
+        let constraint = viewOne.constraints.first!
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraint.firstAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraint.relation, LayoutRelation.equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.centerY)
+        XCTAssertEqual(constraint.constant, -10.0)
+        XCTAssertEqual(constraint.multiplier, 2.0)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
     func testSitsBelowTheBottomEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
@@ -225,6 +248,29 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.relation, LayoutRelation.equal)
         XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraint.constant, 10.0)
+        XCTAssertEqual(constraint.multiplier, 2.0)
+        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
+    func testSitsBelowTheCenterOf() {
+        let viewOne = UIView()
+        let viewTwo = UIView()
+
+        viewOne.addSubview(viewTwo)
+        let constraints = Constraid.set(viewOne, belowTheCenterOf: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+
+        let constraint = viewOne.constraints.first!
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraint.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraint.firstAttribute, LayoutAttribute.top)
+        XCTAssertEqual(constraint.relation, LayoutRelation.equal)
+        XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))

@@ -305,6 +305,39 @@ public func set(_ itemA: Constraid.View, aboveTheTopEdgeOf itemB: Any?,
 }
 
 /**
+ Constrains the receiver's bottom edge to the centerY of
+ `item`
+
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative
+ to the top edge of the item prior to the constant being
+ applied
+ - parameter constant: The amount to offset the object's bottom
+ edge from the top edge of the `item`
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated
+ constraint
+ */
+public func set(_ itemA: Constraid.View, aboveTheCenterOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                by constant: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .bottom,
+                           relatedBy: .equal, toItem: itemB, attribute: .centerY,
+                           multiplier: multiplier, constant: (-1.0 * constant),
+                           priority: priority)
+        ])
+    return collection
+}
+
+/**
  Constrains the receiver's top edge to the bottom edge of
  `item`
 
@@ -335,3 +368,36 @@ public func set(_ itemA: Constraid.View, belowTheBottomEdgeOf itemB: Any?,
         ])
     return collection
 }
+
+/**
+ Constrains the receiver's top edge to the centerY of
+ `item`
+
+ - parameter itemA: The `item` you want to constrain in relation to another object
+ - parameter itemB: The `item` you want to constrain itemA against
+ - parameter multiplier: The ratio altering the constraint relative
+ to the bottom edge of the item prior to the constant being
+ applied
+ - parameter constant: The amount to offset the object's top
+ edge from the bottom edge of the `item`
+ - parameter priority: The priority this constraint uses when being
+ evaluated against other constraints
+
+ - returns: Constraint collection containing the generated
+ constraint
+ */
+public func set(_ itemA: Constraid.View, belowTheCenterOf itemB: Any?,
+                times multiplier: CGFloat = 1.0,
+                by constant: CGFloat = 0.0,
+                priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
+    ) -> Constraid.ConstraintCollection {
+
+    itemA.translatesAutoresizingMaskIntoConstraints = false
+    let collection = Constraid.ConstraintCollection([
+        NSLayoutConstraint(item: itemA, attribute: .top, relatedBy: .equal,
+                           toItem: itemB, attribute: .centerY, multiplier: multiplier,
+                           constant: constant, priority: priority)
+        ])
+    return collection
+}
+
