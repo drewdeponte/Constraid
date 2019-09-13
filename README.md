@@ -271,14 +271,18 @@ below.
 ```swift
 follow(theTrailingEdgeOf:with:)
 follow(theTrailingMarginOf:with:)
+follow(theCentorOf:with:)
 
 precede(theLeadingEdgeOf:with:)
 precede(theLeadingMarginOf:with:)
+precede(theCenterOf:with:)
 
 set(viewA, aboveTheTopEdgeOf:)
 set(viewA, aboveTheTopMarginOf:)
+set(viewA, aboveTheCenterOf:)
 set(viewA, belowTheBottomEdgeOf:)
 set(viewA, belowTheBottomMarginOf:)
+set(viewA, belowTheCenterOf:)
 ```
 
 <img src="resources/not_infinity.png" alt="Not Infinity" align="left" height="70px" hspace="20px" vspace="20px">
