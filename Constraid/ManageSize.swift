@@ -14,7 +14,6 @@
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -36,7 +35,6 @@ public func setWidth(of item: Constraid.View, to constant: CGFloat, priority: Co
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expandWidth(of item: Constraid.View, from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +56,6 @@ public func expandWidth(of item: Constraid.View, from constant: CGFloat, priorit
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func limitWidth(of item: Constraid.View, by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +77,6 @@ public func limitWidth(of item: Constraid.View, by constant: CGFloat, priority: 
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func setHeight(of item: Constraid.View, to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +98,6 @@ public func setHeight(of item: Constraid.View, to constant: CGFloat, priority: C
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expandHeight(of item: Constraid.View, from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -124,7 +119,6 @@ public func expandHeight(of item: Constraid.View, from constant: CGFloat, priori
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func limitHeight(of item: Constraid.View, by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
     item.translatesAutoresizingMaskIntoConstraints = false
@@ -149,7 +143,6 @@ public func limitHeight(of item: Constraid.View, by constant: CGFloat, priority:
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func matchWidth(of itemA: Constraid.View, to itemB: Any?,
                      times multiplier: CGFloat = 1.0,
                      by constant: CGFloat = 0.0,
@@ -178,7 +171,6 @@ public func matchWidth(of itemA: Constraid.View, to itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func matchHeight(of itemA: Constraid.View, to itemB: Any?,
                       times multiplier: CGFloat = 1.0,
                       by constant: CGFloat = 0.0,
@@ -203,7 +195,6 @@ public func matchHeight(of itemA: Constraid.View, to itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func equalize(_ item: Constraid.View,
     priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
     ) -> Constraid.ConstraintCollection {
@@ -227,7 +218,6 @@ public func equalize(_ item: Constraid.View,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func setAspectRatio(of item: Constraid.View, toSize size: CGSize, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     let ratio = size.width/size.height as CGFloat
     item.translatesAutoresizingMaskIntoConstraints = false

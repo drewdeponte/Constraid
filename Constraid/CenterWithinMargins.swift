@@ -20,7 +20,6 @@ import UIKit
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, verticallyWithinMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -66,7 +65,6 @@ public func center(_ itemA: Constraid.View, verticallyWithinMarginsOf itemB: Any
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, horizontallyWithinMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -112,7 +110,6 @@ public func center(_ itemA: Constraid.View, horizontallyWithinMarginsOf itemB: A
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, withinMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,

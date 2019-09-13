@@ -17,7 +17,6 @@ import UIKit
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withLeadingMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     itemA.translatesAutoresizingMaskIntoConstraints = false
@@ -43,7 +42,6 @@ public func flush(_ itemA: Constraid.View, withLeadingMarginOf itemB: Any?, time
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withTrailingMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     itemA.translatesAutoresizingMaskIntoConstraints = false
@@ -69,7 +67,6 @@ public func flush(_ itemA: Constraid.View, withTrailingMarginOf itemB: Any?, tim
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withTopMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     itemA.translatesAutoresizingMaskIntoConstraints = false
@@ -95,7 +92,6 @@ public func flush(_ itemA: Constraid.View, withTopMarginOf itemB: Any?, times mu
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withBottomMarginOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     itemA.translatesAutoresizingMaskIntoConstraints = false
@@ -122,7 +118,6 @@ public func flush(_ itemA: Constraid.View, withBottomMarginOf itemB: Any?, times
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withVerticalMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     let constraints = Constraid.flush(itemA, withLeadingMarginOf: itemB, times: multiplier, insetBy: inset,
@@ -146,7 +141,6 @@ public func flush(_ itemA: Constraid.View, withVerticalMarginsOf itemB: Any?, ti
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withHorizontalMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     let constraints = Constraid.flush(itemA, withTopMarginOf: itemB, times: multiplier, insetBy: inset,
@@ -172,7 +166,6 @@ public func flush(_ itemA: Constraid.View, withHorizontalMarginsOf itemB: Any?, 
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withMarginsOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
     
     let constraints = Constraid.flush(itemA, withHorizontalMarginsOf: itemB, times: multiplier, insetBy: inset,

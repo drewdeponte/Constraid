@@ -50,7 +50,6 @@ public enum OffsetDirection {
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, verticallyWithin itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -93,7 +92,6 @@ public func center(_ itemA: Constraid.View, verticallyWithin itemB: Any?,
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, horizontallyWithin itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -136,7 +134,6 @@ public func center(_ itemA: Constraid.View, horizontallyWithin itemB: Any?,
  
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func center(_ itemA: Constraid.View, within itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,

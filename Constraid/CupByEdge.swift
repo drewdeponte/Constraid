@@ -19,7 +19,6 @@
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byLeadingEdgeOf itemB: Any?,
                    times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                    priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -49,7 +48,6 @@ public func cup(_ itemA: Constraid.View, byLeadingEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byTrailingEdgeOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -79,7 +77,6 @@ public func cup(_ itemA: Constraid.View, byTrailingEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byTopEdgeOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -109,7 +106,6 @@ public func cup(_ itemA: Constraid.View, byTopEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byBottomEdgeOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired

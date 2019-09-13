@@ -18,7 +18,6 @@ import UIKit
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -48,7 +47,6 @@ public func cup(_ itemA: Constraid.View, byLeadingMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byTrailingMarginOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -78,7 +76,6 @@ public func cup(_ itemA: Constraid.View, byTrailingMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -108,7 +105,6 @@ public func cup(_ itemA: Constraid.View, byTopMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraints
  */
-@discardableResult
 public func cup(_ itemA: Constraid.View, byBottomMarginOf itemB: Any?,
                 times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                 priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired

@@ -18,7 +18,6 @@
      - returns: Constraint collection containing the generated
      constraint
      */
-    @discardableResult
     public func follow(theTrailingMarginOf itemB: Any?,
                       with itemA: Constraid.View,
                       times multiplier: CGFloat = 1.0,
@@ -53,7 +52,6 @@
      - returns: Constraint collection containing the generated
      constraint
      */
-    @discardableResult
     public func precede(theLeadingMarginOf itemB: Any?,
                        with itemA: Constraid.View,
                        times multiplier: CGFloat = 1.0,
@@ -88,7 +86,6 @@
      - returns: Constraint collection containing the generated
      constraint
      */
-    @discardableResult
     public func set(_ itemA: Constraid.View, aboveTheTopMarginOf itemB: Any?,
                    times multiplier: CGFloat = 1.0,
                    by constant: CGFloat = 0.0,
@@ -122,7 +119,6 @@
      - returns: Constraint collection containing the generated
      constraint
      */
-    @discardableResult
     public func set(_ itemA: Constraid.View, belowTheBottomMarginOf itemB: Any?,
                    times multiplier: CGFloat = 1.0,
                    by constant: CGFloat = 0.0,
@@ -194,7 +190,6 @@ public func follow(theCenterOf itemB: Any?,
  - returns: Constraint collection containing the generated
  constraint
  */
-@discardableResult
 public func follow(theTrailingEdgeOf itemB: Any?,
                   with itemA: Constraid.View,
                   times multiplier: CGFloat = 1.0,
@@ -228,7 +223,6 @@ public func follow(theTrailingEdgeOf itemB: Any?,
  - returns: Constraint collection containing the generated
  constraint
  */
-@discardableResult
 public func precede(theLeadingEdgeOf itemB: Any?,
                    with itemA: Constraid.View,
                    times multiplier: CGFloat = 1.0,
@@ -262,7 +256,6 @@ public func precede(theLeadingEdgeOf itemB: Any?,
  - returns: Constraint collection containing the generated
  constraint
  */
-@discardableResult
 public func set(_ itemA: Constraid.View, aboveTheTopEdgeOf itemB: Any?,
                times multiplier: CGFloat = 1.0,
                by constant: CGFloat = 0.0,
@@ -296,7 +289,6 @@ public func set(_ itemA: Constraid.View, aboveTheTopEdgeOf itemB: Any?,
  - returns: Constraint collection containing the generated
  constraint
  */
-@discardableResult
 public func set(_ itemA: Constraid.View, belowTheBottomEdgeOf itemB: Any?,
                times multiplier: CGFloat = 1.0,
                by constant: CGFloat = 0.0,

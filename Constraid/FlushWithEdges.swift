@@ -18,7 +18,6 @@
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withLeadingEdgeOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -45,7 +44,6 @@ public func flush(_ itemA: Constraid.View, withLeadingEdgeOf itemB: Any?, times 
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withTrailingEdgeOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -72,7 +70,6 @@ public func flush(_ itemA: Constraid.View, withTrailingEdgeOf itemB: Any?, times
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withTopEdgeOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -99,7 +96,6 @@ public func flush(_ itemA: Constraid.View, withTopEdgeOf itemB: Any?, times mult
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withBottomEdgeOf itemB: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -127,7 +123,6 @@ public func flush(_ itemA: Constraid.View, withBottomEdgeOf itemB: Any?, times m
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withVerticalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -152,7 +147,6 @@ public func flush(_ itemA: Constraid.View, withVerticalEdgesOf item: Any?, times
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withHorizontalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 
@@ -179,7 +173,6 @@ public func flush(_ itemA: Constraid.View, withHorizontalEdgesOf item: Any?, tim
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func flush(_ itemA: Constraid.View, withEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0,
                   priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Constraid.ConstraintCollection {
 

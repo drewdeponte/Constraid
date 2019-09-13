@@ -18,7 +18,6 @@ import UIKit
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromLeadingMarginOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -50,7 +49,6 @@ public func expand(_ itemA: Constraid.View, fromLeadingMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromTrailingMarginOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -82,7 +80,6 @@ public func expand(_ itemA: Constraid.View, fromTrailingMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromTopMarginOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -114,7 +111,6 @@ public func expand(_ itemA: Constraid.View, fromTopMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromBottomMarginOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -146,7 +142,6 @@ public func expand(_ itemA: Constraid.View, fromBottomMarginOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromHorizontalMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -175,7 +170,6 @@ public func expand(_ itemA: Constraid.View, fromHorizontalMarginsOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromVerticalMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -206,7 +200,6 @@ public func expand(_ itemA: Constraid.View, fromVerticalMarginsOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromMarginsOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,

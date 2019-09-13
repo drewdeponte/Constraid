@@ -19,7 +19,6 @@
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromWidthOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy constant: CGFloat = 0.0,
@@ -51,7 +50,6 @@ public func expand(_ itemA: Constraid.View, fromWidthOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromHeightOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy constant: CGFloat = 0.0,

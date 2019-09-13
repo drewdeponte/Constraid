@@ -18,7 +18,6 @@
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromLeadingEdgeOf itemB: Any?,
                  times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
                  priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -49,7 +48,6 @@ public func expand(_ itemA: Constraid.View, fromLeadingEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromTrailingEdgeOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -81,7 +79,6 @@ public func expand(_ itemA: Constraid.View, fromTrailingEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromTopEdgeOf itemB: Any?,
                  times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
                  priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -111,7 +108,6 @@ public func expand(_ itemA: Constraid.View, fromTopEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromBottomEdgeOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -143,7 +139,6 @@ public func expand(_ itemA: Constraid.View, fromBottomEdgeOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromHorizontalEdgesOf itemB: Any?,
                  times multiplier: CGFloat = 1.0,
                  offsetBy offset: CGFloat = 0.0,
@@ -172,7 +167,6 @@ public func expand(_ itemA: Constraid.View, fromHorizontalEdgesOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromVerticalEdgesOf itemB: Any?,
                  times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
                  priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
@@ -202,7 +196,6 @@ public func expand(_ itemA: Constraid.View, fromVerticalEdgesOf itemB: Any?,
 
  - returns: Constraint collection containing the generated constraint
  */
-@discardableResult
 public func expand(_ itemA: Constraid.View, fromEdgesOf itemB: Any?,
                  times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0,
                  priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired
