@@ -1,7 +1,9 @@
 // We don't conditional import AppKit like normal here because AppKit Autolayout doesn't support
 // the margin attributes that UIKit does. And of course this file isn't included in the MacOS
 // build target.
+#if os(iOS)
 import UIKit
+
 
 /**
  Constrains the object's leading, top, and bottom edges to be equal to the
@@ -118,3 +120,5 @@ public func cup(_ itemA: Constraid.View, byBottomMarginOf itemB: Any?,
         ])
     return collection
 }
+
+#endif

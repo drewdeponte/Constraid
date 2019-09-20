@@ -1,14 +1,17 @@
 import XCTest
 import Constraid
 
-class ExpandFromMarginTests: XCTestCase {
-    func testExpandFromLeadingMarginOf() {
+#if os(iOS)
+import UIKit
+
+class LimitByEdgeTests: XCTestCase {
+    func testLimitByLeadingEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromLeadingMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
@@ -16,23 +19,23 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.leading)
-        XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leadingMargin)
-        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leading)
+        XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
-    func testExpandByTrailingMarginOf() {
+    func testLimitByTrailingEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromTrailingMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
@@ -40,33 +43,9 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.trailing)
-        XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.trailingMargin)
-        XCTAssertEqual(constraintOne.constant, 10.0)
-        XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
-
-        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
-    }
-
-    func testExpandFromTopMarginOf() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
-
-        viewOne.addSubview(viewTwo)
-
-        let constraints = Constraid.expand(viewOne, fromTopMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
-        let constraintOne = viewOne.constraints.first!
-
-        XCTAssertEqual(constraints, viewOne.constraints)
-        XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.topMargin)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
@@ -74,23 +53,23 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
-    func testExpandFromBottomMarginOf() {
+    func testLimitByTopEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromBottomMarginOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
-        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.bottomMargin)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
@@ -98,13 +77,37 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
-    func testExpandFromHorizontalMarginsOf() {
+    func testLimitByBottomEdgeOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromHorizontalMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        constraints.activate()
+        let constraintOne = viewOne.constraints.first!
+
+        XCTAssertEqual(constraints, viewOne.constraints)
+        XCTAssertEqual(constraintOne.isActive, true)
+        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.multiplier, 2.0)
+        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+
+        XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
+    }
+
+    func testLimitByHorizontalEdgesOf() {
+        let viewOne = UIView()
+        let viewTwo = UIView()
+
+        viewOne.addSubview(viewTwo)
+
+        let constraints = Constraid.limit(viewOne, byHorizontalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
@@ -113,33 +116,33 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.top)
-        XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.topMargin)
-        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
+        XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.bottom)
-        XCTAssertEqual(constraintTwo.relation, LayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraintTwo.relation, LayoutRelation.lessThanOrEqual)
         XCTAssertEqual(constraintTwo.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottomMargin)
-        XCTAssertEqual(constraintTwo.constant, 10.0)
+        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
-    func testExpandFromVerticalMarginsOf() {
+    func testLimitByVerticalEdgesOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromVerticalMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byVerticalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
@@ -148,33 +151,33 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.leading)
-        XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leadingMargin)
-        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leading)
+        XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.trailing)
-        XCTAssertEqual(constraintTwo.relation, LayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraintTwo.relation, LayoutRelation.lessThanOrEqual)
         XCTAssertEqual(constraintTwo.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.trailingMargin)
-        XCTAssertEqual(constraintTwo.constant, 10.0)
+        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.trailing)
+        XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 
-    func testExpandFromMarginsOf() {
+    func testLimitByEdgesOf() {
         let viewOne = UIView()
         let viewTwo = UIView()
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = Constraid.limit(viewOne, byEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         constraints.activate()
 
         let constraintOne = viewOne.constraints[0]
@@ -187,43 +190,44 @@ class ExpandFromMarginTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, true)
         XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.top)
-        XCTAssertEqual(constraintOne.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintOne.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.topMargin)
-        XCTAssertEqual(constraintOne.constant, -10.0)
+        XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
+        XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.bottom)
-        XCTAssertEqual(constraintTwo.relation, LayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraintTwo.relation, LayoutRelation.lessThanOrEqual)
         XCTAssertEqual(constraintTwo.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottomMargin)
-        XCTAssertEqual(constraintTwo.constant, 10.0)
+        XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottom)
+        XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
         XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintThree.isActive, true)
         XCTAssertEqual(constraintThree.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintThree.firstAttribute, LayoutAttribute.leading)
-        XCTAssertEqual(constraintThree.relation, LayoutRelation.lessThanOrEqual)
+        XCTAssertEqual(constraintThree.relation, LayoutRelation.greaterThanOrEqual)
         XCTAssertEqual(constraintThree.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintThree.secondAttribute, LayoutAttribute.leadingMargin)
-        XCTAssertEqual(constraintThree.constant, -10.0)
+        XCTAssertEqual(constraintThree.secondAttribute, LayoutAttribute.leading)
+        XCTAssertEqual(constraintThree.constant, 10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
         XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintFour.isActive, true)
         XCTAssertEqual(constraintFour.firstItem as! UIView, viewOne)
         XCTAssertEqual(constraintFour.firstAttribute, LayoutAttribute.trailing)
-        XCTAssertEqual(constraintFour.relation, LayoutRelation.greaterThanOrEqual)
+        XCTAssertEqual(constraintFour.relation, LayoutRelation.lessThanOrEqual)
         XCTAssertEqual(constraintFour.secondItem as! UIView, viewTwo)
-        XCTAssertEqual(constraintFour.secondAttribute, LayoutAttribute.trailingMargin)
-        XCTAssertEqual(constraintFour.constant, 10.0)
+        XCTAssertEqual(constraintFour.secondAttribute, LayoutAttribute.trailing)
+        XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
         XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+#endif

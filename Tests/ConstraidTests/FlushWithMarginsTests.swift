@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class FlushWithMarginsTests: XCTestCase {
 
     func testFlushWithLeadingMarginOf() {
@@ -229,3 +232,4 @@ class FlushWithMarginsTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+#endif

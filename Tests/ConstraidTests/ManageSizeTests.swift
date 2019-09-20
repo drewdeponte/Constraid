@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class ManageSizeTests: XCTestCase {
     func testSetWidth() {
         let viewOne = UIView()
@@ -203,3 +206,4 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+#endif

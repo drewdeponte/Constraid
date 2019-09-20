@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class ManageIntrinsicSizeRelationsTests: XCTestCase {
     func testKeepIntrinsicHeight() {
         let viewOne = UIView()
@@ -31,3 +34,4 @@ class ManageIntrinsicSizeRelationsTests: XCTestCase {
         XCTAssertEqual(viewOne.contentHuggingPriority(for: .horizontal), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
     }
 }
+#endif

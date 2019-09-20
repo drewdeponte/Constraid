@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class CupByEdgeTests: XCTestCase {
     func testCupByLeadingEdgeOf() {
         let viewOne = UIView()
@@ -190,4 +193,4 @@ class CupByEdgeTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
-
+#endif

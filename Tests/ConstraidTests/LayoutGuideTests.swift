@@ -1,6 +1,8 @@
 import XCTest
-import UIKit
 import Constraid
+
+#if os(iOS)
+import UIKit
 
 class LayoutGuideTests: XCTestCase {
 
@@ -75,3 +77,5 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+
+#endif

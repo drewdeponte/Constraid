@@ -1,6 +1,8 @@
 import Constraid
 import XCTest
 
+#if os(iOS)
+import UIKit
 class CenterWithinMarginsTests: XCTestCase {
     func testCenterVerticallyWithinMarginsOffsetDown() {
         let viewOne = UIView()
@@ -172,3 +174,4 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+#endif

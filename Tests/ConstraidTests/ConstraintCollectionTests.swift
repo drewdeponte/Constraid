@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class ConstraintCollectionTests: XCTestCase {
     func testConstruction() {
         let viewOne = UIView()
@@ -53,3 +56,4 @@ class ConstraintCollectionTests: XCTestCase {
         XCTAssertEqual(constraintOne.isActive, false)
     }
 }
+#endif

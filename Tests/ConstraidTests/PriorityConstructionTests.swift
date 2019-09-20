@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class PriorityConstructionTests: XCTestCase {
     func testConstructsAndSetsPriority() {
         let viewOne = UIView()
@@ -16,3 +19,4 @@ class PriorityConstructionTests: XCTestCase {
         XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(22)))
     }
 }
+#endif

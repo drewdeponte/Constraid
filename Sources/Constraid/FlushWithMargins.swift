@@ -1,6 +1,7 @@
 // We don't conditional import AppKit like normal here because AppKit Autolayout doesn't support
 // the margin attributes that UIKit does. And of course this file isn't included in the MacOS
 // build target.
+#if os(iOS)
 import UIKit
 
 /**
@@ -174,3 +175,4 @@ public func flush(_ itemA: Constraid.View, withMarginsOf itemB: Any?, times mult
               priority: priority)
     return constraints
 }
+#endif

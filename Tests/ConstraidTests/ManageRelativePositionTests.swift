@@ -1,6 +1,9 @@
 import XCTest
 import Constraid
 
+#if os(iOS)
+import UIKit
+
 class ManageRelativePositionTests: XCTestCase {
     func testFollowsTheTrailingMarginOf() {
         let viewOne = UIView()
@@ -278,3 +281,4 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
+#endif
