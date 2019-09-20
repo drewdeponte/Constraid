@@ -1,6 +1,7 @@
 import XCTest
 import Constraid
 
+// This test is only available on iOS
 #if os(iOS)
 import UIKit
 

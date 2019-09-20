@@ -1,9 +1,6 @@
 import XCTest
 import Constraid
 
-#if os(iOS)
-import UIKit
-
 class FlushWithEdgesTests: XCTestCase {
 
     func testFlushWithLeadingEdgeOf() {
@@ -25,7 +22,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -49,7 +46,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -73,7 +70,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -97,7 +94,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.bottom)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -123,7 +120,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -133,7 +130,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -159,7 +156,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -169,7 +166,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottom)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -197,7 +194,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -207,7 +204,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.bottom)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintThree.isActive, true)
         XCTAssertEqual(constraintThree.firstItem as! UIView, viewOne)
@@ -217,7 +214,7 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintThree.secondAttribute, LayoutAttribute.leading)
         XCTAssertEqual(constraintThree.constant, 10.0)
         XCTAssertEqual(constraintThree.multiplier, 2.0)
-        XCTAssertEqual(constraintThree.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintThree.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintFour.isActive, true)
         XCTAssertEqual(constraintFour.firstItem as! UIView, viewOne)
@@ -227,9 +224,8 @@ class FlushWithEdgesTests: XCTestCase {
         XCTAssertEqual(constraintFour.secondAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintFour.constant, -10.0)
         XCTAssertEqual(constraintFour.multiplier, 2.0)
-        XCTAssertEqual(constraintFour.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintFour.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
-#endif

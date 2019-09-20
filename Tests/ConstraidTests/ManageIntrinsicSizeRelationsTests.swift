@@ -1,17 +1,14 @@
 import XCTest
 import Constraid
 
-#if os(iOS)
-import UIKit
-
 class ManageIntrinsicSizeRelationsTests: XCTestCase {
     func testKeepIntrinsicHeight() {
         let viewOne = UIView()
 
         Constraid.keepIntrinsicHeight(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 
-        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .vertical), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
-        XCTAssertEqual(viewOne.contentHuggingPriority(for: .vertical), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .vertical), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentHuggingPriority(for: .vertical), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
     }
 
     func testKeepIntrinsicWidth() {
@@ -19,8 +16,8 @@ class ManageIntrinsicSizeRelationsTests: XCTestCase {
 
         Constraid.keepIntrinsicWidth(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 
-        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .horizontal), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
-        XCTAssertEqual(viewOne.contentHuggingPriority(for: .horizontal), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .horizontal), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentHuggingPriority(for: .horizontal), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
     }
 
     func testKeepIntrinsicSize() {
@@ -28,10 +25,9 @@ class ManageIntrinsicSizeRelationsTests: XCTestCase {
 
         Constraid.keepIntrinsicSize(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 
-        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .vertical), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
-        XCTAssertEqual(viewOne.contentHuggingPriority(for: .vertical), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
-        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .horizontal), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
-        XCTAssertEqual(viewOne.contentHuggingPriority(for: .horizontal), UILayoutPriority(rawValue: UILayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .vertical), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentHuggingPriority(for: .vertical), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentCompressionResistancePriority(for: .horizontal), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
+        XCTAssertEqual(viewOne.contentHuggingPriority(for: .horizontal), LayoutPriority(rawValue: LayoutPriority.RawValue(284)))
     }
 }
-#endif

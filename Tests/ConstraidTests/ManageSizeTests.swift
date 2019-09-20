@@ -1,9 +1,6 @@
 import XCTest
 import Constraid
 
-#if os(iOS)
-import UIKit
-
 class ManageSizeTests: XCTestCase {
     func testSetWidth() {
         let viewOne = UIView()
@@ -20,7 +17,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -40,7 +37,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -60,7 +57,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -79,7 +76,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -99,7 +96,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -119,7 +116,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertNil(constraint.secondItem)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.notAnAttribute)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -140,7 +137,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.width)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -161,7 +158,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondItem as! UIView, viewTwo)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.height)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -180,7 +177,7 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondItem as! UIView, viewOne)
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.height)
         XCTAssertEqual(constraint.constant, 0.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -201,9 +198,8 @@ class ManageSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.height)
         XCTAssertEqual(constraint.multiplier, ratio)
         XCTAssertEqual(constraint.constant, 0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
-#endif

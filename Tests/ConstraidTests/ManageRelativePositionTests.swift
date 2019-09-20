@@ -1,6 +1,7 @@
 import XCTest
 import Constraid
 
+// This is an iOS only test
 #if os(iOS)
 import UIKit
 
@@ -23,7 +24,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.trailingMargin)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -46,7 +47,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leadingMargin)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -69,7 +70,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.topMargin)
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -92,7 +93,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.bottomMargin)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -115,7 +116,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -138,7 +139,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -161,7 +162,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -184,7 +185,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.leading)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -207,7 +208,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -230,7 +231,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraint.constant, -10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -253,7 +254,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.bottom)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -276,7 +277,7 @@ class ManageRelativePositionTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraint.constant, 10.0)
         XCTAssertEqual(constraint.multiplier, 2.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }

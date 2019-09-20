@@ -1,9 +1,6 @@
 import XCTest
 import Constraid
 
-#if os(iOS)
-import UIKit
-
 class ExpandFromSizeTests: XCTestCase {
     func testExpandFromWidthOf() {
         let viewOne = UIView()
@@ -22,7 +19,7 @@ class ExpandFromSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.width)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -44,9 +41,8 @@ class ExpandFromSizeTests: XCTestCase {
         XCTAssertEqual(constraint.secondAttribute, LayoutAttribute.height)
         XCTAssertEqual(constraint.multiplier, 2.0)
         XCTAssertEqual(constraint.constant, 10.0)
-        XCTAssertEqual(constraint.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraint.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
         
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
 }
-#endif

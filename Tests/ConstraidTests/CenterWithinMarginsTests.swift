@@ -1,8 +1,10 @@
 import Constraid
 import XCTest
 
+// This test is only available on iOS
 #if os(iOS)
 import UIKit
+
 class CenterWithinMarginsTests: XCTestCase {
     func testCenterVerticallyWithinMarginsOffsetDown() {
         let viewOne = UIView()
@@ -23,7 +25,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerYWithinMargins)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -47,7 +49,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerYWithinMargins)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -71,7 +73,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerXWithinMargins)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -95,7 +97,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerXWithinMargins)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -122,7 +124,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerXWithinMargins)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -132,7 +134,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.centerYWithinMargins)
         XCTAssertEqual(constraintTwo.constant, 10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
@@ -159,7 +161,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerXWithinMargins)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
-        XCTAssertEqual(constraintOne.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
         XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
@@ -169,7 +171,7 @@ class CenterWithinMarginsTests: XCTestCase {
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.centerYWithinMargins)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
-        XCTAssertEqual(constraintTwo.priority, UILayoutPriority(rawValue: UILayoutPriority.RawValue(500)))
+        XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(viewOne.translatesAutoresizingMaskIntoConstraints, false)
     }
