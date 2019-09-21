@@ -3,7 +3,7 @@ import Constraid
 
 class ManageIntrinsicSizeRelationsTests: XCTestCase {
     func testKeepIntrinsicHeight() {
-        let viewOne = UIView()
+        let viewOne = View()
 
         Constraid.keepIntrinsicHeight(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 
@@ -12,7 +12,7 @@ class ManageIntrinsicSizeRelationsTests: XCTestCase {
     }
 
     func testKeepIntrinsicWidth() {
-        let viewOne = UIView()
+        let viewOne = View()
 
         Constraid.keepIntrinsicWidth(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 
@@ -21,7 +21,7 @@ class ManageIntrinsicSizeRelationsTests: XCTestCase {
     }
 
     func testKeepIntrinsicSize() {
-        let viewOne = UIView()
+        let viewOne = View()
 
         Constraid.keepIntrinsicSize(of: viewOne, priority: Constraid.LayoutPriority(rawValue: 284))
 

@@ -3,8 +3,8 @@ import Constraid
 
 class ConstraintCollectionTests: XCTestCase {
     func testConstruction() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
         
         _ = Constraid.ConstraintCollection([
             NSLayoutConstraint(item: viewOne, attribute: .leading, relatedBy: .equal,
@@ -14,8 +14,8 @@ class ConstraintCollectionTests: XCTestCase {
     }
 
     func testActivate() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
         
@@ -34,8 +34,8 @@ class ConstraintCollectionTests: XCTestCase {
     }
 
     func testDeactivate() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
         

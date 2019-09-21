@@ -1,17 +1,10 @@
 import XCTest
 import Constraid
 
-#if os(iOS)
-import UIKit
-#elseif os(macOS)
-import AppKit
-typealias UIView = NSView
-#endif
-
 class CenterWithinEdgesTests: XCTestCase {
     func testCenterVerticallyWithinOffsetDown() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -21,10 +14,10 @@ class CenterWithinEdgesTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
@@ -34,8 +27,8 @@ class CenterWithinEdgesTests: XCTestCase {
     }
 
     func testCenterVerticallyWithinOffsetUp() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -45,10 +38,10 @@ class CenterWithinEdgesTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
@@ -58,8 +51,8 @@ class CenterWithinEdgesTests: XCTestCase {
     }
 
     func testCenterHorizontallyWithinOffsetRight() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -69,10 +62,10 @@ class CenterWithinEdgesTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
@@ -82,8 +75,8 @@ class CenterWithinEdgesTests: XCTestCase {
     }
 
     func testCenterHorizontallyWithinOffsetLeft() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -93,10 +86,10 @@ class CenterWithinEdgesTests: XCTestCase {
 
         XCTAssertEqual(constraints, viewOne.constraints)
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
@@ -106,8 +99,8 @@ class CenterWithinEdgesTests: XCTestCase {
     }
 
     func testCenterWithinOffsetDownAndRight() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -120,20 +113,20 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraints, viewOne.constraints)
 
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, 10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
-        XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintTwo.firstItem as! View, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintTwo.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintTwo.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintTwo.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintTwo.constant, 10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)
@@ -143,8 +136,8 @@ class CenterWithinEdgesTests: XCTestCase {
     }
 
     func testCenterWithinOffsetUpAndLeft() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
 
@@ -157,20 +150,20 @@ class CenterWithinEdgesTests: XCTestCase {
         XCTAssertEqual(constraints, viewOne.constraints)
 
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintOne.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintOne.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintOne.secondAttribute, LayoutAttribute.centerX)
         XCTAssertEqual(constraintOne.constant, -10.0)
         XCTAssertEqual(constraintOne.multiplier, 2.0)
         XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
-        XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintTwo.firstItem as! View, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintTwo.relation, LayoutRelation.equal)
-        XCTAssertEqual(constraintTwo.secondItem as! UIView, viewTwo)
+        XCTAssertEqual(constraintTwo.secondItem as! View, viewTwo)
         XCTAssertEqual(constraintTwo.secondAttribute, LayoutAttribute.centerY)
         XCTAssertEqual(constraintTwo.constant, -10.0)
         XCTAssertEqual(constraintTwo.multiplier, 2.0)

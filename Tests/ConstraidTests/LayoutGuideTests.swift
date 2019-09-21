@@ -9,7 +9,7 @@ class LayoutGuideTests: XCTestCase {
 
 //    @available(iOS 11.0, *)
 //    func testSafeAreaGuideFlush() {
-//        let viewOne = UIView()
+//        let viewOne = View()
 //        let layoutGuide = UILayoutGuide()
 //
 //        viewOne.addLayoutGuide(layoutGuide)
@@ -21,8 +21,8 @@ class LayoutGuideTests: XCTestCase {
 
     @available(iOS 11.0, *)
     func testFlushWithEdgesOfsafeAreaLayoutGuide() {
-        let viewOne = UIView()
-        let viewTwo = UIView()
+        let viewOne = View()
+        let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
         let constraints = Constraid.flush(viewOne, withEdgesOf: viewTwo.safeAreaLayoutGuide, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
@@ -36,7 +36,7 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(constraints, viewOne.constraints)
 
         XCTAssertEqual(constraintOne.isActive, true)
-        XCTAssertEqual(constraintOne.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintOne.firstItem as! View, viewOne)
         XCTAssertEqual(constraintOne.firstAttribute, LayoutAttribute.top)
         XCTAssertEqual(constraintOne.relation, LayoutRelation.equal)
         XCTAssertEqual(constraintOne.secondItem as! UILayoutGuide, viewTwo.safeAreaLayoutGuide)
@@ -46,7 +46,7 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(constraintOne.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintTwo.isActive, true)
-        XCTAssertEqual(constraintTwo.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintTwo.firstItem as! View, viewOne)
         XCTAssertEqual(constraintTwo.firstAttribute, LayoutAttribute.bottom)
         XCTAssertEqual(constraintTwo.relation, LayoutRelation.equal)
         XCTAssertEqual(constraintTwo.secondItem as! UILayoutGuide, viewTwo.safeAreaLayoutGuide)
@@ -56,7 +56,7 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(constraintTwo.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintThree.isActive, true)
-        XCTAssertEqual(constraintThree.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintThree.firstItem as! View, viewOne)
         XCTAssertEqual(constraintThree.firstAttribute, LayoutAttribute.leading)
         XCTAssertEqual(constraintThree.relation, LayoutRelation.equal)
         XCTAssertEqual(constraintThree.secondItem as! UILayoutGuide, viewTwo.safeAreaLayoutGuide)
@@ -66,7 +66,7 @@ class LayoutGuideTests: XCTestCase {
         XCTAssertEqual(constraintThree.priority, LayoutPriority(rawValue: LayoutPriority.RawValue(500)))
 
         XCTAssertEqual(constraintFour.isActive, true)
-        XCTAssertEqual(constraintFour.firstItem as! UIView, viewOne)
+        XCTAssertEqual(constraintFour.firstItem as! View, viewOne)
         XCTAssertEqual(constraintFour.firstAttribute, LayoutAttribute.trailing)
         XCTAssertEqual(constraintFour.relation, LayoutRelation.equal)
         XCTAssertEqual(constraintFour.secondItem as! UILayoutGuide, viewTwo.safeAreaLayoutGuide)
