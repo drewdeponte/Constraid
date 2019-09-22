@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added SPM (Swift Package Manager) support
+
 #### [v6.0.0][v6.0.0] - 2019-09-12
 
 * Added `follow(theCenterOf:with:)`
