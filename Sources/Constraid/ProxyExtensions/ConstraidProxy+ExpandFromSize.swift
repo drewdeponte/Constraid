@@ -19,7 +19,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func expanding(fromWidthOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy constant: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func expand(fromWidthOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy constant: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         constraintCollection.append(contentsOf: Constraid.expand(self.base, fromWidthOf: item, times: multiplier, offsetBy: constant, priority: priority))
         return self
     }
@@ -38,7 +38,7 @@ extension ConstraidProxy {
 
      - returns: ConstraidProxy containing the generated constraint
      */
-    public func expanding(fromHeightOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy constant: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func expand(fromHeightOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy constant: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         constraintCollection.append(contentsOf: Constraid.expand(self.base, fromHeightOf: item, times: multiplier, offsetBy: constant, priority: priority))
         return self
     }

@@ -45,7 +45,7 @@ class TestViewController: UIViewController {
         self.view.addSubview(self.testView)
         
         self.testView.constraid
-            .settingWidth(to: 24)
+            .setWidth(to: 24)
             .activate()
     }
 }

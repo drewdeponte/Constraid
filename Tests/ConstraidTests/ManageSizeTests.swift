@@ -6,7 +6,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
         
         let proxy = viewOne.constraid
-            .settingWidth(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+            .setWidth(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
 
@@ -28,7 +28,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
 
         let proxy = viewOne.constraid
-            .expandingWidth(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+            .expandWidth(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
 
@@ -50,7 +50,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
 
         let proxy = viewOne.constraid
-            .limitingWidth(by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+            .limitWidth(by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
 
@@ -72,7 +72,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
 
         let proxy = viewOne.constraid
-            .settingHeight(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+            .setHeight(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
         let constraint = viewOne.constraints.first!
@@ -93,7 +93,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
 
         let proxy = viewOne.constraid
-            .expandingHeight(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+            .expandHeight(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
 
@@ -115,7 +115,7 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
 
         let proxy = viewOne.constraid
-            .limitingHeight(by: 10, priority: Constraid.LayoutPriority(rawValue: 500))
+            .limitHeight(by: 10, priority: Constraid.LayoutPriority(rawValue: 500))
         let constraints = proxy.constraintCollection
         proxy.activate()
 

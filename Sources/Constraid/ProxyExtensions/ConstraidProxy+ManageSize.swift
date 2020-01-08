@@ -14,7 +14,7 @@ extension ConstraidProxy {
 
     - returns: Constraid proxy containing the generated constraint
     */
-    public func settingWidth(to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func setWidth(to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.setWidth(of: self.base, to: constant, priority: priority))
         return self
     }
@@ -28,7 +28,7 @@ extension ConstraidProxy {
 
     - returns: Constraid proxy containing the generated constraint
     */
-    public func expandingWidth(from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func expandWidth(from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.expandWidth(of: self.base, from: constant, priority: priority))
         return self
     }
@@ -42,7 +42,7 @@ extension ConstraidProxy {
 
     - returns: Constraid proxy containing the generated constraint
     */
-    public func limitingWidth(by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func limitWidth(by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.limitWidth(of: self.base, by: constant, priority: priority))
         return self
     }
@@ -57,7 +57,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func settingHeight(to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func setHeight(to constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.setHeight(of: self.base, to: constant, priority: priority))
         return self
     }
@@ -71,7 +71,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func expandingHeight(from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func expandHeight(from constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.expandHeight(of: self.base, from: constant, priority: priority))
         return self
     }
@@ -85,7 +85,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func limitingHeight(by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func limitHeight(by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.limitHeight(of: self.base, by: constant, priority: priority))
         return self
     }
@@ -102,7 +102,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func matchingWidth(to item: Any?,
+    public func matchWidth(to item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -122,7 +122,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func matchingHeight(to item: Any?,
+    public func matchHeight(to item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -138,7 +138,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func equalizing(priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func equalize(priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.equalize(self.base, priority: priority))
         return self
     }
@@ -152,7 +152,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func settingAspectRatio(toSize size: CGSize, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func setAspectRatio(toSize size: CGSize, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.setAspectRatio(of: self.base, toSize: size, priority: priority))
         return self
     }

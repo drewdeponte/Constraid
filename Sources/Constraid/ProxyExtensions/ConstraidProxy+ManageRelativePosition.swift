@@ -18,7 +18,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated
      constraint
      */
-    public func following(theTrailingMarginOf item: Any?,
+    public func follow(theTrailingMarginOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -42,7 +42,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated
      constraint
      */
-    public func preceding(theLeadingMarginOf item: Any?,
+    public func precede(theLeadingMarginOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -115,7 +115,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func preceding(theCenterOf item: Any?,
+    public func precede(theCenterOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -137,7 +137,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func following(theCenterOf item: Any?,
+    public func follow(theCenterOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -159,7 +159,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func following(theTrailingEdgeOf item: Any?,
+    public func follow(theTrailingEdgeOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
@@ -181,7 +181,7 @@ extension ConstraidProxy {
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func preceding(theLeadingEdgeOf item: Any?,
+    public func precede(theLeadingEdgeOf item: Any?,
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
