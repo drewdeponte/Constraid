@@ -1,12 +1,14 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 class ManageSizeTests: XCTestCase {
     func testSetWidth() {
         let viewOne = View()
-
-        let constraints = Constraid.setWidth(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        
+        let proxy = viewOne.constraid
+            .settingWidth(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -25,8 +27,10 @@ class ManageSizeTests: XCTestCase {
     func testExpandWidth() {
         let viewOne = View()
 
-        let constraints = Constraid.expandWidth(of: viewOne, from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid
+            .expandingWidth(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -45,8 +49,10 @@ class ManageSizeTests: XCTestCase {
     func testLimitWidth() {
         let viewOne = View()
 
-        let constraints = Constraid.limitWidth(of: viewOne, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid
+            .limitingWidth(by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -65,8 +71,10 @@ class ManageSizeTests: XCTestCase {
     func testSetHeight() {
         let viewOne = View()
 
-        let constraints = Constraid.setHeight(of: viewOne, to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid
+            .settingHeight(to: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -84,8 +92,10 @@ class ManageSizeTests: XCTestCase {
     func testExpandHeight() {
         let viewOne = View()
 
-        let constraints = Constraid.expandHeight(of: viewOne, from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid
+            .expandingHeight(from: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
 
@@ -104,8 +114,10 @@ class ManageSizeTests: XCTestCase {
     func testLimitHeight() {
         let viewOne = View()
 
-        let constraints = Constraid.limitHeight(of: viewOne, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid
+            .limitingHeight(by: 10, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
 

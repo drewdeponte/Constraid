@@ -79,14 +79,13 @@ extension ConstraidProxy {
     /**
      Limit height of receiver using a constraint in auto-layout
 
-     - parameter item: The `item` you want to constrain
      - parameter constant: The maximum height to limit by
      - parameter priority: The priority this constraint uses when being
      evaluated against other constraints
 
      - returns: Constraid proxy containing the generated constraint
      */
-    public func limitingHeight(of item: Constraid.View, by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
+    public func limitingHeight(by constant: CGFloat, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
         self.constraintCollection.append(contentsOf: Constraid.limitHeight(of: self.base, by: constant, priority: priority))
         return self
     }
