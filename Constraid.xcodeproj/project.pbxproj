@@ -30,6 +30,16 @@
 		E91BE1FD1E54062800861A52 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FB1E54062800861A52 /* Constraint.swift */; };
 		E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */; };
 		E922FEB023C72C1700D2A824 /* ConstraidProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922FEAE23C72B2F00D2A824 /* ConstraidProxyTests.swift */; };
+		E922FEB123C7310900D2A824 /* ConstraidProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A45CD23C4015000581A04 /* ConstraidProxy.swift */; };
+		E922FEB223C7311800D2A824 /* ConstraidProxy+ManageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A45CF23C4103400581A04 /* ConstraidProxy+ManageSize.swift */; };
+		E922FEB323C7312900D2A824 /* ConstraidProxy+ManageRelativePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A45D123C4156700581A04 /* ConstraidProxy+ManageRelativePosition.swift */; };
+		E922FEB423C7313B00D2A824 /* ConstraidProxy+FlushWithEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE36223C500C90091E352 /* ConstraidProxy+FlushWithEdges.swift */; };
+		E922FEB523C7315600D2A824 /* ConstraidProxy+CenterWithinEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE36623C51DD50091E352 /* ConstraidProxy+CenterWithinEdges.swift */; };
+		E922FEB623C7316200D2A824 /* ConstraidProxy+LimitByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE36A23C5246E0091E352 /* ConstraidProxy+LimitByEdge.swift */; };
+		E922FEB723C7316A00D2A824 /* ConstraidProxy+ExpandFromEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE36E23C54FC80091E352 /* ConstraidProxy+ExpandFromEdge.swift */; };
+		E922FEB823C7317B00D2A824 /* ConstraidProxy+ExpandFromSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE37223C5596B0091E352 /* ConstraidProxy+ExpandFromSize.swift */; };
+		E922FEB923C7318300D2A824 /* ConstraidProxy+ManageInstrisicSizeRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE37423C55C610091E352 /* ConstraidProxy+ManageInstrisicSizeRelations.swift */; };
+		E922FEBA23C7318700D2A824 /* ConstraidProxy+CupByEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968AE37623C55E100091E352 /* ConstraidProxy+CupByEdge.swift */; };
 		E94F31991FC569D1006A37B8 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */; };
 		E99C6E321E530E1A00C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
@@ -502,12 +512,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E922FEB123C7310900D2A824 /* ConstraidProxy.swift in Sources */,
 				E9EDB5FC1E2E9FBE00C0D060 /* View.swift in Sources */,
+				E922FEBA23C7318700D2A824 /* ConstraidProxy+CupByEdge.swift in Sources */,
+				E922FEB823C7317B00D2A824 /* ConstraidProxy+ExpandFromSize.swift in Sources */,
+				E922FEB923C7318300D2A824 /* ConstraidProxy+ManageInstrisicSizeRelations.swift in Sources */,
 				E9EDB6071E2EA04200C0D060 /* ManageIntrinsicSizeRelations.swift in Sources */,
+				E922FEB523C7315600D2A824 /* ConstraidProxy+CenterWithinEdges.swift in Sources */,
 				E9EDB6031E2EA00E00C0D060 /* ManageRelativePosition.swift in Sources */,
+				E922FEB323C7312900D2A824 /* ConstraidProxy+ManageRelativePosition.swift in Sources */,
 				E9EDB5FE1E2E9FC900C0D060 /* FlushWithEdges.swift in Sources */,
+				E922FEB723C7316A00D2A824 /* ConstraidProxy+ExpandFromEdge.swift in Sources */,
+				E922FEB623C7316200D2A824 /* ConstraidProxy+LimitByEdge.swift in Sources */,
+				E922FEB423C7313B00D2A824 /* ConstraidProxy+FlushWithEdges.swift in Sources */,
 				E9EDB6061E2EA03B00C0D060 /* ExpandFromSize.swift in Sources */,
 				E9EDB5FF1E2E9FD100C0D060 /* CenterWithinEdges.swift in Sources */,
+				E922FEB223C7311800D2A824 /* ConstraidProxy+ManageSize.swift in Sources */,
 				E9EDB6021E2EA00A00C0D060 /* ManageSize.swift in Sources */,
 				E9BA3EB01FB7B8EB00772FA4 /* CupByEdge.swift in Sources */,
 				E99C6E331E530E2000C72E5E /* ConstraintCollection.swift in Sources */,
