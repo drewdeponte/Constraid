@@ -5,8 +5,8 @@
 #endif
 
 public class ConstraidProxy {
-    internal let base: View
-    internal var constraintCollection: ConstraintCollection
+    public let base: View
+    public var constraintCollection: ConstraintCollection
     
     init(base: View) {
         self.base = base
@@ -33,22 +33,3 @@ public extension View {
         return ConstraidProxy(base: self)
     }
 }
-
-// DELETE ME
-#if os(iOS)
-class TestViewController: UIViewController {
-    let testView: UIView = UIView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.addSubview(self.testView)
-        
-        self.testView.constraid
-            .setWidth(to: 24)
-            .activate()
-    }
-}
-#else
-    
-#endif

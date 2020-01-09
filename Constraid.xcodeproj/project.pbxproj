@@ -29,6 +29,7 @@
 		E91BE1FC1E54062800861A52 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FB1E54062800861A52 /* Constraint.swift */; };
 		E91BE1FD1E54062800861A52 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FB1E54062800861A52 /* Constraint.swift */; };
 		E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */; };
+		E922FEB023C72C1700D2A824 /* ConstraidProxyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E922FEAE23C72B2F00D2A824 /* ConstraidProxyTests.swift */; };
 		E94F31991FC569D1006A37B8 /* Constraid.h in Headers */ = {isa = PBXBuildFile; fileRef = E9CAB2A21E21954B00CDA4E2 /* Constraid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */; };
 		E99C6E321E530E1A00C72E5E /* ConstraintCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */; };
@@ -108,6 +109,7 @@
 		E9112A621E31AC6100F5CEC5 /* FlushWithEdgesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithEdgesTests.swift; sourceTree = "<group>"; };
 		E91BE1FB1E54062800861A52 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		E91BE1FE1E543FFE00861A52 /* FlushWithMarginsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushWithMarginsTests.swift; sourceTree = "<group>"; };
+		E922FEAE23C72B2F00D2A824 /* ConstraidProxyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraidProxyTests.swift; sourceTree = "<group>"; };
 		E984AB031E8CE904009C64A0 /* LimitByEdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LimitByEdgeTests.swift; sourceTree = "<group>"; };
 		E99C6E311E530E1A00C72E5E /* ConstraintCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintCollection.swift; sourceTree = "<group>"; };
 		E9BA3EAE1FB7B8EB00772FA4 /* CupByEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupByEdge.swift; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				E9BA3EB31FB7C5E800772FA4 /* CupByEdgeTests.swift */,
 				E9BA3EB51FB7CD8300772FA4 /* CupByMarginTests.swift */,
 				E9BA3EB71FB7E26F00772FA4 /* LayoutGuideTests.swift */,
+				E922FEAE23C72B2F00D2A824 /* ConstraidProxyTests.swift */,
 			);
 			path = ConstraidTests;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				E984AB041E8CE904009C64A0 /* LimitByEdgeTests.swift in Sources */,
 				E9C0FE551EAAE4B3003FCF15 /* ExpandFromEdgeTests.swift in Sources */,
 				E9BA3EB61FB7CD8300772FA4 /* CupByMarginTests.swift in Sources */,
+				E922FEB023C72C1700D2A824 /* ConstraidProxyTests.swift in Sources */,
 				E91BE2001E54401700861A52 /* FlushWithMarginsTests.swift in Sources */,
 				516653861E2D41BF00E28FB3 /* ExpandFromSizeTests.swift in Sources */,
 				E9C0FE5D1EADC872003FCF15 /* ConstraintCollectionTests.swift in Sources */,
