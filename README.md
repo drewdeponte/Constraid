@@ -76,7 +76,9 @@ childView.constraid.
 
 ## Setup
 
-[Carthage][carthage] is the best way to add [Constraid][constraid] to your project. 
+[Swift Package Manager](https://swift.org/package-manager/) is the best way to add [Constraid][constraid] to your project.
+
+However, we also support [Carthage][carthage] as well. To use [Carthage][carthage] simply do the following:
 
 1. Add the following to your [Cartfile][cartfile].
 
