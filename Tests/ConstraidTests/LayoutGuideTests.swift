@@ -1,5 +1,5 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 // This is an iOS only test
 #if os(iOS)
@@ -25,8 +25,9 @@ class LayoutGuideTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withEdgesOf: viewTwo.safeAreaLayoutGuide, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withEdgesOf: viewTwo.safeAreaLayoutGuide, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
