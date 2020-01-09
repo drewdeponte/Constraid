@@ -163,7 +163,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        self.constraintCollection.append(contentsOf: Constraid.follow(theTrailingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.follow(theTrailingEdgeOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
     
