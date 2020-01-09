@@ -1,5 +1,5 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 class ExpandFromEdgeTests: XCTestCase {
     func testExpandFromLeadingEdgeOf() {
@@ -8,8 +8,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromLeadingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromLeadingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -32,8 +33,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromTrailingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromTrailingEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -56,8 +58,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromTopEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromTopEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -80,8 +83,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromBottomEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromBottomEdgeOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -104,8 +108,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromHorizontalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromHorizontalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -139,8 +144,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromVerticalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromVerticalEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
 
@@ -174,8 +180,9 @@ class ExpandFromEdgeTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.expand(viewOne, fromEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromEdgesOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]

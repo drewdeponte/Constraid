@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+* Added proxy pattern based interface to provide a streamlined API and facilitate chaining
+
 #### [v7.0.0][v7.0.0] - 2019-10-08
 
 * Added SPM (Swift Package Manager) support

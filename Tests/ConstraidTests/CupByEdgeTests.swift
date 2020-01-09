@@ -1,5 +1,5 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 class CupByEdgeTests: XCTestCase {
     func testCupByLeadingEdgeOf() {
@@ -7,8 +7,9 @@ class CupByEdgeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.cup(viewOne, byLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.cup(byLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -54,8 +55,9 @@ class CupByEdgeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.cup(viewOne, byTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.cup(byTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -101,8 +103,9 @@ class CupByEdgeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.cup(viewOne, byTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.cup(byTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
@@ -148,8 +151,9 @@ class CupByEdgeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.cup(viewOne, byBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.cup(byBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]

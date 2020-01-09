@@ -1,5 +1,5 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 class ExpandFromSizeTests: XCTestCase {
     func testExpandFromWidthOf() {
@@ -7,8 +7,9 @@ class ExpandFromSizeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.expand(viewOne, fromWidthOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromWidthOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -29,8 +30,9 @@ class ExpandFromSizeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.expand(viewOne, fromHeightOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.expand(fromHeightOf: viewTwo, times: 2.0, offsetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)

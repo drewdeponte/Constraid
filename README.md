@@ -15,7 +15,7 @@
 # Constraid
 
 Constraid is your personal `NSLayoutConsraint` Aid. It's job is to make it as simple as
-possible for you to programmatically use AutoLayout in your iOS & MacOS projects.
+possible for you to programmatically use AutoLayout in your iOS & macOS projects.
 
 For example if you have a child view (`childView`) added as a subview of a parent
 view (`parentView`) and you want that child view to match the width of the
@@ -49,8 +49,28 @@ let constraints = flush(childView, withVerticalEdgesOf: parentView) +
 constraints.activate()
 ```
 
+Since it is common to apply multiple constraints to a view.
+[Constraid][constraid] uses a proxy pattern allowing you to implement the above
+in a much more concise syntax.
+
+```swift
+let proxy = childView.constraid.
+              flush(withVerticalEdgesOf: parentView).
+              center(verticallyWithin: parentView)
+proxy.activate()
+```
+
 The above is extremely useful when doing AutoLayout Animation or when you
 simply want to deactivate or activate a collection of constraints.
+
+However, if you don't need to reference the proxy to the collection of constraints for later to use for animation, etc. you can simply activate at the end of the chain.
+
+```swift
+childView.constraid.
+  flush(withVerticalEdgesOf: parentView).
+  center(verticallyWithin: parentView).
+  activate()
+```
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
 
