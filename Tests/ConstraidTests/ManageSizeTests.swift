@@ -138,8 +138,10 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.matchWidth(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+
+        let proxy = viewOne.constraid.matchWidth(to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -159,8 +161,9 @@ class ManageSizeTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.matchHeight(of: viewOne, to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.matchHeight(to: viewTwo, times: 2.0, by: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -178,8 +181,9 @@ class ManageSizeTests: XCTestCase {
     func testMakeSquare() {
         let viewOne = View()
 
-        let constraints = Constraid.equalize(viewOne, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.equalize(priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraint = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -198,8 +202,9 @@ class ManageSizeTests: XCTestCase {
         let viewOne = View()
         let size = CGSize(width: 50, height: 5)
         let ratio = size.width/size.height as CGFloat
-        let constraints = Constraid.setAspectRatio(of: viewOne, toSize: size, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.setAspectRatio(toSize: size, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraint = viewOne.constraints.first!
         XCTAssertEqual(constraints, viewOne.constraints)
