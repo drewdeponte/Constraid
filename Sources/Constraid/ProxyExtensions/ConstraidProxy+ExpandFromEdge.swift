@@ -19,7 +19,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromLeadingEdgeOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromLeadingEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromLeadingEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -38,7 +38,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromTrailingEdgeOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromTrailingEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromTrailingEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -57,7 +57,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromTopEdgeOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromTopEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromTopEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -76,7 +76,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromBottomEdgeOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromBottomEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromBottomEdgeOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -95,7 +95,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromHorizontalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromHorizontalEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromHorizontalEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -114,7 +114,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromVerticalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromVerticalEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromVerticalEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
     
@@ -135,7 +135,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func expand(fromEdgesOf item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.expand(self.base, fromEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.expand(self.base, fromEdgesOf: item, times: multiplier, offsetBy: offset, priority: priority))
         return self
     }
 }

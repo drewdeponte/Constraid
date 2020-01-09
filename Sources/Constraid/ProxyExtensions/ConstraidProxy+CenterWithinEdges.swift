@@ -21,7 +21,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func center(verticallyWithin item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, offsetDirection direction: Constraid.VerticalOffsetDirection = .down, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.center(self.base, verticallyWithin: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.center(self.base, verticallyWithin: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
         return self
     }
     
@@ -41,7 +41,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func center(horizontallyWithin item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, offsetDirection direction: Constraid.HorizontalOffsetDirection = .right, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.center(self.base, horizontallyWithin: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.center(self.base, horizontallyWithin: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
         return self
     }
     
@@ -61,7 +61,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func center(within item: Any?, times multiplier: CGFloat = 1.0, offsetBy offset: CGFloat = 0.0, offsetDirection direction: Constraid.OffsetDirection = .downAndRight, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.center(self.base, within: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.center(self.base, within: item, times: multiplier, offsetBy: offset, offsetDirection: direction, priority: priority))
         return self
     }
 }

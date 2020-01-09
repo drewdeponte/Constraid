@@ -5,8 +5,8 @@
 #endif
 
 public class ConstraidProxy {
-    public let base: View
-    var constraintCollection: ConstraintCollection
+    internal let base: View
+    internal var constraintCollection: ConstraintCollection
     
     init(base: View) {
         self.base = base

@@ -20,7 +20,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraints
      */
     public func cup(byLeadingMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.cup(self.base, byLeadingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.cup(self.base, byLeadingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -39,7 +39,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraints
      */
     public func cup(byTrailingMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.cup(self.base, byTrailingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.cup(self.base, byTrailingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -58,7 +58,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraints
      */
     public func cup(byTopMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.cup(self.base, byTopMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.cup(self.base, byTopMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -77,7 +77,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraints
      */
     public func cup(byBottomMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.cup(self.base, byBottomMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.cup(self.base, byBottomMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
 }

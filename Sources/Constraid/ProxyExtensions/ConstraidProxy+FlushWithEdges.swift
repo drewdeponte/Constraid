@@ -19,7 +19,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withLeadingEdgeOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withLeadingEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withLeadingEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -37,7 +37,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withTrailingEdgeOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withTrailingEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withTrailingEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -55,7 +55,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withTopEdgeOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withTopEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withTopEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -73,7 +73,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withBottomEdgeOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withBottomEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withBottomEdgeOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -92,7 +92,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withVerticalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withVerticalEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withVerticalEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -111,7 +111,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withHorizontalEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withHorizontalEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withHorizontalEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -131,7 +131,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func flush(withEdgesOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.flush(self.base, withEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.flush(self.base, withEdgesOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
 }

@@ -22,7 +22,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.follow(theTrailingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.follow(theTrailingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
 
@@ -46,7 +46,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.precede(theLeadingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.precede(theLeadingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -69,7 +69,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheTopMarginOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheTopMarginOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -92,7 +92,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheBottomMarginOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheBottomMarginOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
 }
@@ -119,7 +119,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.precede(theCenterOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.precede(theCenterOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
 
@@ -141,7 +141,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.follow(theCenterOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.follow(theCenterOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -163,7 +163,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.follow(theTrailingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.follow(theTrailingMarginOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -185,7 +185,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.precede(theLeadingEdgeOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.precede(theLeadingEdgeOf: item, with: self.base, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -207,7 +207,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheTopEdgeOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheTopEdgeOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -229,7 +229,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheCenterOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, aboveTheCenterOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -251,7 +251,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheBottomEdgeOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheBottomEdgeOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
     
@@ -273,7 +273,7 @@ extension ConstraidProxy {
         times multiplier: CGFloat = 1.0,
         by constant: CGFloat = 0.0,
         priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheCenterOf: item, times: multiplier, by: constant, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.set(self.base, belowTheCenterOf: item, times: multiplier, by: constant, priority: priority))
         return self
     }
 }

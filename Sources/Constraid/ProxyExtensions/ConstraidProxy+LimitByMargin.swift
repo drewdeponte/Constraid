@@ -20,7 +20,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byLeadingMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byLeadingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byLeadingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -39,7 +39,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byTrailingMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byTrailingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byTrailingMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -58,7 +58,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byTopMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byTopMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byTopMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -77,7 +77,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byBottomMarginOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byBottomMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byBottomMarginOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -96,7 +96,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byHorizontalMarginsOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byHorizontalMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byHorizontalMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -115,7 +115,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byVerticalMarginsOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byVerticalMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byVerticalMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
     
@@ -136,7 +136,7 @@ extension ConstraidProxy {
      - returns: Constraid proxy containing the generated constraint
      */
     public func limit(byMarginsOf item: Any?, times multiplier: CGFloat = 1.0, insetBy inset: CGFloat = 0.0, priority: Constraid.LayoutPriority = Constraid.LayoutPriorityRequired) -> Self {
-        constraintCollection.append(contentsOf: Constraid.limit(self.base, byMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
+        self.constraintCollection.append(contentsOf: Constraid.limit(self.base, byMarginsOf: item, times: multiplier, insetBy: inset, priority: priority))
         return self
     }
 }
