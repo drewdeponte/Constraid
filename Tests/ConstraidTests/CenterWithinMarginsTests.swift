@@ -1,4 +1,4 @@
-import Constraid
+@testable import Constraid
 import XCTest
 
 // This test is only available on iOS
@@ -12,8 +12,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, verticallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .down, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(verticallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .down, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -36,8 +37,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, verticallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .up, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(verticallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .up, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -60,8 +62,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, horizontallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .right, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(horizontallyWithinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .right, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -84,8 +87,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, horizontallyWithinMarginsOf: viewTwo, times: 2.0,  offsetBy: 10.0, offsetDirection: .left,priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(horizontallyWithinMarginsOf: viewTwo, times: 2.0,  offsetBy: 10.0, offsetDirection: .left,priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
         let constraintOne = viewOne.constraints.first!
 
         XCTAssertEqual(constraints, viewOne.constraints)
@@ -108,8 +112,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, withinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .downAndRight, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(withinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .downAndRight, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
@@ -145,8 +150,9 @@ class CenterWithinMarginsTests: XCTestCase {
 
         viewOne.addSubview(viewTwo)
 
-        let constraints = Constraid.center(viewOne, withinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .upAndLeft, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.center(withinMarginsOf: viewTwo, times: 2.0, offsetBy: 10.0, offsetDirection: .upAndLeft, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
