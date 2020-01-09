@@ -10,6 +10,8 @@ that you can set version constraints properly.
 
 #### [Unreleased][unreleased] -
 
+#### [v7.1.0][v7.1.0] - 2020-01-09
+
 * Added proxy pattern based interface to provide a streamlined API and facilitate chaining
 
 #### [v7.0.0][v7.0.0] - 2019-10-08
@@ -141,7 +143,8 @@ that you can set version constraints properly.
   `sitsOn(theTopEdgeOf)`, `sitsUnder(theBottomEdgeOf)`
 * Added `setWidth(constant)`, `setHeight(constant)`
 
-[unreleased]: https://github.com/uptech/Constraid/compare/7.0.0...HEAD
+[unreleased]: https://github.com/uptech/Constraid/compare/7.1.0...HEAD
+[v7.1.0]: https://github.com/uptech/Constraid/compare/7.0.0...7.1.0
 [v7.0.0]: https://github.com/uptech/Constraid/compare/6.0.0...7.0.0
 [v6.0.0]: https://github.com/uptech/Constraid/compare/5.0.0...6.0.0
 [v5.0.0]: https://github.com/uptech/Constraid/compare/4.1.0...5.0.0
