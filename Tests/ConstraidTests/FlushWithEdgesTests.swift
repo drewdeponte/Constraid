@@ -1,5 +1,5 @@
 import XCTest
-import Constraid
+@testable import Constraid
 
 class FlushWithEdgesTests: XCTestCase {
 
@@ -8,8 +8,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withLeadingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
 
@@ -32,8 +33,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withTrailingEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
 
@@ -56,8 +58,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withTopEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
 
@@ -80,8 +83,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withBottomEdgeOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
 
@@ -104,8 +108,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withVerticalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withVerticalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
@@ -140,8 +145,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withHorizontalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withHorizontalEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints.first!
         let constraintTwo = viewOne.constraints.last!
@@ -176,8 +182,9 @@ class FlushWithEdgesTests: XCTestCase {
         let viewTwo = View()
 
         viewOne.addSubview(viewTwo)
-        let constraints = Constraid.flush(viewOne, withEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
-        constraints.activate()
+        let proxy = viewOne.constraid.flush(withEdgesOf: viewTwo, times: 2.0, insetBy: 10.0, priority: Constraid.LayoutPriority(rawValue: 500))
+        let constraints = proxy.constraintCollection
+        proxy.activate()
 
         let constraintOne = viewOne.constraints[0]
         let constraintTwo = viewOne.constraints[1]
