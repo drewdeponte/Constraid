@@ -54,9 +54,9 @@ Since it is common to apply multiple constraints to a view.
 in a much more concise syntax.
 
 ```swift
-let proxy = childView.constraid.
-              flush(withVerticalEdgesOf: parentView).
-              center(verticallyWithin: parentView)
+let proxy = childView.constraid
+              .flush(withVerticalEdgesOf: parentView)
+              .center(verticallyWithin: parentView)
 proxy.activate()
 ```
 
@@ -66,10 +66,10 @@ simply want to deactivate or activate a collection of constraints.
 However, if you don't need to reference the proxy to the collection of constraints for later to use for animation, etc. you can simply activate at the end of the chain.
 
 ```swift
-childView.constraid.
-  flush(withVerticalEdgesOf: parentView).
-  center(verticallyWithin: parentView).
-  activate()
+childView.constraid
+  .flush(withVerticalEdgesOf: parentView)
+  .center(verticallyWithin: parentView)
+  .activate()
 ```
 
 <img src="resources/mascot_woman.png" alt="Crazy Woman in Straight Jacket" align="right">
